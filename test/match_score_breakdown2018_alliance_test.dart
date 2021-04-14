@@ -192,6 +192,5 @@ void main() {
     test('to test the property `tbaGameData`', () async {
       // TODO
     });
-
   });
 }

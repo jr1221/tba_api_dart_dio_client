@@ -2,7 +2,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-
 import 'package:dio/dio.dart';
 import 'package:tba_api_dart_dio_client/src/auth/auth.dart';
 

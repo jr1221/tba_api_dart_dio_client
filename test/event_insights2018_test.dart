@@ -189,25 +189,29 @@ void main() {
 
     // Average opposing switch denail percentage for the winning alliance during teleop.
     // double winningOppSwitchDenialPercentageTeleop
-    test('to test the property `winningOppSwitchDenialPercentageTeleop`', () async {
+    test('to test the property `winningOppSwitchDenialPercentageTeleop`',
+        () async {
       // TODO
     });
 
     // Average own switch ownership percentage for the winning alliance.
     // double winningOwnSwitchOwnershipPercentage
-    test('to test the property `winningOwnSwitchOwnershipPercentage`', () async {
+    test('to test the property `winningOwnSwitchOwnershipPercentage`',
+        () async {
       // TODO
     });
 
     // Average own switch ownership percentage for the winning alliance during auto.
     // double winningOwnSwitchOwnershipPercentageAuto
-    test('to test the property `winningOwnSwitchOwnershipPercentageAuto`', () async {
+    test('to test the property `winningOwnSwitchOwnershipPercentageAuto`',
+        () async {
       // TODO
     });
 
     // Average own switch ownership percentage for the winning alliance during teleop.
     // double winningOwnSwitchOwnershipPercentageTeleop
-    test('to test the property `winningOwnSwitchOwnershipPercentageTeleop`', () async {
+    test('to test the property `winningOwnSwitchOwnershipPercentageTeleop`',
+        () async {
       // TODO
     });
 
@@ -219,15 +223,16 @@ void main() {
 
     // Average scale ownership percentage for the winning alliance during auto.
     // double winningScaleOwnershipPercentageAuto
-    test('to test the property `winningScaleOwnershipPercentageAuto`', () async {
+    test('to test the property `winningScaleOwnershipPercentageAuto`',
+        () async {
       // TODO
     });
 
     // Average scale ownership percentage for the winning alliance during teleop.
     // double winningScaleOwnershipPercentageTeleop
-    test('to test the property `winningScaleOwnershipPercentageTeleop`', () async {
+    test('to test the property `winningScaleOwnershipPercentageTeleop`',
+        () async {
       // TODO
     });
-
   });
 }

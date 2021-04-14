@@ -139,7 +139,8 @@ void main() {
 
     // Unofficial TBA-computed value that indicates whether the shieldEnergizedRankingPoint was earned normally or awarded due to a foul.
     // bool tbaShieldEnergizedRankingPointFromFoul
-    test('to test the property `tbaShieldEnergizedRankingPointFromFoul`', () async {
+    test('to test the property `tbaShieldEnergizedRankingPointFromFoul`',
+        () async {
       // TODO
     });
 
@@ -178,6 +179,5 @@ void main() {
     test('to test the property `totalPoints`', () async {
       // TODO
     });
-
   });
 }

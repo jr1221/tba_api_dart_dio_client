@@ -34,6 +34,5 @@ void main() {
     test('to test the property `playoffAverage`', () async {
       // TODO
     });
-
   });
 }

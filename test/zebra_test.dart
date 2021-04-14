@@ -23,6 +23,5 @@ void main() {
     test('to test the property `alliances`', () async {
       // TODO
     });
-
   });
 }

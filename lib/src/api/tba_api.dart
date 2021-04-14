@@ -10,17 +10,16 @@ import 'package:dio/dio.dart';
 import 'package:tba_api_dart_dio_client/src/model/api_status.dart';
 
 class TBAApi {
-
   final Dio _dio;
 
   final Serializers _serializers;
 
   const TBAApi(this._dio, this._serializers);
 
-  /// 
+  ///
   ///
   /// Returns API status, and TBA status information.
-  Future<Response<APIStatus>> getStatus({ 
+  Future<Response<APIStatus>> getStatus({
     String? ifModifiedSince,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,8 +52,7 @@ class TBAApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{
-    };
+    final _queryParameters = <String, dynamic>{};
 
     final _response = await _dio.request<Object>(
       _path,
@@ -73,7 +71,6 @@ class TBAApi {
         _response.data!,
         specifiedType: _responseType,
       ) as APIStatus;
-
     } catch (error) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -94,5 +91,4 @@ class TBAApi {
       extra: _response.extra,
     );
   }
-
 }
