@@ -55,9 +55,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -133,9 +130,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -211,9 +205,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -289,9 +280,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -367,9 +355,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -445,9 +430,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -523,9 +505,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -601,9 +580,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -679,9 +655,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -757,9 +730,6 @@ class DistrictApi {
         ],
         ...?extra,
       },
- /*     contentType: [
-        'application/json',
-      ].first, */
       validateStatus: validateStatus,
     );
 

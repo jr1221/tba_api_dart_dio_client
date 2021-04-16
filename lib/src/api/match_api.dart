@@ -52,9 +52,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -130,9 +127,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -208,9 +202,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -286,9 +277,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -364,9 +352,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -442,9 +427,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -520,9 +502,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -598,9 +577,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -678,9 +654,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -758,9 +731,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -838,9 +808,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -918,9 +885,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -998,9 +962,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1078,9 +1039,6 @@ class MatchApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 

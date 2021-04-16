@@ -60,9 +60,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -138,9 +135,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -216,9 +210,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -294,9 +285,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -372,9 +360,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -450,9 +435,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -528,9 +510,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -606,9 +585,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -685,9 +661,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -763,9 +736,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -843,9 +813,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -921,9 +888,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1001,9 +965,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1081,9 +1042,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1161,9 +1119,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1241,9 +1196,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1321,9 +1273,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1399,9 +1348,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1479,9 +1425,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1559,9 +1502,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1639,9 +1579,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1717,9 +1654,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1795,9 +1729,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1876,9 +1807,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1957,9 +1885,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2037,9 +1962,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2117,9 +2039,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2197,9 +2116,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2279,9 +2195,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2359,9 +2272,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2437,9 +2347,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2515,9 +2422,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2593,9 +2497,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2671,9 +2572,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2749,9 +2647,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2829,9 +2724,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2909,9 +2801,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2989,9 +2878,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -3067,9 +2953,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -3145,9 +3028,6 @@ class TeamApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 

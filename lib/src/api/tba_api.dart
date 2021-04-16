@@ -46,9 +46,6 @@ class TBAApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 

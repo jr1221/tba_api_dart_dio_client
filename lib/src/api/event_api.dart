@@ -62,9 +62,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -140,9 +137,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -218,9 +212,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -296,9 +287,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -374,9 +362,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -453,9 +438,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -531,9 +513,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -609,9 +588,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -687,9 +663,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -765,9 +738,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -843,9 +813,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -921,9 +888,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -999,9 +963,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1077,9 +1038,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1155,9 +1113,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1233,9 +1188,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1311,9 +1263,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1389,9 +1338,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1467,9 +1413,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1545,9 +1488,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1624,9 +1564,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1702,9 +1639,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1780,9 +1714,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1860,9 +1791,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -1940,9 +1868,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2020,9 +1945,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2100,9 +2022,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2180,9 +2099,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2258,9 +2174,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2338,9 +2251,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2418,9 +2328,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2498,9 +2405,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2576,9 +2480,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2654,9 +2555,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
@@ -2735,9 +2633,6 @@ class EventApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
