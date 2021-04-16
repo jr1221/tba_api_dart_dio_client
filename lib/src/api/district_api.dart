@@ -757,9 +757,9 @@ class DistrictApi {
         ],
         ...?extra,
       },
-      contentType: [
+ /*     contentType: [
         'application/json',
-      ].first,
+      ].first, */
       validateStatus: validateStatus,
     );
 
