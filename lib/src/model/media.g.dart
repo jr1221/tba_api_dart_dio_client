@@ -127,7 +127,8 @@ class _$MediaTypeEnumSerializer implements PrimitiveSerializer<MediaTypeEnum> {
   @override
   MediaTypeEnum deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      MediaTypeEnum.valueOf(_fromWire[serialized] ?? serialized as String);
+      MediaTypeEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$Media extends Media {
@@ -145,7 +146,7 @@ class _$Media extends Media {
   final String? viewUrl;
 
   factory _$Media([void Function(MediaBuilder)? updates]) =>
-      (new MediaBuilder()..update(updates)).build();
+      (new MediaBuilder()..update(updates))._build();
 
   _$Media._(
       {required this.type,
@@ -155,8 +156,8 @@ class _$Media extends Media {
       this.directUrl,
       this.viewUrl})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(type, 'Media', 'type');
-    BuiltValueNullFieldError.checkNotNull(foreignKey, 'Media', 'foreignKey');
+    BuiltValueNullFieldError.checkNotNull(type, r'Media', 'type');
+    BuiltValueNullFieldError.checkNotNull(foreignKey, r'Media', 'foreignKey');
   }
 
   @override
@@ -192,7 +193,7 @@ class _$Media extends Media {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Media')
+    return (newBuiltValueToStringHelper(r'Media')
           ..add('type', type)
           ..add('foreignKey', foreignKey)
           ..add('details', details)
@@ -231,7 +232,7 @@ class MediaBuilder implements Builder<Media, MediaBuilder> {
   set viewUrl(String? viewUrl) => _$this._viewUrl = viewUrl;
 
   MediaBuilder() {
-    Media._initializeBuilder(this);
+    Media._defaults(this);
   }
 
   MediaBuilder get _$this {
@@ -260,12 +261,14 @@ class MediaBuilder implements Builder<Media, MediaBuilder> {
   }
 
   @override
-  _$Media build() {
+  Media build() => _build();
+
+  _$Media _build() {
     final _$result = _$v ??
         new _$Media._(
-            type: BuiltValueNullFieldError.checkNotNull(type, 'Media', 'type'),
+            type: BuiltValueNullFieldError.checkNotNull(type, r'Media', 'type'),
             foreignKey: BuiltValueNullFieldError.checkNotNull(
-                foreignKey, 'Media', 'foreignKey'),
+                foreignKey, r'Media', 'foreignKey'),
             details: details,
             preferred: preferred,
             directUrl: directUrl,
@@ -275,4 +278,4 @@ class MediaBuilder implements Builder<Media, MediaBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

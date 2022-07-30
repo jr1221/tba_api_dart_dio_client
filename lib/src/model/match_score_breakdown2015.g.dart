@@ -74,7 +74,7 @@ class _$MatchScoreBreakdown2015CoopertitionEnumSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       MatchScoreBreakdown2015CoopertitionEnum.valueOf(
-          _fromWire[serialized] ?? serialized as String);
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$MatchScoreBreakdown2015 extends MatchScoreBreakdown2015 {
@@ -89,7 +89,7 @@ class _$MatchScoreBreakdown2015 extends MatchScoreBreakdown2015 {
 
   factory _$MatchScoreBreakdown2015(
           [void Function(MatchScoreBreakdown2015Builder)? updates]) =>
-      (new MatchScoreBreakdown2015Builder()..update(updates)).build();
+      (new MatchScoreBreakdown2015Builder()..update(updates))._build();
 
   _$MatchScoreBreakdown2015._(
       {this.blue, this.red, this.coopertition, this.coopertitionPoints})
@@ -123,7 +123,7 @@ class _$MatchScoreBreakdown2015 extends MatchScoreBreakdown2015 {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('MatchScoreBreakdown2015')
+    return (newBuiltValueToStringHelper(r'MatchScoreBreakdown2015')
           ..add('blue', blue)
           ..add('red', red)
           ..add('coopertition', coopertition)
@@ -159,7 +159,7 @@ class MatchScoreBreakdown2015Builder
       _$this._coopertitionPoints = coopertitionPoints;
 
   MatchScoreBreakdown2015Builder() {
-    MatchScoreBreakdown2015._initializeBuilder(this);
+    MatchScoreBreakdown2015._defaults(this);
   }
 
   MatchScoreBreakdown2015Builder get _$this {
@@ -186,7 +186,9 @@ class MatchScoreBreakdown2015Builder
   }
 
   @override
-  _$MatchScoreBreakdown2015 build() {
+  MatchScoreBreakdown2015 build() => _build();
+
+  _$MatchScoreBreakdown2015 _build() {
     _$MatchScoreBreakdown2015 _$result;
     try {
       _$result = _$v ??
@@ -204,7 +206,7 @@ class MatchScoreBreakdown2015Builder
         _red?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'MatchScoreBreakdown2015', _$failedField, e.toString());
+            r'MatchScoreBreakdown2015', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -213,4 +215,4 @@ class MatchScoreBreakdown2015Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

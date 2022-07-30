@@ -17,7 +17,7 @@ class _$TeamRobot extends TeamRobot {
   final String teamKey;
 
   factory _$TeamRobot([void Function(TeamRobotBuilder)? updates]) =>
-      (new TeamRobotBuilder()..update(updates)).build();
+      (new TeamRobotBuilder()..update(updates))._build();
 
   _$TeamRobot._(
       {required this.year,
@@ -25,10 +25,10 @@ class _$TeamRobot extends TeamRobot {
       required this.key,
       required this.teamKey})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(year, 'TeamRobot', 'year');
-    BuiltValueNullFieldError.checkNotNull(robotName, 'TeamRobot', 'robotName');
-    BuiltValueNullFieldError.checkNotNull(key, 'TeamRobot', 'key');
-    BuiltValueNullFieldError.checkNotNull(teamKey, 'TeamRobot', 'teamKey');
+    BuiltValueNullFieldError.checkNotNull(year, r'TeamRobot', 'year');
+    BuiltValueNullFieldError.checkNotNull(robotName, r'TeamRobot', 'robotName');
+    BuiltValueNullFieldError.checkNotNull(key, r'TeamRobot', 'key');
+    BuiltValueNullFieldError.checkNotNull(teamKey, r'TeamRobot', 'teamKey');
   }
 
   @override
@@ -57,7 +57,7 @@ class _$TeamRobot extends TeamRobot {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('TeamRobot')
+    return (newBuiltValueToStringHelper(r'TeamRobot')
           ..add('year', year)
           ..add('robotName', robotName)
           ..add('key', key)
@@ -86,7 +86,7 @@ class TeamRobotBuilder implements Builder<TeamRobot, TeamRobotBuilder> {
   set teamKey(String? teamKey) => _$this._teamKey = teamKey;
 
   TeamRobotBuilder() {
-    TeamRobot._initializeBuilder(this);
+    TeamRobot._defaults(this);
   }
 
   TeamRobotBuilder get _$this {
@@ -113,19 +113,22 @@ class TeamRobotBuilder implements Builder<TeamRobot, TeamRobotBuilder> {
   }
 
   @override
-  _$TeamRobot build() {
+  TeamRobot build() => _build();
+
+  _$TeamRobot _build() {
     final _$result = _$v ??
         new _$TeamRobot._(
             year: BuiltValueNullFieldError.checkNotNull(
-                year, 'TeamRobot', 'year'),
+                year, r'TeamRobot', 'year'),
             robotName: BuiltValueNullFieldError.checkNotNull(
-                robotName, 'TeamRobot', 'robotName'),
-            key: BuiltValueNullFieldError.checkNotNull(key, 'TeamRobot', 'key'),
+                robotName, r'TeamRobot', 'robotName'),
+            key:
+                BuiltValueNullFieldError.checkNotNull(key, r'TeamRobot', 'key'),
             teamKey: BuiltValueNullFieldError.checkNotNull(
-                teamKey, 'TeamRobot', 'teamKey'));
+                teamKey, r'TeamRobot', 'teamKey'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

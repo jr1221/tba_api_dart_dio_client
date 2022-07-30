@@ -8,76 +8,82 @@ import 'package:built_value/serializer.dart';
 
 part 'event_insights.g.dart';
 
-abstract class EventInsights
-    implements Built<EventInsights, EventInsightsBuilder> {
-  /// Inights for the qualification round of an event
-  @BuiltValueField(wireName: r'qual')
-  JsonObject? get qual;
+/// A year-specific event insight object expressed as a JSON string, separated in to `qual` and `playoff` fields. See also Event_Insights_2016, Event_Insights_2017, etc.
+///
+/// Properties:
+/// * [qual] - Inights for the qualification round of an event
+/// * [playoff] - Insights for the playoff round of an event
+abstract class EventInsights implements Built<EventInsights, EventInsightsBuilder> {
+    /// Inights for the qualification round of an event
+    @BuiltValueField(wireName: r'qual')
+    JsonObject? get qual;
 
-  /// Insights for the playoff round of an event
-  @BuiltValueField(wireName: r'playoff')
-  JsonObject? get playoff;
+    /// Insights for the playoff round of an event
+    @BuiltValueField(wireName: r'playoff')
+    JsonObject? get playoff;
 
-  EventInsights._();
+    EventInsights._();
 
-  static void _initializeBuilder(EventInsightsBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(EventInsightsBuilder b) => b;
 
-  factory EventInsights([void updates(EventInsightsBuilder b)]) =
-      _$EventInsights;
+    factory EventInsights([void updates(EventInsightsBuilder b)]) = _$EventInsights;
 
-  @BuiltValueSerializer(custom: true)
-  static Serializer<EventInsights> get serializer =>
-      _$EventInsightsSerializer();
+    @BuiltValueSerializer(custom: true)
+    static Serializer<EventInsights> get serializer => _$EventInsightsSerializer();
 }
 
 class _$EventInsightsSerializer implements StructuredSerializer<EventInsights> {
-  @override
-  final Iterable<Type> types = const [EventInsights, _$EventInsights];
+    @override
+    final Iterable<Type> types = const [EventInsights, _$EventInsights];
 
-  @override
-  final String wireName = r'EventInsights';
+    @override
+    final String wireName = r'EventInsights';
 
-  @override
-  Iterable<Object?> serialize(Serializers serializers, EventInsights object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[];
-    if (object.qual != null) {
-      result
-        ..add(r'qual')
-        ..add(serializers.serialize(object.qual,
-            specifiedType: const FullType(JsonObject)));
+    @override
+    Iterable<Object?> serialize(Serializers serializers, EventInsights object,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = <Object?>[];
+        if (object.qual != null) {
+            result
+                ..add(r'qual')
+                ..add(serializers.serialize(object.qual,
+                    specifiedType: const FullType(JsonObject)));
+        }
+        if (object.playoff != null) {
+            result
+                ..add(r'playoff')
+                ..add(serializers.serialize(object.playoff,
+                    specifiedType: const FullType(JsonObject)));
+        }
+        return result;
     }
-    if (object.playoff != null) {
-      result
-        ..add(r'playoff')
-        ..add(serializers.serialize(object.playoff,
-            specifiedType: const FullType(JsonObject)));
-    }
-    return result;
-  }
 
-  @override
-  EventInsights deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = EventInsightsBuilder();
+    @override
+    EventInsights deserialize(Serializers serializers, Iterable<Object?> serialized,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = EventInsightsBuilder();
 
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case r'qual':
-          result.qual = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
-          break;
-        case r'playoff':
-          result.playoff = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
-          break;
-      }
+        final iterator = serialized.iterator;
+        while (iterator.moveNext()) {
+            final key = iterator.current as String;
+            iterator.moveNext();
+            final Object? value = iterator.current;
+            
+            switch (key) {
+                case r'qual':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(JsonObject)) as JsonObject;
+                    result.qual = valueDes;
+                    break;
+                case r'playoff':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(JsonObject)) as JsonObject;
+                    result.playoff = valueDes;
+                    break;
+            }
+        }
+        return result.build();
     }
-    return result.build();
-  }
 }
+

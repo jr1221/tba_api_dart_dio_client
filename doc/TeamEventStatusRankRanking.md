@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **matchesPlayed** | **int** | Number of matches played. | [optional] 
 **qualAverage** | **double** | For some years, average qualification score. Can be null. | [optional] 
-**sortOrders** | **BuiltList<num>** | Ordered list of values used to determine the rank. See the `sort_order_info` property for the name of each value. | [optional] 
+**sortOrders** | **BuiltList&lt;num&gt;** | Ordered list of values used to determine the rank. See the `sort_order_info` property for the name of each value. | [optional] 
 **record** | [**WLTRecord**](WLTRecord.md) |  | [optional] 
 **rank** | **int** | Relative rank of this team. | [optional] 
 **dq** | **int** | Number of matches the team was disqualified for. | [optional] 

@@ -79,9 +79,10 @@ void main() {
     });
 
     // Array of video objects associated with this match.
-    // BuiltList<MatchVideos> videos
+    // BuiltList<MatchVideosInner> videos
     test('to test the property `videos`', () async {
       // TODO
     });
+
   });
 }

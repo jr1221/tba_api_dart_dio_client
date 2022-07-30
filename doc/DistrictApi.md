@@ -9,16 +9,16 @@ All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDistrictEvents**](DistrictApi.md#getdistrictevents) | **get** /district/{district_key}/events | 
-[**getDistrictEventsKeys**](DistrictApi.md#getdistricteventskeys) | **get** /district/{district_key}/events/keys | 
-[**getDistrictEventsSimple**](DistrictApi.md#getdistricteventssimple) | **get** /district/{district_key}/events/simple | 
-[**getDistrictRankings**](DistrictApi.md#getdistrictrankings) | **get** /district/{district_key}/rankings | 
-[**getDistrictTeams**](DistrictApi.md#getdistrictteams) | **get** /district/{district_key}/teams | 
-[**getDistrictTeamsKeys**](DistrictApi.md#getdistrictteamskeys) | **get** /district/{district_key}/teams/keys | 
-[**getDistrictTeamsSimple**](DistrictApi.md#getdistrictteamssimple) | **get** /district/{district_key}/teams/simple | 
-[**getDistrictsByYear**](DistrictApi.md#getdistrictsbyyear) | **get** /districts/{year} | 
-[**getEventDistrictPoints**](DistrictApi.md#geteventdistrictpoints) | **get** /event/{event_key}/district_points | 
-[**getTeamDistricts**](DistrictApi.md#getteamdistricts) | **get** /team/{team_key}/districts | 
+[**getDistrictEvents**](DistrictApi.md#getdistrictevents) | **GET** /district/{district_key}/events | 
+[**getDistrictEventsKeys**](DistrictApi.md#getdistricteventskeys) | **GET** /district/{district_key}/events/keys | 
+[**getDistrictEventsSimple**](DistrictApi.md#getdistricteventssimple) | **GET** /district/{district_key}/events/simple | 
+[**getDistrictRankings**](DistrictApi.md#getdistrictrankings) | **GET** /district/{district_key}/rankings | 
+[**getDistrictTeams**](DistrictApi.md#getdistrictteams) | **GET** /district/{district_key}/teams | 
+[**getDistrictTeamsKeys**](DistrictApi.md#getdistrictteamskeys) | **GET** /district/{district_key}/teams/keys | 
+[**getDistrictTeamsSimple**](DistrictApi.md#getdistrictteamssimple) | **GET** /district/{district_key}/teams/simple | 
+[**getDistrictsByYear**](DistrictApi.md#getdistrictsbyyear) | **GET** /districts/{year} | 
+[**getEventDistrictPoints**](DistrictApi.md#geteventdistrictpoints) | **GET** /event/{event_key}/district_points | 
+[**getTeamDistricts**](DistrictApi.md#getteamdistricts) | **GET** /team/{team_key}/districts | 
 
 
 # **getDistrictEvents**
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 Gets a list of events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -36,14 +36,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictEvents(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictEvents(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictEvents: $e\n');
 }
 ```
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Event>**](Event.md)
+[**BuiltList&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 Gets a list of event keys for events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -85,14 +85,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictEventsKeys(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictEventsKeys(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictEventsKeys: $e\n');
 }
 ```
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -134,14 +134,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictEventsSimple(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictEventsSimple(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictEventsSimple: $e\n');
 }
 ```
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<EventSimple>**](EventSimple.md)
+[**BuiltList&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 Gets a list of team district rankings for the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -183,14 +183,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictRankings(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictRankings(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictRankings: $e\n');
 }
 ```
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<DistrictRanking>**](DistrictRanking.md)
+[**BuiltList&lt;DistrictRanking&gt;**](DistrictRanking.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 Gets a list of `Team` objects that competed in events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -232,14 +232,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictTeams(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictTeams(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictTeams: $e\n');
 }
 ```
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Team>**](Team.md)
+[**BuiltList&lt;Team&gt;**](Team.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 Gets a list of `Team` objects that competed in events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -281,14 +281,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictTeamsKeys(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictTeamsKeys(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictTeamsKeys: $e\n');
 }
 ```
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of `Team` objects that competed in events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -330,14 +330,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictTeamsSimple(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictTeamsSimple(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictTeamsSimple: $e\n');
 }
 ```
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<TeamSimple>**](TeamSimple.md)
+[**BuiltList&lt;TeamSimple&gt;**](TeamSimple.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 Gets a list of districts and their corresponding district key, for the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -379,14 +379,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictsByYear(year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictsByYear(year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getDistrictsByYear: $e\n');
 }
 ```
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<DistrictList>**](DistrictList.md)
+[**BuiltList&lt;DistrictList&gt;**](DistrictList.md)
 
 ### Authorization
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 Gets a list of team rankings for the Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -428,14 +428,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventDistrictPoints(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventDistrictPoints(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getEventDistrictPoints: $e\n');
 }
 ```
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -477,14 +477,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DistrictApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getDistrictApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamDistricts(teamKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamDistricts(teamKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistrictApi->getTeamDistricts: $e\n');
 }
 ```
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<DistrictList>**](DistrictList.md)
+[**BuiltList&lt;DistrictList&gt;**](DistrictList.md)
 
 ### Authorization
 

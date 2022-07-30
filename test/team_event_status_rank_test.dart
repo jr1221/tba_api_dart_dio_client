@@ -19,7 +19,7 @@ void main() {
     });
 
     // Ordered list of names corresponding to the elements of the `sort_orders` array.
-    // BuiltList<TeamEventStatusRankSortOrderInfo> sortOrderInfo
+    // BuiltList<TeamEventStatusRankSortOrderInfoInner> sortOrderInfo
     test('to test the property `sortOrderInfo`', () async {
       // TODO
     });
@@ -28,5 +28,6 @@ void main() {
     test('to test the property `status`', () async {
       // TODO
     });
+
   });
 }

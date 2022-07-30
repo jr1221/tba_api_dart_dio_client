@@ -7,23 +7,36 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:tba_api_dart_dio_client/src/model/zebra.dart';
-import 'package:tba_api_dart_dio_client/src/model/match_simple.dart';
-import 'package:tba_api_dart_dio_client/src/model/match.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
+import 'package:tba_api_dart_dio_client/src/model/match.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_simple.dart';
+import 'package:tba_api_dart_dio_client/src/model/zebra.dart';
 
 class MatchApi {
+
   final Dio _dio;
 
   final Serializers _serializers;
 
   const MatchApi(this._dio, this._serializers);
 
-  ///
-  ///
+  /// getEventMatchTimeseries
   /// Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
-  Future<Response<BuiltList<String>>> getEventMatchTimeseries({
+  ///
+  /// Parameters:
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<String>>> getEventMatchTimeseries({ 
     required String eventKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -33,8 +46,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/matches/timeseries'
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/matches/timeseries'.replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -55,12 +67,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -74,13 +83,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -95,10 +105,22 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getEventMatches
   /// Gets a list of matches for the given event.
-  Future<Response<BuiltList<Match>>> getEventMatches({
+  ///
+  /// Parameters:
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<Match>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<Match>>> getEventMatches({ 
     required String eventKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -108,8 +130,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/matches'
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/matches'.replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -130,12 +151,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -149,13 +167,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Match>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<Match>>(
@@ -170,10 +189,22 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getEventMatchesKeys
   /// Gets a list of match keys for the given event.
-  Future<Response<BuiltList<String>>> getEventMatchesKeys({
+  ///
+  /// Parameters:
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<String>>> getEventMatchesKeys({ 
     required String eventKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -183,8 +214,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/matches/keys'
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/matches/keys'.replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -205,12 +235,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -224,13 +251,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -245,10 +273,22 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getEventMatchesSimple
   /// Gets a short-form list of matches for the given event.
-  Future<Response<BuiltList<MatchSimple>>> getEventMatchesSimple({
+  ///
+  /// Parameters:
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<MatchSimple>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<MatchSimple>>> getEventMatchesSimple({ 
     required String eventKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -258,8 +298,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/matches/simple'
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/matches/simple'.replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -280,12 +319,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -299,13 +335,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<MatchSimple>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<MatchSimple>>(
@@ -320,10 +357,22 @@ class MatchApi {
     );
   }
 
+  /// getMatch
+  /// Gets a &#x60;Match&#x60; object for the given match key.
   ///
+  /// Parameters:
+  /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Gets a `Match` object for the given match key.
-  Future<Response<Match>> getMatch({
+  /// Returns a [Future] containing a [Response] with a [Match] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<Match>> getMatch({ 
     required String matchKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -333,8 +382,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/match/{match_key}'
-        .replaceAll('{' r'match_key' '}', matchKey.toString());
+    final _path = r'/match/{match_key}'.replaceAll('{' r'match_key' '}', matchKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -355,12 +403,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -374,13 +419,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as Match;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<Match>(
@@ -395,10 +441,22 @@ class MatchApi {
     );
   }
 
+  /// getMatchSimple
+  /// Gets a short-form &#x60;Match&#x60; object for the given match key.
   ///
+  /// Parameters:
+  /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Gets a short-form `Match` object for the given match key.
-  Future<Response<MatchSimple>> getMatchSimple({
+  /// Returns a [Future] containing a [Response] with a [MatchSimple] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<MatchSimple>> getMatchSimple({ 
     required String matchKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -408,8 +466,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/match/{match_key}/simple'
-        .replaceAll('{' r'match_key' '}', matchKey.toString());
+    final _path = r'/match/{match_key}/simple'.replaceAll('{' r'match_key' '}', matchKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -430,12 +487,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -449,13 +503,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as MatchSimple;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<MatchSimple>(
@@ -470,10 +525,22 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getMatchTimeseries
   /// Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
-  Future<Response<BuiltList<JsonObject>>> getMatchTimeseries({
+  ///
+  /// Parameters:
+  /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<JsonObject>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<JsonObject>>> getMatchTimeseries({ 
     required String matchKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -483,8 +550,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/match/{match_key}/timeseries'
-        .replaceAll('{' r'match_key' '}', matchKey.toString());
+    final _path = r'/match/{match_key}/timeseries'.replaceAll('{' r'match_key' '}', matchKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -505,12 +571,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -524,13 +587,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<JsonObject>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<JsonObject>>(
@@ -545,10 +609,22 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getMatchZebra
   /// Gets Zebra MotionWorks data for a Match for the given match key.
-  Future<Response<Zebra>> getMatchZebra({
+  ///
+  /// Parameters:
+  /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [Zebra] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<Zebra>> getMatchZebra({ 
     required String matchKey,
     String? ifModifiedSince,
     CancelToken? cancelToken,
@@ -558,8 +634,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/match/{match_key}/zebra_motionworks'
-        .replaceAll('{' r'match_key' '}', matchKey.toString());
+    final _path = r'/match/{match_key}/zebra_motionworks'.replaceAll('{' r'match_key' '}', matchKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -580,12 +655,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -599,13 +671,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as Zebra;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<Zebra>(
@@ -620,10 +693,23 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getTeamEventMatches
   /// Gets a list of matches for the given team and event.
-  Future<Response<BuiltList<Match>>> getTeamEventMatches({
+  ///
+  /// Parameters:
+  /// * [teamKey] - TBA Team Key, eg `frc254`
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<Match>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<Match>>> getTeamEventMatches({ 
     required String teamKey,
     required String eventKey,
     String? ifModifiedSince,
@@ -634,9 +720,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/event/{event_key}/matches'
-        .replaceAll('{' r'team_key' '}', teamKey.toString())
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/team/{team_key}/event/{event_key}/matches'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -657,12 +741,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -676,13 +757,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Match>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<Match>>(
@@ -697,10 +779,23 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getTeamEventMatchesKeys
   /// Gets a list of match keys for matches for the given team and event.
-  Future<Response<BuiltList<String>>> getTeamEventMatchesKeys({
+  ///
+  /// Parameters:
+  /// * [teamKey] - TBA Team Key, eg `frc254`
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<String>>> getTeamEventMatchesKeys({ 
     required String teamKey,
     required String eventKey,
     String? ifModifiedSince,
@@ -711,9 +806,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/event/{event_key}/matches/keys'
-        .replaceAll('{' r'team_key' '}', teamKey.toString())
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/team/{team_key}/event/{event_key}/matches/keys'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -734,12 +827,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -753,13 +843,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -774,10 +865,23 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getTeamEventMatchesSimple
   /// Gets a short-form list of matches for the given team and event.
-  Future<Response<BuiltList<Match>>> getTeamEventMatchesSimple({
+  ///
+  /// Parameters:
+  /// * [teamKey] - TBA Team Key, eg `frc254`
+  /// * [eventKey] - TBA Event Key, eg `2016nytr`
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<Match>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<Match>>> getTeamEventMatchesSimple({ 
     required String teamKey,
     required String eventKey,
     String? ifModifiedSince,
@@ -788,9 +892,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/event/{event_key}/matches/simple'
-        .replaceAll('{' r'team_key' '}', teamKey.toString())
-        .replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/team/{team_key}/event/{event_key}/matches/simple'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -811,12 +913,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -830,13 +929,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Match>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<Match>>(
@@ -851,10 +951,23 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getTeamMatchesByYear
   /// Gets a list of matches for the given team and year.
-  Future<Response<BuiltList<Match>>> getTeamMatchesByYear({
+  ///
+  /// Parameters:
+  /// * [teamKey] - TBA Team Key, eg `frc254`
+  /// * [year] - Competition Year (or Season). Must be 4 digits.
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<Match>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<Match>>> getTeamMatchesByYear({ 
     required String teamKey,
     required int year,
     String? ifModifiedSince,
@@ -865,9 +978,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/matches/{year}'
-        .replaceAll('{' r'team_key' '}', teamKey.toString())
-        .replaceAll('{' r'year' '}', year.toString());
+    final _path = r'/team/{team_key}/matches/{year}'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -888,12 +999,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -907,13 +1015,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Match>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<Match>>(
@@ -928,10 +1037,23 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getTeamMatchesByYearKeys
   /// Gets a list of match keys for matches for the given team and year.
-  Future<Response<BuiltList<String>>> getTeamMatchesByYearKeys({
+  ///
+  /// Parameters:
+  /// * [teamKey] - TBA Team Key, eg `frc254`
+  /// * [year] - Competition Year (or Season). Must be 4 digits.
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<String>>> getTeamMatchesByYearKeys({ 
     required String teamKey,
     required int year,
     String? ifModifiedSince,
@@ -942,9 +1064,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/matches/{year}/keys'
-        .replaceAll('{' r'team_key' '}', teamKey.toString())
-        .replaceAll('{' r'year' '}', year.toString());
+    final _path = r'/team/{team_key}/matches/{year}/keys'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -965,12 +1085,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -984,13 +1101,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -1005,10 +1123,23 @@ class MatchApi {
     );
   }
 
-  ///
-  ///
+  /// getTeamMatchesByYearSimple
   /// Gets a short-form list of matches for the given team and year.
-  Future<Response<BuiltList<MatchSimple>>> getTeamMatchesByYearSimple({
+  ///
+  /// Parameters:
+  /// * [teamKey] - TBA Team Key, eg `frc254`
+  /// * [year] - Competition Year (or Season). Must be 4 digits.
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<MatchSimple>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<MatchSimple>>> getTeamMatchesByYearSimple({ 
     required String teamKey,
     required int year,
     String? ifModifiedSince,
@@ -1019,9 +1150,7 @@ class MatchApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/matches/{year}/simple'
-        .replaceAll('{' r'team_key' '}', teamKey.toString())
-        .replaceAll('{' r'year' '}', year.toString());
+    final _path = r'/team/{team_key}/matches/{year}/simple'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1042,12 +1171,9 @@ class MatchApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1061,13 +1187,14 @@ class MatchApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<MatchSimple>;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<MatchSimple>>(
@@ -1081,4 +1208,5 @@ class MatchApi {
       extra: _response.extra,
     );
   }
+
 }

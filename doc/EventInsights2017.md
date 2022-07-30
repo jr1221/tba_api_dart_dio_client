@@ -28,18 +28,18 @@ Name | Type | Description | Notes
 **averageTakeoffPointsTeleop** | **double** | Average takeoff points scored during teleop. | 
 **averageWinMargin** | **double** | Average margin of victory. | 
 **averageWinScore** | **double** | Average winning score. | 
-**highKpa** | **BuiltList<String>** | An array with three values, kPa scored, match key from the match with the high kPa, and the name of the match | 
-**highScore** | **BuiltList<String>** | An array with three values, high score, match key from the match with the high score, and the name of the match | 
-**kpaAchieved** | **BuiltList<double>** | An array with three values, number of times kPa bonus achieved, number of opportunities to bonus, and percentage. | 
-**mobilityCounts** | **BuiltList<double>** | An array with three values, number of times mobility bonus achieved, number of opportunities to bonus, and percentage. | 
-**rotor1Engaged** | **BuiltList<double>** | An array with three values, number of times rotor 1 engaged, number of opportunities to engage, and percentage. | 
-**rotor1EngagedAuto** | **BuiltList<double>** | An array with three values, number of times rotor 1 engaged in auto, number of opportunities to engage in auto, and percentage. | 
-**rotor2Engaged** | **BuiltList<double>** | An array with three values, number of times rotor 2 engaged, number of opportunities to engage, and percentage. | 
-**rotor2EngagedAuto** | **BuiltList<double>** | An array with three values, number of times rotor 2 engaged in auto, number of opportunities to engage in auto, and percentage. | 
-**rotor3Engaged** | **BuiltList<double>** | An array with three values, number of times rotor 3 engaged, number of opportunities to engage, and percentage. | 
-**rotor4Engaged** | **BuiltList<double>** | An array with three values, number of times rotor 4 engaged, number of opportunities to engage, and percentage. | 
-**takeoffCounts** | **BuiltList<double>** | An array with three values, number of times takeoff was counted, number of opportunities to takeoff, and percentage. | 
-**unicornMatches** | **BuiltList<double>** | An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage. | 
+**highKpa** | **BuiltList&lt;String&gt;** | An array with three values, kPa scored, match key from the match with the high kPa, and the name of the match | 
+**highScore** | **BuiltList&lt;String&gt;** | An array with three values, high score, match key from the match with the high score, and the name of the match | 
+**kpaAchieved** | **BuiltList&lt;double&gt;** | An array with three values, number of times kPa bonus achieved, number of opportunities to bonus, and percentage. | 
+**mobilityCounts** | **BuiltList&lt;double&gt;** | An array with three values, number of times mobility bonus achieved, number of opportunities to bonus, and percentage. | 
+**rotor1Engaged** | **BuiltList&lt;double&gt;** | An array with three values, number of times rotor 1 engaged, number of opportunities to engage, and percentage. | 
+**rotor1EngagedAuto** | **BuiltList&lt;double&gt;** | An array with three values, number of times rotor 1 engaged in auto, number of opportunities to engage in auto, and percentage. | 
+**rotor2Engaged** | **BuiltList&lt;double&gt;** | An array with three values, number of times rotor 2 engaged, number of opportunities to engage, and percentage. | 
+**rotor2EngagedAuto** | **BuiltList&lt;double&gt;** | An array with three values, number of times rotor 2 engaged in auto, number of opportunities to engage in auto, and percentage. | 
+**rotor3Engaged** | **BuiltList&lt;double&gt;** | An array with three values, number of times rotor 3 engaged, number of opportunities to engage, and percentage. | 
+**rotor4Engaged** | **BuiltList&lt;double&gt;** | An array with three values, number of times rotor 4 engaged, number of opportunities to engage, and percentage. | 
+**takeoffCounts** | **BuiltList&lt;double&gt;** | An array with three values, number of times takeoff was counted, number of opportunities to takeoff, and percentage. | 
+**unicornMatches** | **BuiltList&lt;double&gt;** | An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

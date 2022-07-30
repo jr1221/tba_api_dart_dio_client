@@ -14,7 +14,7 @@ class _$MatchScoreBreakdown2020 extends MatchScoreBreakdown2020 {
 
   factory _$MatchScoreBreakdown2020(
           [void Function(MatchScoreBreakdown2020Builder)? updates]) =>
-      (new MatchScoreBreakdown2020Builder()..update(updates)).build();
+      (new MatchScoreBreakdown2020Builder()..update(updates))._build();
 
   _$MatchScoreBreakdown2020._({this.blue, this.red}) : super._();
 
@@ -42,7 +42,7 @@ class _$MatchScoreBreakdown2020 extends MatchScoreBreakdown2020 {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('MatchScoreBreakdown2020')
+    return (newBuiltValueToStringHelper(r'MatchScoreBreakdown2020')
           ..add('blue', blue)
           ..add('red', red))
         .toString();
@@ -65,7 +65,7 @@ class MatchScoreBreakdown2020Builder
   set red(MatchScoreBreakdown2020AllianceBuilder? red) => _$this._red = red;
 
   MatchScoreBreakdown2020Builder() {
-    MatchScoreBreakdown2020._initializeBuilder(this);
+    MatchScoreBreakdown2020._defaults(this);
   }
 
   MatchScoreBreakdown2020Builder get _$this {
@@ -90,7 +90,9 @@ class MatchScoreBreakdown2020Builder
   }
 
   @override
-  _$MatchScoreBreakdown2020 build() {
+  MatchScoreBreakdown2020 build() => _build();
+
+  _$MatchScoreBreakdown2020 _build() {
     _$MatchScoreBreakdown2020 _$result;
     try {
       _$result = _$v ??
@@ -105,7 +107,7 @@ class MatchScoreBreakdown2020Builder
         _red?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'MatchScoreBreakdown2020', _$failedField, e.toString());
+            r'MatchScoreBreakdown2020', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -114,4 +116,4 @@ class MatchScoreBreakdown2020Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

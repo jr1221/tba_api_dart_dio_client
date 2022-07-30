@@ -9,20 +9,20 @@ All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getEventMatchTimeseries**](MatchApi.md#geteventmatchtimeseries) | **get** /event/{event_key}/matches/timeseries | 
-[**getEventMatches**](MatchApi.md#geteventmatches) | **get** /event/{event_key}/matches | 
-[**getEventMatchesKeys**](MatchApi.md#geteventmatcheskeys) | **get** /event/{event_key}/matches/keys | 
-[**getEventMatchesSimple**](MatchApi.md#geteventmatchessimple) | **get** /event/{event_key}/matches/simple | 
-[**getMatch**](MatchApi.md#getmatch) | **get** /match/{match_key} | 
-[**getMatchSimple**](MatchApi.md#getmatchsimple) | **get** /match/{match_key}/simple | 
-[**getMatchTimeseries**](MatchApi.md#getmatchtimeseries) | **get** /match/{match_key}/timeseries | 
-[**getMatchZebra**](MatchApi.md#getmatchzebra) | **get** /match/{match_key}/zebra_motionworks | 
-[**getTeamEventMatches**](MatchApi.md#getteameventmatches) | **get** /team/{team_key}/event/{event_key}/matches | 
-[**getTeamEventMatchesKeys**](MatchApi.md#getteameventmatcheskeys) | **get** /team/{team_key}/event/{event_key}/matches/keys | 
-[**getTeamEventMatchesSimple**](MatchApi.md#getteameventmatchessimple) | **get** /team/{team_key}/event/{event_key}/matches/simple | 
-[**getTeamMatchesByYear**](MatchApi.md#getteammatchesbyyear) | **get** /team/{team_key}/matches/{year} | 
-[**getTeamMatchesByYearKeys**](MatchApi.md#getteammatchesbyyearkeys) | **get** /team/{team_key}/matches/{year}/keys | 
-[**getTeamMatchesByYearSimple**](MatchApi.md#getteammatchesbyyearsimple) | **get** /team/{team_key}/matches/{year}/simple | 
+[**getEventMatchTimeseries**](MatchApi.md#geteventmatchtimeseries) | **GET** /event/{event_key}/matches/timeseries | 
+[**getEventMatches**](MatchApi.md#geteventmatches) | **GET** /event/{event_key}/matches | 
+[**getEventMatchesKeys**](MatchApi.md#geteventmatcheskeys) | **GET** /event/{event_key}/matches/keys | 
+[**getEventMatchesSimple**](MatchApi.md#geteventmatchessimple) | **GET** /event/{event_key}/matches/simple | 
+[**getMatch**](MatchApi.md#getmatch) | **GET** /match/{match_key} | 
+[**getMatchSimple**](MatchApi.md#getmatchsimple) | **GET** /match/{match_key}/simple | 
+[**getMatchTimeseries**](MatchApi.md#getmatchtimeseries) | **GET** /match/{match_key}/timeseries | 
+[**getMatchZebra**](MatchApi.md#getmatchzebra) | **GET** /match/{match_key}/zebra_motionworks | 
+[**getTeamEventMatches**](MatchApi.md#getteameventmatches) | **GET** /team/{team_key}/event/{event_key}/matches | 
+[**getTeamEventMatchesKeys**](MatchApi.md#getteameventmatcheskeys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
+[**getTeamEventMatchesSimple**](MatchApi.md#getteameventmatchessimple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
+[**getTeamMatchesByYear**](MatchApi.md#getteammatchesbyyear) | **GET** /team/{team_key}/matches/{year} | 
+[**getTeamMatchesByYearKeys**](MatchApi.md#getteammatchesbyyearkeys) | **GET** /team/{team_key}/matches/{year}/keys | 
+[**getTeamMatchesByYearSimple**](MatchApi.md#getteammatchesbyyearsimple) | **GET** /team/{team_key}/matches/{year}/simple | 
 
 
 # **getEventMatchTimeseries**
@@ -32,7 +32,7 @@ Method | HTTP request | Description
 
 Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -40,14 +40,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatchTimeseries(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatchTimeseries(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getEventMatchTimeseries: $e\n');
 }
 ```
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 Gets a list of matches for the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -89,14 +89,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatches(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatches(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getEventMatches: $e\n');
 }
 ```
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 Gets a list of match keys for the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -138,14 +138,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatchesKeys(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatchesKeys(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getEventMatchesKeys: $e\n');
 }
 ```
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of matches for the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -187,14 +187,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatchesSimple(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatchesSimple(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getEventMatchesSimple: $e\n');
 }
 ```
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<MatchSimple>**](MatchSimple.md)
+[**BuiltList&lt;MatchSimple&gt;**](MatchSimple.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 Gets a `Match` object for the given match key.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -236,14 +236,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getMatch(matchKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getMatch(matchKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getMatch: $e\n');
 }
 ```
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form `Match` object for the given match key.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -285,14 +285,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getMatchSimple(matchKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getMatchSimple(matchKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getMatchSimple: $e\n');
 }
 ```
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -334,14 +334,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getMatchTimeseries(matchKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getMatchTimeseries(matchKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getMatchTimeseries: $e\n');
 }
 ```
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<JsonObject>**](JsonObject.md)
+[**BuiltList&lt;JsonObject&gt;**](JsonObject.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 Gets Zebra MotionWorks data for a Match for the given match key.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -383,14 +383,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String matchKey = matchKey_example; // String | TBA Match Key, eg `2016nytr_qm1`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getMatchZebra(matchKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getMatchZebra(matchKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getMatchZebra: $e\n');
 }
 ```
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 Gets a list of matches for the given team and event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -432,15 +432,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getTeamEventMatches: $e\n');
 }
 ```
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 Gets a list of match keys for matches for the given team and event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -483,15 +483,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getTeamEventMatchesKeys: $e\n');
 }
 ```
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of matches for the given team and event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -534,15 +534,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getTeamEventMatchesSimple: $e\n');
 }
 ```
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 Gets a list of matches for the given team and year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -585,15 +585,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamMatchesByYear(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamMatchesByYear(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getTeamMatchesByYear: $e\n');
 }
 ```
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -628,7 +628,7 @@ Name | Type | Description  | Notes
 
 Gets a list of match keys for matches for the given team and year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -636,15 +636,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getTeamMatchesByYearKeys: $e\n');
 }
 ```
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of matches for the given team and year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -687,15 +687,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MatchApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getMatchApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MatchApi->getTeamMatchesByYearSimple: $e\n');
 }
 ```
@@ -710,7 +710,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<MatchSimple>**](MatchSimple.md)
+[**BuiltList&lt;MatchSimple&gt;**](MatchSimple.md)
 
 ### Authorization
 

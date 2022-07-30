@@ -72,7 +72,7 @@ class _$MatchTimeseries2018 extends MatchTimeseries2018 {
 
   factory _$MatchTimeseries2018(
           [void Function(MatchTimeseries2018Builder)? updates]) =>
-      (new MatchTimeseries2018Builder()..update(updates)).build();
+      (new MatchTimeseries2018Builder()..update(updates))._build();
 
   _$MatchTimeseries2018._(
       {this.eventKey,
@@ -198,7 +198,7 @@ class _$MatchTimeseries2018 extends MatchTimeseries2018 {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('MatchTimeseries2018')
+    return (newBuiltValueToStringHelper(r'MatchTimeseries2018')
           ..add('eventKey', eventKey)
           ..add('matchId', matchId)
           ..add('mode', mode)
@@ -387,7 +387,7 @@ class MatchTimeseries2018Builder
       _$this._redSwitchOwned = redSwitchOwned;
 
   MatchTimeseries2018Builder() {
-    MatchTimeseries2018._initializeBuilder(this);
+    MatchTimeseries2018._defaults(this);
   }
 
   MatchTimeseries2018Builder get _$this {
@@ -441,7 +441,9 @@ class MatchTimeseries2018Builder
   }
 
   @override
-  _$MatchTimeseries2018 build() {
+  MatchTimeseries2018 build() => _build();
+
+  _$MatchTimeseries2018 _build() {
     final _$result = _$v ??
         new _$MatchTimeseries2018._(
             eventKey: eventKey,
@@ -480,4 +482,4 @@ class MatchTimeseries2018Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -19,7 +19,7 @@ class _$Award extends Award {
   final int year;
 
   factory _$Award([void Function(AwardBuilder)? updates]) =>
-      (new AwardBuilder()..update(updates)).build();
+      (new AwardBuilder()..update(updates))._build();
 
   _$Award._(
       {required this.name,
@@ -28,12 +28,12 @@ class _$Award extends Award {
       required this.recipientList,
       required this.year})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, 'Award', 'name');
-    BuiltValueNullFieldError.checkNotNull(awardType, 'Award', 'awardType');
-    BuiltValueNullFieldError.checkNotNull(eventKey, 'Award', 'eventKey');
+    BuiltValueNullFieldError.checkNotNull(name, r'Award', 'name');
+    BuiltValueNullFieldError.checkNotNull(awardType, r'Award', 'awardType');
+    BuiltValueNullFieldError.checkNotNull(eventKey, r'Award', 'eventKey');
     BuiltValueNullFieldError.checkNotNull(
-        recipientList, 'Award', 'recipientList');
-    BuiltValueNullFieldError.checkNotNull(year, 'Award', 'year');
+        recipientList, r'Award', 'recipientList');
+    BuiltValueNullFieldError.checkNotNull(year, r'Award', 'year');
   }
 
   @override
@@ -66,7 +66,7 @@ class _$Award extends Award {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Award')
+    return (newBuiltValueToStringHelper(r'Award')
           ..add('name', name)
           ..add('awardType', awardType)
           ..add('eventKey', eventKey)
@@ -102,7 +102,7 @@ class AwardBuilder implements Builder<Award, AwardBuilder> {
   set year(int? year) => _$this._year = year;
 
   AwardBuilder() {
-    Award._initializeBuilder(this);
+    Award._defaults(this);
   }
 
   AwardBuilder get _$this {
@@ -130,20 +130,22 @@ class AwardBuilder implements Builder<Award, AwardBuilder> {
   }
 
   @override
-  _$Award build() {
+  Award build() => _build();
+
+  _$Award _build() {
     _$Award _$result;
     try {
       _$result = _$v ??
           new _$Award._(
               name:
-                  BuiltValueNullFieldError.checkNotNull(name, 'Award', 'name'),
+                  BuiltValueNullFieldError.checkNotNull(name, r'Award', 'name'),
               awardType: BuiltValueNullFieldError.checkNotNull(
-                  awardType, 'Award', 'awardType'),
+                  awardType, r'Award', 'awardType'),
               eventKey: BuiltValueNullFieldError.checkNotNull(
-                  eventKey, 'Award', 'eventKey'),
+                  eventKey, r'Award', 'eventKey'),
               recipientList: recipientList.build(),
-              year:
-                  BuiltValueNullFieldError.checkNotNull(year, 'Award', 'year'));
+              year: BuiltValueNullFieldError.checkNotNull(
+                  year, r'Award', 'year'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -151,7 +153,7 @@ class AwardBuilder implements Builder<Award, AwardBuilder> {
         recipientList.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'Award', _$failedField, e.toString());
+            r'Award', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -160,4 +162,4 @@ class AwardBuilder implements Builder<Award, AwardBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

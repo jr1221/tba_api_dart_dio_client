@@ -120,5 +120,6 @@ void main() {
     test('to test the property `homeChampionship`', () async {
       // TODO
     });
+
   });
 }

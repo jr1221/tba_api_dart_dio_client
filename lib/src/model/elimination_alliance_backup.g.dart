@@ -14,7 +14,7 @@ class _$EliminationAllianceBackup extends EliminationAllianceBackup {
 
   factory _$EliminationAllianceBackup(
           [void Function(EliminationAllianceBackupBuilder)? updates]) =>
-      (new EliminationAllianceBackupBuilder()..update(updates)).build();
+      (new EliminationAllianceBackupBuilder()..update(updates))._build();
 
   _$EliminationAllianceBackup._({this.in_, this.out_}) : super._();
 
@@ -42,7 +42,7 @@ class _$EliminationAllianceBackup extends EliminationAllianceBackup {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('EliminationAllianceBackup')
+    return (newBuiltValueToStringHelper(r'EliminationAllianceBackup')
           ..add('in_', in_)
           ..add('out_', out_))
         .toString();
@@ -63,7 +63,7 @@ class EliminationAllianceBackupBuilder
   set out_(String? out_) => _$this._out_ = out_;
 
   EliminationAllianceBackupBuilder() {
-    EliminationAllianceBackup._initializeBuilder(this);
+    EliminationAllianceBackup._defaults(this);
   }
 
   EliminationAllianceBackupBuilder get _$this {
@@ -88,7 +88,9 @@ class EliminationAllianceBackupBuilder
   }
 
   @override
-  _$EliminationAllianceBackup build() {
+  EliminationAllianceBackup build() => _build();
+
+  _$EliminationAllianceBackup _build() {
     final _$result =
         _$v ?? new _$EliminationAllianceBackup._(in_: in_, out_: out_);
     replace(_$result);
@@ -96,4 +98,4 @@ class EliminationAllianceBackupBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

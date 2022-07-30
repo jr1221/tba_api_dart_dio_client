@@ -24,14 +24,14 @@ class _$EventSimple extends EventSimple {
   @override
   final String? country;
   @override
-  final DateTime startDate;
+  final Date startDate;
   @override
-  final DateTime endDate;
+  final Date endDate;
   @override
   final int year;
 
   factory _$EventSimple([void Function(EventSimpleBuilder)? updates]) =>
-      (new EventSimpleBuilder()..update(updates)).build();
+      (new EventSimpleBuilder()..update(updates))._build();
 
   _$EventSimple._(
       {required this.key,
@@ -46,16 +46,16 @@ class _$EventSimple extends EventSimple {
       required this.endDate,
       required this.year})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(key, 'EventSimple', 'key');
-    BuiltValueNullFieldError.checkNotNull(name, 'EventSimple', 'name');
+    BuiltValueNullFieldError.checkNotNull(key, r'EventSimple', 'key');
+    BuiltValueNullFieldError.checkNotNull(name, r'EventSimple', 'name');
     BuiltValueNullFieldError.checkNotNull(
-        eventCode, 'EventSimple', 'eventCode');
+        eventCode, r'EventSimple', 'eventCode');
     BuiltValueNullFieldError.checkNotNull(
-        eventType, 'EventSimple', 'eventType');
+        eventType, r'EventSimple', 'eventType');
     BuiltValueNullFieldError.checkNotNull(
-        startDate, 'EventSimple', 'startDate');
-    BuiltValueNullFieldError.checkNotNull(endDate, 'EventSimple', 'endDate');
-    BuiltValueNullFieldError.checkNotNull(year, 'EventSimple', 'year');
+        startDate, r'EventSimple', 'startDate');
+    BuiltValueNullFieldError.checkNotNull(endDate, r'EventSimple', 'endDate');
+    BuiltValueNullFieldError.checkNotNull(year, r'EventSimple', 'year');
   }
 
   @override
@@ -108,7 +108,7 @@ class _$EventSimple extends EventSimple {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('EventSimple')
+    return (newBuiltValueToStringHelper(r'EventSimple')
           ..add('key', key)
           ..add('name', name)
           ..add('eventCode', eventCode)
@@ -160,20 +160,20 @@ class EventSimpleBuilder implements Builder<EventSimple, EventSimpleBuilder> {
   String? get country => _$this._country;
   set country(String? country) => _$this._country = country;
 
-  DateTime? _startDate;
-  DateTime? get startDate => _$this._startDate;
-  set startDate(DateTime? startDate) => _$this._startDate = startDate;
+  Date? _startDate;
+  Date? get startDate => _$this._startDate;
+  set startDate(Date? startDate) => _$this._startDate = startDate;
 
-  DateTime? _endDate;
-  DateTime? get endDate => _$this._endDate;
-  set endDate(DateTime? endDate) => _$this._endDate = endDate;
+  Date? _endDate;
+  Date? get endDate => _$this._endDate;
+  set endDate(Date? endDate) => _$this._endDate = endDate;
 
   int? _year;
   int? get year => _$this._year;
   set year(int? year) => _$this._year = year;
 
   EventSimpleBuilder() {
-    EventSimple._initializeBuilder(this);
+    EventSimple._defaults(this);
   }
 
   EventSimpleBuilder get _$this {
@@ -207,29 +207,31 @@ class EventSimpleBuilder implements Builder<EventSimple, EventSimpleBuilder> {
   }
 
   @override
-  _$EventSimple build() {
+  EventSimple build() => _build();
+
+  _$EventSimple _build() {
     _$EventSimple _$result;
     try {
       _$result = _$v ??
           new _$EventSimple._(
               key: BuiltValueNullFieldError.checkNotNull(
-                  key, 'EventSimple', 'key'),
+                  key, r'EventSimple', 'key'),
               name: BuiltValueNullFieldError.checkNotNull(
-                  name, 'EventSimple', 'name'),
+                  name, r'EventSimple', 'name'),
               eventCode: BuiltValueNullFieldError.checkNotNull(
-                  eventCode, 'EventSimple', 'eventCode'),
+                  eventCode, r'EventSimple', 'eventCode'),
               eventType: BuiltValueNullFieldError.checkNotNull(
-                  eventType, 'EventSimple', 'eventType'),
+                  eventType, r'EventSimple', 'eventType'),
               district: _district?.build(),
               city: city,
               stateProv: stateProv,
               country: country,
               startDate: BuiltValueNullFieldError.checkNotNull(
-                  startDate, 'EventSimple', 'startDate'),
+                  startDate, r'EventSimple', 'startDate'),
               endDate: BuiltValueNullFieldError.checkNotNull(
-                  endDate, 'EventSimple', 'endDate'),
+                  endDate, r'EventSimple', 'endDate'),
               year: BuiltValueNullFieldError.checkNotNull(
-                  year, 'EventSimple', 'year'));
+                  year, r'EventSimple', 'year'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -237,7 +239,7 @@ class EventSimpleBuilder implements Builder<EventSimple, EventSimpleBuilder> {
         _district?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'EventSimple', _$failedField, e.toString());
+            r'EventSimple', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -246,4 +248,4 @@ class EventSimpleBuilder implements Builder<EventSimple, EventSimpleBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

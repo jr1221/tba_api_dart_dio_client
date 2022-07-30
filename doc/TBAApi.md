@@ -9,7 +9,7 @@ All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getStatus**](TBAApi.md#getstatus) | **get** /status | 
+[**getStatus**](TBAApi.md#getstatus) | **GET** /status | 
 
 
 # **getStatus**
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Returns API status, and TBA status information.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -27,13 +27,13 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new TBAApi();
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getTBAApi();
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getStatus(ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getStatus(ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling TBAApi->getStatus: $e\n');
 }
 ```

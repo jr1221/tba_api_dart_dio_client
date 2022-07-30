@@ -25,7 +25,7 @@ class _$TeamEventStatus extends TeamEventStatus {
   final String? lastMatchKey;
 
   factory _$TeamEventStatus([void Function(TeamEventStatusBuilder)? updates]) =>
-      (new TeamEventStatusBuilder()..update(updates)).build();
+      (new TeamEventStatusBuilder()..update(updates))._build();
 
   _$TeamEventStatus._(
       {this.qual,
@@ -78,7 +78,7 @@ class _$TeamEventStatus extends TeamEventStatus {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('TeamEventStatus')
+    return (newBuiltValueToStringHelper(r'TeamEventStatus')
           ..add('qual', qual)
           ..add('alliance', alliance)
           ..add('playoff', playoff)
@@ -136,7 +136,7 @@ class TeamEventStatusBuilder
   set lastMatchKey(String? lastMatchKey) => _$this._lastMatchKey = lastMatchKey;
 
   TeamEventStatusBuilder() {
-    TeamEventStatus._initializeBuilder(this);
+    TeamEventStatus._defaults(this);
   }
 
   TeamEventStatusBuilder get _$this {
@@ -167,7 +167,9 @@ class TeamEventStatusBuilder
   }
 
   @override
-  _$TeamEventStatus build() {
+  TeamEventStatus build() => _build();
+
+  _$TeamEventStatus _build() {
     _$TeamEventStatus _$result;
     try {
       _$result = _$v ??
@@ -191,7 +193,7 @@ class TeamEventStatusBuilder
         _playoff?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'TeamEventStatus', _$failedField, e.toString());
+            r'TeamEventStatus', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -200,4 +202,4 @@ class TeamEventStatusBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

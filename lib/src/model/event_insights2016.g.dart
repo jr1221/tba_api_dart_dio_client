@@ -58,7 +58,7 @@ class _$EventInsights2016 extends EventInsights2016 {
 
   factory _$EventInsights2016(
           [void Function(EventInsights2016Builder)? updates]) =>
-      (new EventInsights2016Builder()..update(updates)).build();
+      (new EventInsights2016Builder()..update(updates))._build();
 
   _$EventInsights2016._(
       {required this.lowBar,
@@ -87,52 +87,52 @@ class _$EventInsights2016 extends EventInsights2016 {
       required this.highScore})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        lowBar, 'EventInsights2016', 'lowBar');
+        lowBar, r'EventInsights2016', 'lowBar');
     BuiltValueNullFieldError.checkNotNull(
-        aChevalDeFrise, 'EventInsights2016', 'aChevalDeFrise');
+        aChevalDeFrise, r'EventInsights2016', 'aChevalDeFrise');
     BuiltValueNullFieldError.checkNotNull(
-        aPortcullis, 'EventInsights2016', 'aPortcullis');
+        aPortcullis, r'EventInsights2016', 'aPortcullis');
     BuiltValueNullFieldError.checkNotNull(
-        bRamparts, 'EventInsights2016', 'bRamparts');
-    BuiltValueNullFieldError.checkNotNull(bMoat, 'EventInsights2016', 'bMoat');
+        bRamparts, r'EventInsights2016', 'bRamparts');
+    BuiltValueNullFieldError.checkNotNull(bMoat, r'EventInsights2016', 'bMoat');
     BuiltValueNullFieldError.checkNotNull(
-        cSallyPort, 'EventInsights2016', 'cSallyPort');
+        cSallyPort, r'EventInsights2016', 'cSallyPort');
     BuiltValueNullFieldError.checkNotNull(
-        cDrawbridge, 'EventInsights2016', 'cDrawbridge');
+        cDrawbridge, r'EventInsights2016', 'cDrawbridge');
     BuiltValueNullFieldError.checkNotNull(
-        dRoughTerrain, 'EventInsights2016', 'dRoughTerrain');
+        dRoughTerrain, r'EventInsights2016', 'dRoughTerrain');
     BuiltValueNullFieldError.checkNotNull(
-        dRockWall, 'EventInsights2016', 'dRockWall');
+        dRockWall, r'EventInsights2016', 'dRockWall');
     BuiltValueNullFieldError.checkNotNull(
-        averageHighGoals, 'EventInsights2016', 'averageHighGoals');
+        averageHighGoals, r'EventInsights2016', 'averageHighGoals');
     BuiltValueNullFieldError.checkNotNull(
-        averageLowGoals, 'EventInsights2016', 'averageLowGoals');
+        averageLowGoals, r'EventInsights2016', 'averageLowGoals');
     BuiltValueNullFieldError.checkNotNull(
-        breaches, 'EventInsights2016', 'breaches');
+        breaches, r'EventInsights2016', 'breaches');
     BuiltValueNullFieldError.checkNotNull(
-        scales, 'EventInsights2016', 'scales');
+        scales, r'EventInsights2016', 'scales');
     BuiltValueNullFieldError.checkNotNull(
-        challenges, 'EventInsights2016', 'challenges');
+        challenges, r'EventInsights2016', 'challenges');
     BuiltValueNullFieldError.checkNotNull(
-        captures, 'EventInsights2016', 'captures');
+        captures, r'EventInsights2016', 'captures');
     BuiltValueNullFieldError.checkNotNull(
-        averageWinScore, 'EventInsights2016', 'averageWinScore');
+        averageWinScore, r'EventInsights2016', 'averageWinScore');
     BuiltValueNullFieldError.checkNotNull(
-        averageWinMargin, 'EventInsights2016', 'averageWinMargin');
+        averageWinMargin, r'EventInsights2016', 'averageWinMargin');
     BuiltValueNullFieldError.checkNotNull(
-        averageScore, 'EventInsights2016', 'averageScore');
+        averageScore, r'EventInsights2016', 'averageScore');
     BuiltValueNullFieldError.checkNotNull(
-        averageAutoScore, 'EventInsights2016', 'averageAutoScore');
+        averageAutoScore, r'EventInsights2016', 'averageAutoScore');
     BuiltValueNullFieldError.checkNotNull(
-        averageCrossingScore, 'EventInsights2016', 'averageCrossingScore');
+        averageCrossingScore, r'EventInsights2016', 'averageCrossingScore');
     BuiltValueNullFieldError.checkNotNull(
-        averageBoulderScore, 'EventInsights2016', 'averageBoulderScore');
+        averageBoulderScore, r'EventInsights2016', 'averageBoulderScore');
     BuiltValueNullFieldError.checkNotNull(
-        averageTowerScore, 'EventInsights2016', 'averageTowerScore');
+        averageTowerScore, r'EventInsights2016', 'averageTowerScore');
     BuiltValueNullFieldError.checkNotNull(
-        averageFoulScore, 'EventInsights2016', 'averageFoulScore');
+        averageFoulScore, r'EventInsights2016', 'averageFoulScore');
     BuiltValueNullFieldError.checkNotNull(
-        highScore, 'EventInsights2016', 'highScore');
+        highScore, r'EventInsights2016', 'highScore');
   }
 
   @override
@@ -217,7 +217,7 @@ class _$EventInsights2016 extends EventInsights2016 {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('EventInsights2016')
+    return (newBuiltValueToStringHelper(r'EventInsights2016')
           ..add('lowBar', lowBar)
           ..add('aChevalDeFrise', aChevalDeFrise)
           ..add('aPortcullis', aPortcullis)
@@ -378,7 +378,7 @@ class EventInsights2016Builder
       _$this._highScore = highScore;
 
   EventInsights2016Builder() {
-    EventInsights2016._initializeBuilder(this);
+    EventInsights2016._defaults(this);
   }
 
   EventInsights2016Builder get _$this {
@@ -425,7 +425,9 @@ class EventInsights2016Builder
   }
 
   @override
-  _$EventInsights2016 build() {
+  EventInsights2016 build() => _build();
+
+  _$EventInsights2016 _build() {
     _$EventInsights2016 _$result;
     try {
       _$result = _$v ??
@@ -440,27 +442,27 @@ class EventInsights2016Builder
               dRoughTerrain: dRoughTerrain.build(),
               dRockWall: dRockWall.build(),
               averageHighGoals: BuiltValueNullFieldError.checkNotNull(
-                  averageHighGoals, 'EventInsights2016', 'averageHighGoals'),
+                  averageHighGoals, r'EventInsights2016', 'averageHighGoals'),
               averageLowGoals: BuiltValueNullFieldError.checkNotNull(
-                  averageLowGoals, 'EventInsights2016', 'averageLowGoals'),
+                  averageLowGoals, r'EventInsights2016', 'averageLowGoals'),
               breaches: breaches.build(),
               scales: scales.build(),
               challenges: challenges.build(),
               captures: captures.build(),
               averageWinScore: BuiltValueNullFieldError.checkNotNull(
-                  averageWinScore, 'EventInsights2016', 'averageWinScore'),
+                  averageWinScore, r'EventInsights2016', 'averageWinScore'),
               averageWinMargin: BuiltValueNullFieldError.checkNotNull(
-                  averageWinMargin, 'EventInsights2016', 'averageWinMargin'),
+                  averageWinMargin, r'EventInsights2016', 'averageWinMargin'),
               averageScore: BuiltValueNullFieldError.checkNotNull(
-                  averageScore, 'EventInsights2016', 'averageScore'),
+                  averageScore, r'EventInsights2016', 'averageScore'),
               averageAutoScore: BuiltValueNullFieldError.checkNotNull(
-                  averageAutoScore, 'EventInsights2016', 'averageAutoScore'),
+                  averageAutoScore, r'EventInsights2016', 'averageAutoScore'),
               averageCrossingScore: BuiltValueNullFieldError.checkNotNull(
-                  averageCrossingScore, 'EventInsights2016', 'averageCrossingScore'),
+                  averageCrossingScore, r'EventInsights2016', 'averageCrossingScore'),
               averageBoulderScore:
-                  BuiltValueNullFieldError.checkNotNull(averageBoulderScore, 'EventInsights2016', 'averageBoulderScore'),
-              averageTowerScore: BuiltValueNullFieldError.checkNotNull(averageTowerScore, 'EventInsights2016', 'averageTowerScore'),
-              averageFoulScore: BuiltValueNullFieldError.checkNotNull(averageFoulScore, 'EventInsights2016', 'averageFoulScore'),
+                  BuiltValueNullFieldError.checkNotNull(averageBoulderScore, r'EventInsights2016', 'averageBoulderScore'),
+              averageTowerScore: BuiltValueNullFieldError.checkNotNull(averageTowerScore, r'EventInsights2016', 'averageTowerScore'),
+              averageFoulScore: BuiltValueNullFieldError.checkNotNull(averageFoulScore, r'EventInsights2016', 'averageFoulScore'),
               highScore: highScore.build());
     } catch (_) {
       late String _$failedField;
@@ -497,7 +499,7 @@ class EventInsights2016Builder
         highScore.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'EventInsights2016', _$failedField, e.toString());
+            r'EventInsights2016', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -506,4 +508,4 @@ class EventInsights2016Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

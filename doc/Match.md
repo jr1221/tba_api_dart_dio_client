@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **predictedTime** | **int** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time. | [optional] 
 **postResultTime** | **int** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) when the match result was posted. | [optional] 
 **scoreBreakdown** | [**JsonObject**](.md) | Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null. | [optional] 
-**videos** | [**BuiltList<MatchVideos>**](MatchVideos.md) | Array of video objects associated with this match. | [optional] 
+**videos** | [**BuiltList&lt;MatchVideosInner&gt;**](MatchVideosInner.md) | Array of video objects associated with this match. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

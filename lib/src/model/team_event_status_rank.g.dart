@@ -12,13 +12,13 @@ class _$TeamEventStatusRank extends TeamEventStatusRank {
   @override
   final TeamEventStatusRankRanking? ranking;
   @override
-  final BuiltList<TeamEventStatusRankSortOrderInfo>? sortOrderInfo;
+  final BuiltList<TeamEventStatusRankSortOrderInfoInner>? sortOrderInfo;
   @override
   final String? status;
 
   factory _$TeamEventStatusRank(
           [void Function(TeamEventStatusRankBuilder)? updates]) =>
-      (new TeamEventStatusRankBuilder()..update(updates)).build();
+      (new TeamEventStatusRankBuilder()..update(updates))._build();
 
   _$TeamEventStatusRank._(
       {this.numTeams, this.ranking, this.sortOrderInfo, this.status})
@@ -53,7 +53,7 @@ class _$TeamEventStatusRank extends TeamEventStatusRank {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('TeamEventStatusRank')
+    return (newBuiltValueToStringHelper(r'TeamEventStatusRank')
           ..add('numTeams', numTeams)
           ..add('ranking', ranking)
           ..add('sortOrderInfo', sortOrderInfo)
@@ -76,12 +76,12 @@ class TeamEventStatusRankBuilder
   set ranking(TeamEventStatusRankRankingBuilder? ranking) =>
       _$this._ranking = ranking;
 
-  ListBuilder<TeamEventStatusRankSortOrderInfo>? _sortOrderInfo;
-  ListBuilder<TeamEventStatusRankSortOrderInfo> get sortOrderInfo =>
+  ListBuilder<TeamEventStatusRankSortOrderInfoInner>? _sortOrderInfo;
+  ListBuilder<TeamEventStatusRankSortOrderInfoInner> get sortOrderInfo =>
       _$this._sortOrderInfo ??=
-          new ListBuilder<TeamEventStatusRankSortOrderInfo>();
+          new ListBuilder<TeamEventStatusRankSortOrderInfoInner>();
   set sortOrderInfo(
-          ListBuilder<TeamEventStatusRankSortOrderInfo>? sortOrderInfo) =>
+          ListBuilder<TeamEventStatusRankSortOrderInfoInner>? sortOrderInfo) =>
       _$this._sortOrderInfo = sortOrderInfo;
 
   String? _status;
@@ -89,7 +89,7 @@ class TeamEventStatusRankBuilder
   set status(String? status) => _$this._status = status;
 
   TeamEventStatusRankBuilder() {
-    TeamEventStatusRank._initializeBuilder(this);
+    TeamEventStatusRank._defaults(this);
   }
 
   TeamEventStatusRankBuilder get _$this {
@@ -116,7 +116,9 @@ class TeamEventStatusRankBuilder
   }
 
   @override
-  _$TeamEventStatusRank build() {
+  TeamEventStatusRank build() => _build();
+
+  _$TeamEventStatusRank _build() {
     _$TeamEventStatusRank _$result;
     try {
       _$result = _$v ??
@@ -134,7 +136,7 @@ class TeamEventStatusRankBuilder
         _sortOrderInfo?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'TeamEventStatusRank', _$failedField, e.toString());
+            r'TeamEventStatusRank', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -143,4 +145,4 @@ class TeamEventStatusRankBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

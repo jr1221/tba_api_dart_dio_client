@@ -14,15 +14,15 @@ class _$APIStatusAppVersion extends APIStatusAppVersion {
 
   factory _$APIStatusAppVersion(
           [void Function(APIStatusAppVersionBuilder)? updates]) =>
-      (new APIStatusAppVersionBuilder()..update(updates)).build();
+      (new APIStatusAppVersionBuilder()..update(updates))._build();
 
   _$APIStatusAppVersion._(
       {required this.minAppVersion, required this.latestAppVersion})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        minAppVersion, 'APIStatusAppVersion', 'minAppVersion');
+        minAppVersion, r'APIStatusAppVersion', 'minAppVersion');
     BuiltValueNullFieldError.checkNotNull(
-        latestAppVersion, 'APIStatusAppVersion', 'latestAppVersion');
+        latestAppVersion, r'APIStatusAppVersion', 'latestAppVersion');
   }
 
   @override
@@ -49,7 +49,7 @@ class _$APIStatusAppVersion extends APIStatusAppVersion {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('APIStatusAppVersion')
+    return (newBuiltValueToStringHelper(r'APIStatusAppVersion')
           ..add('minAppVersion', minAppVersion)
           ..add('latestAppVersion', latestAppVersion))
         .toString();
@@ -71,7 +71,7 @@ class APIStatusAppVersionBuilder
       _$this._latestAppVersion = latestAppVersion;
 
   APIStatusAppVersionBuilder() {
-    APIStatusAppVersion._initializeBuilder(this);
+    APIStatusAppVersion._defaults(this);
   }
 
   APIStatusAppVersionBuilder get _$this {
@@ -96,16 +96,18 @@ class APIStatusAppVersionBuilder
   }
 
   @override
-  _$APIStatusAppVersion build() {
+  APIStatusAppVersion build() => _build();
+
+  _$APIStatusAppVersion _build() {
     final _$result = _$v ??
         new _$APIStatusAppVersion._(
             minAppVersion: BuiltValueNullFieldError.checkNotNull(
-                minAppVersion, 'APIStatusAppVersion', 'minAppVersion'),
+                minAppVersion, r'APIStatusAppVersion', 'minAppVersion'),
             latestAppVersion: BuiltValueNullFieldError.checkNotNull(
-                latestAppVersion, 'APIStatusAppVersion', 'latestAppVersion'));
+                latestAppVersion, r'APIStatusAppVersion', 'latestAppVersion'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

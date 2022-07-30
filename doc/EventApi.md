@@ -9,41 +9,41 @@ All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDistrictEvents**](EventApi.md#getdistrictevents) | **get** /district/{district_key}/events | 
-[**getDistrictEventsKeys**](EventApi.md#getdistricteventskeys) | **get** /district/{district_key}/events/keys | 
-[**getDistrictEventsSimple**](EventApi.md#getdistricteventssimple) | **get** /district/{district_key}/events/simple | 
-[**getEvent**](EventApi.md#getevent) | **get** /event/{event_key} | 
-[**getEventAlliances**](EventApi.md#geteventalliances) | **get** /event/{event_key}/alliances | 
-[**getEventAwards**](EventApi.md#geteventawards) | **get** /event/{event_key}/awards | 
-[**getEventDistrictPoints**](EventApi.md#geteventdistrictpoints) | **get** /event/{event_key}/district_points | 
-[**getEventInsights**](EventApi.md#geteventinsights) | **get** /event/{event_key}/insights | 
-[**getEventMatchTimeseries**](EventApi.md#geteventmatchtimeseries) | **get** /event/{event_key}/matches/timeseries | 
-[**getEventMatches**](EventApi.md#geteventmatches) | **get** /event/{event_key}/matches | 
-[**getEventMatchesKeys**](EventApi.md#geteventmatcheskeys) | **get** /event/{event_key}/matches/keys | 
-[**getEventMatchesSimple**](EventApi.md#geteventmatchessimple) | **get** /event/{event_key}/matches/simple | 
-[**getEventOPRs**](EventApi.md#geteventoprs) | **get** /event/{event_key}/oprs | 
-[**getEventPredictions**](EventApi.md#geteventpredictions) | **get** /event/{event_key}/predictions | 
-[**getEventRankings**](EventApi.md#geteventrankings) | **get** /event/{event_key}/rankings | 
-[**getEventSimple**](EventApi.md#geteventsimple) | **get** /event/{event_key}/simple | 
-[**getEventTeams**](EventApi.md#geteventteams) | **get** /event/{event_key}/teams | 
-[**getEventTeamsKeys**](EventApi.md#geteventteamskeys) | **get** /event/{event_key}/teams/keys | 
-[**getEventTeamsSimple**](EventApi.md#geteventteamssimple) | **get** /event/{event_key}/teams/simple | 
-[**getEventTeamsStatuses**](EventApi.md#geteventteamsstatuses) | **get** /event/{event_key}/teams/statuses | 
-[**getEventsByYear**](EventApi.md#geteventsbyyear) | **get** /events/{year} | 
-[**getEventsByYearKeys**](EventApi.md#geteventsbyyearkeys) | **get** /events/{year}/keys | 
-[**getEventsByYearSimple**](EventApi.md#geteventsbyyearsimple) | **get** /events/{year}/simple | 
-[**getTeamEventAwards**](EventApi.md#getteameventawards) | **get** /team/{team_key}/event/{event_key}/awards | 
-[**getTeamEventMatches**](EventApi.md#getteameventmatches) | **get** /team/{team_key}/event/{event_key}/matches | 
-[**getTeamEventMatchesKeys**](EventApi.md#getteameventmatcheskeys) | **get** /team/{team_key}/event/{event_key}/matches/keys | 
-[**getTeamEventMatchesSimple**](EventApi.md#getteameventmatchessimple) | **get** /team/{team_key}/event/{event_key}/matches/simple | 
-[**getTeamEventStatus**](EventApi.md#getteameventstatus) | **get** /team/{team_key}/event/{event_key}/status | 
-[**getTeamEvents**](EventApi.md#getteamevents) | **get** /team/{team_key}/events | 
-[**getTeamEventsByYear**](EventApi.md#getteameventsbyyear) | **get** /team/{team_key}/events/{year} | 
-[**getTeamEventsByYearKeys**](EventApi.md#getteameventsbyyearkeys) | **get** /team/{team_key}/events/{year}/keys | 
-[**getTeamEventsByYearSimple**](EventApi.md#getteameventsbyyearsimple) | **get** /team/{team_key}/events/{year}/simple | 
-[**getTeamEventsKeys**](EventApi.md#getteameventskeys) | **get** /team/{team_key}/events/keys | 
-[**getTeamEventsSimple**](EventApi.md#getteameventssimple) | **get** /team/{team_key}/events/simple | 
-[**getTeamEventsStatusesByYear**](EventApi.md#getteameventsstatusesbyyear) | **get** /team/{team_key}/events/{year}/statuses | 
+[**getDistrictEvents**](EventApi.md#getdistrictevents) | **GET** /district/{district_key}/events | 
+[**getDistrictEventsKeys**](EventApi.md#getdistricteventskeys) | **GET** /district/{district_key}/events/keys | 
+[**getDistrictEventsSimple**](EventApi.md#getdistricteventssimple) | **GET** /district/{district_key}/events/simple | 
+[**getEvent**](EventApi.md#getevent) | **GET** /event/{event_key} | 
+[**getEventAlliances**](EventApi.md#geteventalliances) | **GET** /event/{event_key}/alliances | 
+[**getEventAwards**](EventApi.md#geteventawards) | **GET** /event/{event_key}/awards | 
+[**getEventDistrictPoints**](EventApi.md#geteventdistrictpoints) | **GET** /event/{event_key}/district_points | 
+[**getEventInsights**](EventApi.md#geteventinsights) | **GET** /event/{event_key}/insights | 
+[**getEventMatchTimeseries**](EventApi.md#geteventmatchtimeseries) | **GET** /event/{event_key}/matches/timeseries | 
+[**getEventMatches**](EventApi.md#geteventmatches) | **GET** /event/{event_key}/matches | 
+[**getEventMatchesKeys**](EventApi.md#geteventmatcheskeys) | **GET** /event/{event_key}/matches/keys | 
+[**getEventMatchesSimple**](EventApi.md#geteventmatchessimple) | **GET** /event/{event_key}/matches/simple | 
+[**getEventOPRs**](EventApi.md#geteventoprs) | **GET** /event/{event_key}/oprs | 
+[**getEventPredictions**](EventApi.md#geteventpredictions) | **GET** /event/{event_key}/predictions | 
+[**getEventRankings**](EventApi.md#geteventrankings) | **GET** /event/{event_key}/rankings | 
+[**getEventSimple**](EventApi.md#geteventsimple) | **GET** /event/{event_key}/simple | 
+[**getEventTeams**](EventApi.md#geteventteams) | **GET** /event/{event_key}/teams | 
+[**getEventTeamsKeys**](EventApi.md#geteventteamskeys) | **GET** /event/{event_key}/teams/keys | 
+[**getEventTeamsSimple**](EventApi.md#geteventteamssimple) | **GET** /event/{event_key}/teams/simple | 
+[**getEventTeamsStatuses**](EventApi.md#geteventteamsstatuses) | **GET** /event/{event_key}/teams/statuses | 
+[**getEventsByYear**](EventApi.md#geteventsbyyear) | **GET** /events/{year} | 
+[**getEventsByYearKeys**](EventApi.md#geteventsbyyearkeys) | **GET** /events/{year}/keys | 
+[**getEventsByYearSimple**](EventApi.md#geteventsbyyearsimple) | **GET** /events/{year}/simple | 
+[**getTeamEventAwards**](EventApi.md#getteameventawards) | **GET** /team/{team_key}/event/{event_key}/awards | 
+[**getTeamEventMatches**](EventApi.md#getteameventmatches) | **GET** /team/{team_key}/event/{event_key}/matches | 
+[**getTeamEventMatchesKeys**](EventApi.md#getteameventmatcheskeys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
+[**getTeamEventMatchesSimple**](EventApi.md#getteameventmatchessimple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
+[**getTeamEventStatus**](EventApi.md#getteameventstatus) | **GET** /team/{team_key}/event/{event_key}/status | 
+[**getTeamEvents**](EventApi.md#getteamevents) | **GET** /team/{team_key}/events | 
+[**getTeamEventsByYear**](EventApi.md#getteameventsbyyear) | **GET** /team/{team_key}/events/{year} | 
+[**getTeamEventsByYearKeys**](EventApi.md#getteameventsbyyearkeys) | **GET** /team/{team_key}/events/{year}/keys | 
+[**getTeamEventsByYearSimple**](EventApi.md#getteameventsbyyearsimple) | **GET** /team/{team_key}/events/{year}/simple | 
+[**getTeamEventsKeys**](EventApi.md#getteameventskeys) | **GET** /team/{team_key}/events/keys | 
+[**getTeamEventsSimple**](EventApi.md#getteameventssimple) | **GET** /team/{team_key}/events/simple | 
+[**getTeamEventsStatusesByYear**](EventApi.md#getteameventsstatusesbyyear) | **GET** /team/{team_key}/events/{year}/statuses | 
 
 
 # **getDistrictEvents**
@@ -53,7 +53,7 @@ Method | HTTP request | Description
 
 Gets a list of events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -61,14 +61,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictEvents(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictEvents(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getDistrictEvents: $e\n');
 }
 ```
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Event>**](Event.md)
+[**BuiltList&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 Gets a list of event keys for events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -110,14 +110,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictEventsKeys(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictEventsKeys(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getDistrictEventsKeys: $e\n');
 }
 ```
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of events in the given district.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -159,14 +159,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getDistrictEventsSimple(districtKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getDistrictEventsSimple(districtKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getDistrictEventsSimple: $e\n');
 }
 ```
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<EventSimple>**](EventSimple.md)
+[**BuiltList&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 Gets an Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -208,14 +208,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEvent(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEvent(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEvent: $e\n');
 }
 ```
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 Gets a list of Elimination Alliances for the given Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -257,14 +257,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventAlliances(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventAlliances(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventAlliances: $e\n');
 }
 ```
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<EliminationAlliance>**](EliminationAlliance.md)
+[**BuiltList&lt;EliminationAlliance&gt;**](EliminationAlliance.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 Gets a list of awards from the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -306,14 +306,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventAwards(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventAwards(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventAwards: $e\n');
 }
 ```
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Award>**](Award.md)
+[**BuiltList&lt;Award&gt;**](Award.md)
 
 ### Authorization
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 Gets a list of team rankings for the Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -355,14 +355,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventDistrictPoints(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventDistrictPoints(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventDistrictPoints: $e\n');
 }
 ```
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 Gets a set of Event-specific insights for the given Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -404,14 +404,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventInsights(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventInsights(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventInsights: $e\n');
 }
 ```
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -453,14 +453,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatchTimeseries(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatchTimeseries(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventMatchTimeseries: $e\n');
 }
 ```
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 Gets a list of matches for the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -502,14 +502,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatches(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatches(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventMatches: $e\n');
 }
 ```
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 Gets a list of match keys for the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -551,14 +551,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatchesKeys(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatchesKeys(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventMatchesKeys: $e\n');
 }
 ```
@@ -572,7 +572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of matches for the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -600,14 +600,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventMatchesSimple(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventMatchesSimple(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventMatchesSimple: $e\n');
 }
 ```
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<MatchSimple>**](MatchSimple.md)
+[**BuiltList&lt;MatchSimple&gt;**](MatchSimple.md)
 
 ### Authorization
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -649,14 +649,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventOPRs(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventOPRs(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventOPRs: $e\n');
 }
 ```
@@ -690,7 +690,7 @@ Name | Type | Description  | Notes
 
 Gets information on TBA-generated predictions for the given Event. Contains year-specific information. *WARNING* This endpoint is currently under development and may change at any time.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -698,14 +698,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventPredictions(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventPredictions(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventPredictions: $e\n');
 }
 ```
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 
 Gets a list of team rankings for the Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -747,14 +747,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventRankings(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventRankings(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventRankings: $e\n');
 }
 ```
@@ -788,7 +788,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form Event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -796,14 +796,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventSimple(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventSimple(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventSimple: $e\n');
 }
 ```
@@ -837,7 +837,7 @@ Name | Type | Description  | Notes
 
 Gets a list of `Team` objects that competed in the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -845,14 +845,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventTeams(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventTeams(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventTeams: $e\n');
 }
 ```
@@ -866,7 +866,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Team>**](Team.md)
+[**BuiltList&lt;Team&gt;**](Team.md)
 
 ### Authorization
 
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 
 Gets a list of `Team` keys that competed in the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -894,14 +894,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventTeamsKeys(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventTeamsKeys(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventTeamsKeys: $e\n');
 }
 ```
@@ -915,7 +915,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -935,7 +935,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of `Team` objects that competed in the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -943,14 +943,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventTeamsSimple(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventTeamsSimple(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventTeamsSimple: $e\n');
 }
 ```
@@ -964,7 +964,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<TeamSimple>**](TeamSimple.md)
+[**BuiltList&lt;TeamSimple&gt;**](TeamSimple.md)
 
 ### Authorization
 
@@ -984,7 +984,7 @@ Name | Type | Description  | Notes
 
 Gets a key-value list of the event statuses for teams competing at the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -992,14 +992,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventTeamsStatuses(eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventTeamsStatuses(eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventTeamsStatuses: $e\n');
 }
 ```
@@ -1013,7 +1013,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltMap<String, TeamEventStatus>**](TeamEventStatus.md)
+[**BuiltMap&lt;String, TeamEventStatus&gt;**](TeamEventStatus.md)
 
 ### Authorization
 
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 
 Gets a list of events in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1041,14 +1041,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventsByYear(year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventsByYear(year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventsByYear: $e\n');
 }
 ```
@@ -1062,7 +1062,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Event>**](Event.md)
+[**BuiltList&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -1082,7 +1082,7 @@ Name | Type | Description  | Notes
 
 Gets a list of event keys in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1090,14 +1090,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventsByYearKeys(year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventsByYearKeys(year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventsByYearKeys: $e\n');
 }
 ```
@@ -1111,7 +1111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -1131,7 +1131,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of events in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1139,14 +1139,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getEventsByYearSimple(year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getEventsByYearSimple(year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getEventsByYearSimple: $e\n');
 }
 ```
@@ -1160,7 +1160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<EventSimple>**](EventSimple.md)
+[**BuiltList&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -1180,7 +1180,7 @@ Name | Type | Description  | Notes
 
 Gets a list of awards the given team won at the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1188,15 +1188,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventAwards(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventAwards(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventAwards: $e\n');
 }
 ```
@@ -1211,7 +1211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Award>**](Award.md)
+[**BuiltList&lt;Award&gt;**](Award.md)
 
 ### Authorization
 
@@ -1231,7 +1231,7 @@ Name | Type | Description  | Notes
 
 Gets a list of matches for the given team and event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1239,15 +1239,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventMatches: $e\n');
 }
 ```
@@ -1262,7 +1262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -1282,7 +1282,7 @@ Name | Type | Description  | Notes
 
 Gets a list of match keys for matches for the given team and event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1290,15 +1290,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventMatchesKeys: $e\n');
 }
 ```
@@ -1313,7 +1313,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of matches for the given team and event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1341,15 +1341,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventMatchesSimple: $e\n');
 }
 ```
@@ -1364,7 +1364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Match>**](Match.md)
+[**BuiltList&lt;Match&gt;**](Match.md)
 
 ### Authorization
 
@@ -1384,7 +1384,7 @@ Name | Type | Description  | Notes
 
 Gets the competition rank and status of the team at the given event.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1392,15 +1392,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventStatus(teamKey, eventKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventStatus(teamKey, eventKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventStatus: $e\n');
 }
 ```
@@ -1435,7 +1435,7 @@ Name | Type | Description  | Notes
 
 Gets a list of all events this team has competed at.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1443,14 +1443,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEvents(teamKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEvents(teamKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEvents: $e\n');
 }
 ```
@@ -1464,7 +1464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Event>**](Event.md)
+[**BuiltList&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -1484,7 +1484,7 @@ Name | Type | Description  | Notes
 
 Gets a list of events this team has competed at in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1492,15 +1492,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventsByYear(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventsByYear(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventsByYear: $e\n');
 }
 ```
@@ -1515,7 +1515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<Event>**](Event.md)
+[**BuiltList&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -1535,7 +1535,7 @@ Name | Type | Description  | Notes
 
 Gets a list of the event keys for events this team has competed at in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1543,15 +1543,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventsByYearKeys(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventsByYearKeys(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventsByYearKeys: $e\n');
 }
 ```
@@ -1566,7 +1566,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -1586,7 +1586,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of events this team has competed at in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1594,15 +1594,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventsByYearSimple(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventsByYearSimple(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventsByYearSimple: $e\n');
 }
 ```
@@ -1617,7 +1617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<EventSimple>**](EventSimple.md)
+[**BuiltList&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -1637,7 +1637,7 @@ Name | Type | Description  | Notes
 
 Gets a list of the event keys for all events this team has competed at.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1645,14 +1645,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventsKeys(teamKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventsKeys(teamKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventsKeys: $e\n');
 }
 ```
@@ -1666,7 +1666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -1686,7 +1686,7 @@ Name | Type | Description  | Notes
 
 Gets a short-form list of all events this team has competed at.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1694,14 +1694,14 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventsSimple(teamKey, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventsSimple(teamKey, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventsSimple: $e\n');
 }
 ```
@@ -1715,7 +1715,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList<EventSimple>**](EventSimple.md)
+[**BuiltList&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -1735,7 +1735,7 @@ Name | Type | Description  | Notes
 
 Gets a key-value list of the event statuses for events this team has competed at in the given year.
 
-### Example 
+### Example
 ```dart
 import 'package:tba_api_dart_dio_client/api.dart';
 // TODO Configure API key authorization: apiKey
@@ -1743,15 +1743,15 @@ import 'package:tba_api_dart_dio_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
-var api_instance = new EventApi();
-var teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-var year = 56; // int | Competition Year (or Season). Must be 4 digits.
-var ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final api = TbaApiDartDioClient().getEventApi();
+final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
+final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
+final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 
-try { 
-    var result = api_instance.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince);
-    print(result);
-} catch (e) {
+try {
+    final response = api.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling EventApi->getTeamEventsStatusesByYear: $e\n');
 }
 ```
@@ -1766,7 +1766,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltMap<String, TeamEventStatus>**](TeamEventStatus.md)
+[**BuiltMap&lt;String, TeamEventStatus&gt;**](TeamEventStatus.md)
 
 ### Authorization
 

@@ -14,7 +14,7 @@ class _$TeamEventStatusAllianceBackup extends TeamEventStatusAllianceBackup {
 
   factory _$TeamEventStatusAllianceBackup(
           [void Function(TeamEventStatusAllianceBackupBuilder)? updates]) =>
-      (new TeamEventStatusAllianceBackupBuilder()..update(updates)).build();
+      (new TeamEventStatusAllianceBackupBuilder()..update(updates))._build();
 
   _$TeamEventStatusAllianceBackup._({this.out_, this.in_}) : super._();
 
@@ -42,7 +42,7 @@ class _$TeamEventStatusAllianceBackup extends TeamEventStatusAllianceBackup {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('TeamEventStatusAllianceBackup')
+    return (newBuiltValueToStringHelper(r'TeamEventStatusAllianceBackup')
           ..add('out_', out_)
           ..add('in_', in_))
         .toString();
@@ -64,7 +64,7 @@ class TeamEventStatusAllianceBackupBuilder
   set in_(String? in_) => _$this._in_ = in_;
 
   TeamEventStatusAllianceBackupBuilder() {
-    TeamEventStatusAllianceBackup._initializeBuilder(this);
+    TeamEventStatusAllianceBackup._defaults(this);
   }
 
   TeamEventStatusAllianceBackupBuilder get _$this {
@@ -89,7 +89,9 @@ class TeamEventStatusAllianceBackupBuilder
   }
 
   @override
-  _$TeamEventStatusAllianceBackup build() {
+  TeamEventStatusAllianceBackup build() => _build();
+
+  _$TeamEventStatusAllianceBackup _build() {
     final _$result =
         _$v ?? new _$TeamEventStatusAllianceBackup._(out_: out_, in_: in_);
     replace(_$result);
@@ -97,4 +99,4 @@ class TeamEventStatusAllianceBackupBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

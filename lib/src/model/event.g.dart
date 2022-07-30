@@ -24,9 +24,9 @@ class _$Event extends Event {
   @override
   final String? country;
   @override
-  final DateTime startDate;
+  final Date startDate;
   @override
-  final DateTime endDate;
+  final Date endDate;
   @override
   final int year;
   @override
@@ -69,7 +69,7 @@ class _$Event extends Event {
   final String? playoffTypeString;
 
   factory _$Event([void Function(EventBuilder)? updates]) =>
-      (new EventBuilder()..update(updates)).build();
+      (new EventBuilder()..update(updates))._build();
 
   _$Event._(
       {required this.key,
@@ -103,15 +103,15 @@ class _$Event extends Event {
       this.playoffType,
       this.playoffTypeString})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(key, 'Event', 'key');
-    BuiltValueNullFieldError.checkNotNull(name, 'Event', 'name');
-    BuiltValueNullFieldError.checkNotNull(eventCode, 'Event', 'eventCode');
-    BuiltValueNullFieldError.checkNotNull(eventType, 'Event', 'eventType');
-    BuiltValueNullFieldError.checkNotNull(startDate, 'Event', 'startDate');
-    BuiltValueNullFieldError.checkNotNull(endDate, 'Event', 'endDate');
-    BuiltValueNullFieldError.checkNotNull(year, 'Event', 'year');
+    BuiltValueNullFieldError.checkNotNull(key, r'Event', 'key');
+    BuiltValueNullFieldError.checkNotNull(name, r'Event', 'name');
+    BuiltValueNullFieldError.checkNotNull(eventCode, r'Event', 'eventCode');
+    BuiltValueNullFieldError.checkNotNull(eventType, r'Event', 'eventType');
+    BuiltValueNullFieldError.checkNotNull(startDate, r'Event', 'startDate');
+    BuiltValueNullFieldError.checkNotNull(endDate, r'Event', 'endDate');
+    BuiltValueNullFieldError.checkNotNull(year, r'Event', 'year');
     BuiltValueNullFieldError.checkNotNull(
-        eventTypeString, 'Event', 'eventTypeString');
+        eventTypeString, r'Event', 'eventTypeString');
   }
 
   @override
@@ -201,7 +201,7 @@ class _$Event extends Event {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Event')
+    return (newBuiltValueToStringHelper(r'Event')
           ..add('key', key)
           ..add('name', name)
           ..add('eventCode', eventCode)
@@ -272,13 +272,13 @@ class EventBuilder implements Builder<Event, EventBuilder> {
   String? get country => _$this._country;
   set country(String? country) => _$this._country = country;
 
-  DateTime? _startDate;
-  DateTime? get startDate => _$this._startDate;
-  set startDate(DateTime? startDate) => _$this._startDate = startDate;
+  Date? _startDate;
+  Date? get startDate => _$this._startDate;
+  set startDate(Date? startDate) => _$this._startDate = startDate;
 
-  DateTime? _endDate;
-  DateTime? get endDate => _$this._endDate;
-  set endDate(DateTime? endDate) => _$this._endDate = endDate;
+  Date? _endDate;
+  Date? get endDate => _$this._endDate;
+  set endDate(Date? endDate) => _$this._endDate = endDate;
 
   int? _year;
   int? get year => _$this._year;
@@ -368,7 +368,7 @@ class EventBuilder implements Builder<Event, EventBuilder> {
       _$this._playoffTypeString = playoffTypeString;
 
   EventBuilder() {
-    Event._initializeBuilder(this);
+    Event._defaults(this);
   }
 
   EventBuilder get _$this {
@@ -421,31 +421,33 @@ class EventBuilder implements Builder<Event, EventBuilder> {
   }
 
   @override
-  _$Event build() {
+  Event build() => _build();
+
+  _$Event _build() {
     _$Event _$result;
     try {
       _$result = _$v ??
           new _$Event._(
-              key: BuiltValueNullFieldError.checkNotNull(key, 'Event', 'key'),
+              key: BuiltValueNullFieldError.checkNotNull(key, r'Event', 'key'),
               name:
-                  BuiltValueNullFieldError.checkNotNull(name, 'Event', 'name'),
+                  BuiltValueNullFieldError.checkNotNull(name, r'Event', 'name'),
               eventCode: BuiltValueNullFieldError.checkNotNull(
-                  eventCode, 'Event', 'eventCode'),
+                  eventCode, r'Event', 'eventCode'),
               eventType: BuiltValueNullFieldError.checkNotNull(
-                  eventType, 'Event', 'eventType'),
+                  eventType, r'Event', 'eventType'),
               district: _district?.build(),
               city: city,
               stateProv: stateProv,
               country: country,
               startDate: BuiltValueNullFieldError.checkNotNull(
-                  startDate, 'Event', 'startDate'),
+                  startDate, r'Event', 'startDate'),
               endDate: BuiltValueNullFieldError.checkNotNull(
-                  endDate, 'Event', 'endDate'),
+                  endDate, r'Event', 'endDate'),
               year:
-                  BuiltValueNullFieldError.checkNotNull(year, 'Event', 'year'),
+                  BuiltValueNullFieldError.checkNotNull(year, r'Event', 'year'),
               shortName: shortName,
               eventTypeString: BuiltValueNullFieldError.checkNotNull(
-                  eventTypeString, 'Event', 'eventTypeString'),
+                  eventTypeString, r'Event', 'eventTypeString'),
               week: week,
               address: address,
               postalCode: postalCode,
@@ -475,7 +477,7 @@ class EventBuilder implements Builder<Event, EventBuilder> {
         _divisionKeys?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'Event', _$failedField, e.toString());
+            r'Event', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -484,4 +486,4 @@ class EventBuilder implements Builder<Event, EventBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

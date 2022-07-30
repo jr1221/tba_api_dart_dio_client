@@ -79,7 +79,7 @@ class _$MatchScoreBreakdown2020Alliance
 
   factory _$MatchScoreBreakdown2020Alliance(
           [void Function(MatchScoreBreakdown2020AllianceBuilder)? updates]) =>
-      (new MatchScoreBreakdown2020AllianceBuilder()..update(updates)).build();
+      (new MatchScoreBreakdown2020AllianceBuilder()..update(updates))._build();
 
   _$MatchScoreBreakdown2020Alliance._(
       {this.initLineRobot1,
@@ -212,7 +212,7 @@ class _$MatchScoreBreakdown2020Alliance
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('MatchScoreBreakdown2020Alliance')
+    return (newBuiltValueToStringHelper(r'MatchScoreBreakdown2020Alliance')
           ..add('initLineRobot1', initLineRobot1)
           ..add('endgameRobot1', endgameRobot1)
           ..add('initLineRobot2', initLineRobot2)
@@ -426,7 +426,7 @@ class MatchScoreBreakdown2020AllianceBuilder
   set totalPoints(int? totalPoints) => _$this._totalPoints = totalPoints;
 
   MatchScoreBreakdown2020AllianceBuilder() {
-    MatchScoreBreakdown2020Alliance._initializeBuilder(this);
+    MatchScoreBreakdown2020Alliance._defaults(this);
   }
 
   MatchScoreBreakdown2020AllianceBuilder get _$this {
@@ -484,7 +484,9 @@ class MatchScoreBreakdown2020AllianceBuilder
   }
 
   @override
-  _$MatchScoreBreakdown2020Alliance build() {
+  MatchScoreBreakdown2020Alliance build() => _build();
+
+  _$MatchScoreBreakdown2020Alliance _build() {
     final _$result = _$v ??
         new _$MatchScoreBreakdown2020Alliance._(
             initLineRobot1: initLineRobot1,
@@ -527,4 +529,4 @@ class MatchScoreBreakdown2020AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

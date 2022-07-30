@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **city** | **String** | City, town, village, etc. the event is located in. | [optional] 
 **stateProv** | **String** | State or Province the event is located in. | [optional] 
 **country** | **String** | Country the event is located in. | [optional] 
-**startDate** | [**DateTime**](DateTime.md) | Event start date in `yyyy-mm-dd` format. | 
-**endDate** | [**DateTime**](DateTime.md) | Event end date in `yyyy-mm-dd` format. | 
+**startDate** | [**Date**](Date.md) | Event start date in `yyyy-mm-dd` format. | 
+**endDate** | [**Date**](Date.md) | Event end date in `yyyy-mm-dd` format. | 
 **year** | **int** | Year the event data is for. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,6 +1,6 @@
 pubName: tba_api_dart_dio_client
-pubVersion: 0.0.1
-pubDescription: "A Blue Alliance API client using dio"
-pubAuthor: Jack Rubacha
-pubAuthorEmail: rubacha.jack03@gmail.com
-pubHomepage: https://github.com/jr1221/tba_api_dart_dio_sdk
+pubVersion: 0.0.2
+pubDescription: "The Blue Alliance API Dart Dio SDK"
+pubAuthor: Jack1221
+pubAuthorEmail: iambent.omnishambles@gmail.com
+pubHomepage: https://github.com/jr1221/tba_api_dart_dio_client

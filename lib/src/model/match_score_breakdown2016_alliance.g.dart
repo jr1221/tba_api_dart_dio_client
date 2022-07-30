@@ -147,7 +147,7 @@ class _$MatchScoreBreakdown2016AllianceRobot1AutoEnumSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       MatchScoreBreakdown2016AllianceRobot1AutoEnum.valueOf(
-          _fromWire[serialized] ?? serialized as String);
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$MatchScoreBreakdown2016AllianceRobot2AutoEnumSerializer
@@ -182,7 +182,7 @@ class _$MatchScoreBreakdown2016AllianceRobot2AutoEnumSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       MatchScoreBreakdown2016AllianceRobot2AutoEnum.valueOf(
-          _fromWire[serialized] ?? serialized as String);
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$MatchScoreBreakdown2016AllianceRobot3AutoEnumSerializer
@@ -217,7 +217,7 @@ class _$MatchScoreBreakdown2016AllianceRobot3AutoEnumSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       MatchScoreBreakdown2016AllianceRobot3AutoEnum.valueOf(
-          _fromWire[serialized] ?? serialized as String);
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$MatchScoreBreakdown2016Alliance
@@ -301,7 +301,7 @@ class _$MatchScoreBreakdown2016Alliance
 
   factory _$MatchScoreBreakdown2016Alliance(
           [void Function(MatchScoreBreakdown2016AllianceBuilder)? updates]) =>
-      (new MatchScoreBreakdown2016AllianceBuilder()..update(updates)).build();
+      (new MatchScoreBreakdown2016AllianceBuilder()..update(updates))._build();
 
   _$MatchScoreBreakdown2016Alliance._(
       {this.autoPoints,
@@ -441,7 +441,7 @@ class _$MatchScoreBreakdown2016Alliance
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('MatchScoreBreakdown2016Alliance')
+    return (newBuiltValueToStringHelper(r'MatchScoreBreakdown2016Alliance')
           ..add('autoPoints', autoPoints)
           ..add('teleopPoints', teleopPoints)
           ..add('breachPoints', breachPoints)
@@ -670,7 +670,7 @@ class MatchScoreBreakdown2016AllianceBuilder
       _$this._position5crossings = position5crossings;
 
   MatchScoreBreakdown2016AllianceBuilder() {
-    MatchScoreBreakdown2016Alliance._initializeBuilder(this);
+    MatchScoreBreakdown2016Alliance._defaults(this);
   }
 
   MatchScoreBreakdown2016AllianceBuilder get _$this {
@@ -731,7 +731,9 @@ class MatchScoreBreakdown2016AllianceBuilder
   }
 
   @override
-  _$MatchScoreBreakdown2016Alliance build() {
+  MatchScoreBreakdown2016Alliance build() => _build();
+
+  _$MatchScoreBreakdown2016Alliance _build() {
     final _$result = _$v ??
         new _$MatchScoreBreakdown2016Alliance._(
             autoPoints: autoPoints,
@@ -777,4 +779,4 @@ class MatchScoreBreakdown2016AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

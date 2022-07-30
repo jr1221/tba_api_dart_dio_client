@@ -2,11 +2,15 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_import
+
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
 import 'package:built_value/iso_8601_date_time_serializer.dart';
+import 'package:tba_api_dart_dio_client/src/date_serializer.dart';
+import 'package:tba_api_dart_dio_client/src/model/date.dart';
 
 import 'package:tba_api_dart_dio_client/src/model/api_status.dart';
 import 'package:tba_api_dart_dio_client/src/model/api_status_app_version.dart';
@@ -14,23 +18,23 @@ import 'package:tba_api_dart_dio_client/src/model/award.dart';
 import 'package:tba_api_dart_dio_client/src/model/award_recipient.dart';
 import 'package:tba_api_dart_dio_client/src/model/district_list.dart';
 import 'package:tba_api_dart_dio_client/src/model/district_ranking.dart';
-import 'package:tba_api_dart_dio_client/src/model/district_ranking_event_points.dart';
+import 'package:tba_api_dart_dio_client/src/model/district_ranking_event_points_inner.dart';
 import 'package:tba_api_dart_dio_client/src/model/elimination_alliance.dart';
 import 'package:tba_api_dart_dio_client/src/model/elimination_alliance_backup.dart';
 import 'package:tba_api_dart_dio_client/src/model/elimination_alliance_status.dart';
 import 'package:tba_api_dart_dio_client/src/model/event.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_district_points.dart';
-import 'package:tba_api_dart_dio_client/src/model/event_district_points_points.dart';
-import 'package:tba_api_dart_dio_client/src/model/event_district_points_tiebreakers.dart';
+import 'package:tba_api_dart_dio_client/src/model/event_district_points_points_value.dart';
+import 'package:tba_api_dart_dio_client/src/model/event_district_points_tiebreakers_value.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_insights.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_insights2016.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_insights2017.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_insights2018.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_oprs.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_ranking.dart';
-import 'package:tba_api_dart_dio_client/src/model/event_ranking_extra_stats_info.dart';
-import 'package:tba_api_dart_dio_client/src/model/event_ranking_rankings.dart';
-import 'package:tba_api_dart_dio_client/src/model/event_ranking_sort_order_info.dart';
+import 'package:tba_api_dart_dio_client/src/model/event_ranking_extra_stats_info_inner.dart';
+import 'package:tba_api_dart_dio_client/src/model/event_ranking_rankings_inner.dart';
+import 'package:tba_api_dart_dio_client/src/model/event_ranking_sort_order_info_inner.dart';
 import 'package:tba_api_dart_dio_client/src/model/event_simple.dart';
 import 'package:tba_api_dart_dio_client/src/model/match.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_alliance.dart';
@@ -46,10 +50,12 @@ import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2019.dart
 import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2019_alliance.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2020.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2020_alliance.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2022.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2022_alliance.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_simple.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_simple_alliances.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_timeseries2018.dart';
-import 'package:tba_api_dart_dio_client/src/model/match_videos.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_videos_inner.dart';
 import 'package:tba_api_dart_dio_client/src/model/media.dart';
 import 'package:tba_api_dart_dio_client/src/model/team.dart';
 import 'package:tba_api_dart_dio_client/src/model/team_event_status.dart';
@@ -58,7 +64,7 @@ import 'package:tba_api_dart_dio_client/src/model/team_event_status_alliance_bac
 import 'package:tba_api_dart_dio_client/src/model/team_event_status_playoff.dart';
 import 'package:tba_api_dart_dio_client/src/model/team_event_status_rank.dart';
 import 'package:tba_api_dart_dio_client/src/model/team_event_status_rank_ranking.dart';
-import 'package:tba_api_dart_dio_client/src/model/team_event_status_rank_sort_order_info.dart';
+import 'package:tba_api_dart_dio_client/src/model/team_event_status_rank_sort_order_info_inner.dart';
 import 'package:tba_api_dart_dio_client/src/model/team_robot.dart';
 import 'package:tba_api_dart_dio_client/src/model/team_simple.dart';
 import 'package:tba_api_dart_dio_client/src/model/wlt_record.dart';
@@ -76,23 +82,23 @@ part 'serializers.g.dart';
   AwardRecipient,
   DistrictList,
   DistrictRanking,
-  DistrictRankingEventPoints,
+  DistrictRankingEventPointsInner,
   EliminationAlliance,
   EliminationAllianceBackup,
   EliminationAllianceStatus,
   Event,
   EventDistrictPoints,
-  EventDistrictPointsPoints,
-  EventDistrictPointsTiebreakers,
+  EventDistrictPointsPointsValue,
+  EventDistrictPointsTiebreakersValue,
   EventInsights,
   EventInsights2016,
   EventInsights2017,
   EventInsights2018,
   EventOPRs,
   EventRanking,
-  EventRankingExtraStatsInfo,
-  EventRankingRankings,
-  EventRankingSortOrderInfo,
+  EventRankingExtraStatsInfoInner,
+  EventRankingRankingsInner,
+  EventRankingSortOrderInfoInner,
   EventSimple,
   Match,
   MatchAlliance,
@@ -108,10 +114,12 @@ part 'serializers.g.dart';
   MatchScoreBreakdown2019Alliance,
   MatchScoreBreakdown2020,
   MatchScoreBreakdown2020Alliance,
+  MatchScoreBreakdown2022,
+  MatchScoreBreakdown2022Alliance,
   MatchSimple,
   MatchSimpleAlliances,
   MatchTimeseries2018,
-  MatchVideos,
+  MatchVideosInner,
   Media,
   Team,
   TeamEventStatus,
@@ -120,7 +128,7 @@ part 'serializers.g.dart';
   TeamEventStatusPlayoff,
   TeamEventStatusRank,
   TeamEventStatusRankRanking,
-  TeamEventStatusRankSortOrderInfo,
+  TeamEventStatusRankSortOrderInfoInner,
   TeamRobot,
   TeamSimple,
   WLTRecord,
@@ -131,116 +139,36 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Event)]),
-        () => ListBuilder<Event>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(TeamSimple)]),
-        () => ListBuilder<TeamSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(String)]),
-        () => ListBuilder<String>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(DistrictRanking)]),
-        () => ListBuilder<DistrictRanking>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Team)]),
-        () => ListBuilder<Team>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(EventSimple)]),
-        () => ListBuilder<EventSimple>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DistrictList)]),
         () => ListBuilder<DistrictList>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Event)]),
-        () => ListBuilder<Event>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(EliminationAlliance)]),
-        () => ListBuilder<EliminationAlliance>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(TeamSimple)]),
         () => ListBuilder<TeamSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(String)]),
-        () => ListBuilder<String>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Match)]),
-        () => ListBuilder<Match>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]),
-        () => MapBuilder<String, TeamEventStatus>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(MatchSimple)]),
         () => ListBuilder<MatchSimple>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Team)]),
-        () => ListBuilder<Team>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(EventSimple)]),
         () => ListBuilder<EventSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Award)]),
-        () => ListBuilder<Award>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Event)]),
-        () => ListBuilder<Event>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(TeamSimple)]),
-        () => ListBuilder<TeamSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(String)]),
-        () => ListBuilder<String>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]),
-        () => MapBuilder<String, TeamEventStatus>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(DistrictRanking)]),
-        () => ListBuilder<DistrictRanking>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Team)]),
-        () => ListBuilder<Team>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(EventSimple)]),
-        () => ListBuilder<EventSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(String)]),
-        () => ListBuilder<String>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Match)]),
-        () => ListBuilder<Match>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(JsonObject)]),
         () => ListBuilder<JsonObject>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(MatchSimple)]),
-        () => ListBuilder<MatchSimple>(),
+        const FullType(BuiltList, [FullType(DistrictRanking)]),
+        () => ListBuilder<DistrictRanking>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Team)]),
+        () => ListBuilder<Team>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(EliminationAlliance)]),
+        () => ListBuilder<EliminationAlliance>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Event)]),
@@ -251,10 +179,6 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<Media>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(TeamRobot)]),
-        () => ListBuilder<TeamRobot>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]),
         () => MapBuilder<String, TeamEventStatus>(),
       )
@@ -263,41 +187,22 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<int>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Award)]),
-        () => ListBuilder<Award>(),
+        const FullType(BuiltList, [FullType(Match)]),
+        () => ListBuilder<Match>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(TeamSimple)]),
-        () => ListBuilder<TeamSimple>(),
+        const FullType(BuiltList, [FullType(TeamRobot)]),
+        () => ListBuilder<TeamRobot>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Match)]),
-        () => ListBuilder<Match>(),
+        const FullType(BuiltList, [FullType(Award)]),
+        () => ListBuilder<Award>(),
       )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(DistrictRanking)]),
-        () => ListBuilder<DistrictRanking>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Team)]),
-        () => ListBuilder<Team>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(MatchSimple)]),
-        () => ListBuilder<MatchSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(EventSimple)]),
-        () => ListBuilder<EventSimple>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(DistrictList)]),
-        () => ListBuilder<DistrictList>(),
-      )
+      ..add(const DateSerializer())
       ..add(Iso8601DateTimeSerializer()))
     .build();
 

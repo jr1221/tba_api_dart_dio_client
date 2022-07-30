@@ -47,7 +47,7 @@ class _$Team extends Team {
   final JsonObject? homeChampionship;
 
   factory _$Team([void Function(TeamBuilder)? updates]) =>
-      (new TeamBuilder()..update(updates)).build();
+      (new TeamBuilder()..update(updates))._build();
 
   _$Team._(
       {required this.key,
@@ -70,9 +70,9 @@ class _$Team extends Team {
       this.motto,
       this.homeChampionship})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(key, 'Team', 'key');
-    BuiltValueNullFieldError.checkNotNull(teamNumber, 'Team', 'teamNumber');
-    BuiltValueNullFieldError.checkNotNull(name, 'Team', 'name');
+    BuiltValueNullFieldError.checkNotNull(key, r'Team', 'key');
+    BuiltValueNullFieldError.checkNotNull(teamNumber, r'Team', 'teamNumber');
+    BuiltValueNullFieldError.checkNotNull(name, r'Team', 'name');
   }
 
   @override
@@ -157,7 +157,7 @@ class _$Team extends Team {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Team')
+    return (newBuiltValueToStringHelper(r'Team')
           ..add('key', key)
           ..add('teamNumber', teamNumber)
           ..add('nickname', nickname)
@@ -262,7 +262,7 @@ class TeamBuilder implements Builder<Team, TeamBuilder> {
       _$this._homeChampionship = homeChampionship;
 
   TeamBuilder() {
-    Team._initializeBuilder(this);
+    Team._defaults(this);
   }
 
   TeamBuilder get _$this {
@@ -304,14 +304,16 @@ class TeamBuilder implements Builder<Team, TeamBuilder> {
   }
 
   @override
-  _$Team build() {
+  Team build() => _build();
+
+  _$Team _build() {
     final _$result = _$v ??
         new _$Team._(
-            key: BuiltValueNullFieldError.checkNotNull(key, 'Team', 'key'),
+            key: BuiltValueNullFieldError.checkNotNull(key, r'Team', 'key'),
             teamNumber: BuiltValueNullFieldError.checkNotNull(
-                teamNumber, 'Team', 'teamNumber'),
+                teamNumber, r'Team', 'teamNumber'),
             nickname: nickname,
-            name: BuiltValueNullFieldError.checkNotNull(name, 'Team', 'name'),
+            name: BuiltValueNullFieldError.checkNotNull(name, r'Team', 'name'),
             schoolName: schoolName,
             city: city,
             stateProv: stateProv,
@@ -332,4 +334,4 @@ class TeamBuilder implements Builder<Team, TeamBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

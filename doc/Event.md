@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **city** | **String** | City, town, village, etc. the event is located in. | [optional] 
 **stateProv** | **String** | State or Province the event is located in. | [optional] 
 **country** | **String** | Country the event is located in. | [optional] 
-**startDate** | [**DateTime**](DateTime.md) | Event start date in `yyyy-mm-dd` format. | 
-**endDate** | [**DateTime**](DateTime.md) | Event end date in `yyyy-mm-dd` format. | 
+**startDate** | [**Date**](Date.md) | Event start date in `yyyy-mm-dd` format. | 
+**endDate** | [**Date**](Date.md) | Event end date in `yyyy-mm-dd` format. | 
 **year** | **int** | Year the event data is for. | 
 **shortName** | **String** | Same as `name` but doesn't include event specifiers, such as 'Regional' or 'District'. May be null. | [optional] 
 **eventTypeString** | **String** | Event Type, eg Regional, District, or Offseason. | 
@@ -33,8 +33,8 @@ Name | Type | Description | Notes
 **website** | **String** | The event's website, if any. | [optional] 
 **firstEventId** | **String** | The FIRST internal Event ID, used to link to the event on the FRC webpage. | [optional] 
 **firstEventCode** | **String** | Public facing event code used by FIRST (on frc-events.firstinspires.org, for example) | [optional] 
-**webcasts** | [**BuiltList<Webcast>**](Webcast.md) |  | [optional] 
-**divisionKeys** | **BuiltList<String>** | An array of event keys for the divisions at this event. | [optional] 
+**webcasts** | [**BuiltList&lt;Webcast&gt;**](Webcast.md) |  | [optional] 
+**divisionKeys** | **BuiltList&lt;String&gt;** | An array of event keys for the divisions at this event. | [optional] 
 **parentEventKey** | **String** | The TBA Event key that represents the event's parent. Used to link back to the event from a division event. It is also the inverse relation of `divison_keys`. | [optional] 
 **playoffType** | **int** | Playoff Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/playoff_type.py#L4, or null. | [optional] 
 **playoffTypeString** | **String** | String representation of the `playoff_type`, or null. | [optional] 

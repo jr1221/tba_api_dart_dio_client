@@ -8,23 +8,24 @@ part of 'event_ranking.dart';
 
 class _$EventRanking extends EventRanking {
   @override
-  final BuiltList<EventRankingRankings> rankings;
+  final BuiltList<EventRankingRankingsInner> rankings;
   @override
-  final BuiltList<EventRankingExtraStatsInfo>? extraStatsInfo;
+  final BuiltList<EventRankingExtraStatsInfoInner>? extraStatsInfo;
   @override
-  final BuiltList<EventRankingSortOrderInfo> sortOrderInfo;
+  final BuiltList<EventRankingSortOrderInfoInner> sortOrderInfo;
 
   factory _$EventRanking([void Function(EventRankingBuilder)? updates]) =>
-      (new EventRankingBuilder()..update(updates)).build();
+      (new EventRankingBuilder()..update(updates))._build();
 
   _$EventRanking._(
       {required this.rankings,
       this.extraStatsInfo,
       required this.sortOrderInfo})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(rankings, 'EventRanking', 'rankings');
     BuiltValueNullFieldError.checkNotNull(
-        sortOrderInfo, 'EventRanking', 'sortOrderInfo');
+        rankings, r'EventRanking', 'rankings');
+    BuiltValueNullFieldError.checkNotNull(
+        sortOrderInfo, r'EventRanking', 'sortOrderInfo');
   }
 
   @override
@@ -51,7 +52,7 @@ class _$EventRanking extends EventRanking {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('EventRanking')
+    return (newBuiltValueToStringHelper(r'EventRanking')
           ..add('rankings', rankings)
           ..add('extraStatsInfo', extraStatsInfo)
           ..add('sortOrderInfo', sortOrderInfo))
@@ -63,26 +64,30 @@ class EventRankingBuilder
     implements Builder<EventRanking, EventRankingBuilder> {
   _$EventRanking? _$v;
 
-  ListBuilder<EventRankingRankings>? _rankings;
-  ListBuilder<EventRankingRankings> get rankings =>
-      _$this._rankings ??= new ListBuilder<EventRankingRankings>();
-  set rankings(ListBuilder<EventRankingRankings>? rankings) =>
+  ListBuilder<EventRankingRankingsInner>? _rankings;
+  ListBuilder<EventRankingRankingsInner> get rankings =>
+      _$this._rankings ??= new ListBuilder<EventRankingRankingsInner>();
+  set rankings(ListBuilder<EventRankingRankingsInner>? rankings) =>
       _$this._rankings = rankings;
 
-  ListBuilder<EventRankingExtraStatsInfo>? _extraStatsInfo;
-  ListBuilder<EventRankingExtraStatsInfo> get extraStatsInfo =>
-      _$this._extraStatsInfo ??= new ListBuilder<EventRankingExtraStatsInfo>();
-  set extraStatsInfo(ListBuilder<EventRankingExtraStatsInfo>? extraStatsInfo) =>
+  ListBuilder<EventRankingExtraStatsInfoInner>? _extraStatsInfo;
+  ListBuilder<EventRankingExtraStatsInfoInner> get extraStatsInfo =>
+      _$this._extraStatsInfo ??=
+          new ListBuilder<EventRankingExtraStatsInfoInner>();
+  set extraStatsInfo(
+          ListBuilder<EventRankingExtraStatsInfoInner>? extraStatsInfo) =>
       _$this._extraStatsInfo = extraStatsInfo;
 
-  ListBuilder<EventRankingSortOrderInfo>? _sortOrderInfo;
-  ListBuilder<EventRankingSortOrderInfo> get sortOrderInfo =>
-      _$this._sortOrderInfo ??= new ListBuilder<EventRankingSortOrderInfo>();
-  set sortOrderInfo(ListBuilder<EventRankingSortOrderInfo>? sortOrderInfo) =>
+  ListBuilder<EventRankingSortOrderInfoInner>? _sortOrderInfo;
+  ListBuilder<EventRankingSortOrderInfoInner> get sortOrderInfo =>
+      _$this._sortOrderInfo ??=
+          new ListBuilder<EventRankingSortOrderInfoInner>();
+  set sortOrderInfo(
+          ListBuilder<EventRankingSortOrderInfoInner>? sortOrderInfo) =>
       _$this._sortOrderInfo = sortOrderInfo;
 
   EventRankingBuilder() {
-    EventRanking._initializeBuilder(this);
+    EventRanking._defaults(this);
   }
 
   EventRankingBuilder get _$this {
@@ -108,7 +113,9 @@ class EventRankingBuilder
   }
 
   @override
-  _$EventRanking build() {
+  EventRanking build() => _build();
+
+  _$EventRanking _build() {
     _$EventRanking _$result;
     try {
       _$result = _$v ??
@@ -127,7 +134,7 @@ class EventRankingBuilder
         sortOrderInfo.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'EventRanking', _$failedField, e.toString());
+            r'EventRanking', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -136,4 +143,4 @@ class EventRankingBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

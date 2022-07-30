@@ -17,7 +17,7 @@ class _$MatchAlliance extends MatchAlliance {
   final BuiltList<String>? dqTeamKeys;
 
   factory _$MatchAlliance([void Function(MatchAllianceBuilder)? updates]) =>
-      (new MatchAllianceBuilder()..update(updates)).build();
+      (new MatchAllianceBuilder()..update(updates))._build();
 
   _$MatchAlliance._(
       {required this.score,
@@ -25,9 +25,9 @@ class _$MatchAlliance extends MatchAlliance {
       this.surrogateTeamKeys,
       this.dqTeamKeys})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(score, 'MatchAlliance', 'score');
+    BuiltValueNullFieldError.checkNotNull(score, r'MatchAlliance', 'score');
     BuiltValueNullFieldError.checkNotNull(
-        teamKeys, 'MatchAlliance', 'teamKeys');
+        teamKeys, r'MatchAlliance', 'teamKeys');
   }
 
   @override
@@ -57,7 +57,7 @@ class _$MatchAlliance extends MatchAlliance {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('MatchAlliance')
+    return (newBuiltValueToStringHelper(r'MatchAlliance')
           ..add('score', score)
           ..add('teamKeys', teamKeys)
           ..add('surrogateTeamKeys', surrogateTeamKeys)
@@ -92,7 +92,7 @@ class MatchAllianceBuilder
       _$this._dqTeamKeys = dqTeamKeys;
 
   MatchAllianceBuilder() {
-    MatchAlliance._initializeBuilder(this);
+    MatchAlliance._defaults(this);
   }
 
   MatchAllianceBuilder get _$this {
@@ -119,13 +119,15 @@ class MatchAllianceBuilder
   }
 
   @override
-  _$MatchAlliance build() {
+  MatchAlliance build() => _build();
+
+  _$MatchAlliance _build() {
     _$MatchAlliance _$result;
     try {
       _$result = _$v ??
           new _$MatchAlliance._(
               score: BuiltValueNullFieldError.checkNotNull(
-                  score, 'MatchAlliance', 'score'),
+                  score, r'MatchAlliance', 'score'),
               teamKeys: teamKeys.build(),
               surrogateTeamKeys: _surrogateTeamKeys?.build(),
               dqTeamKeys: _dqTeamKeys?.build());
@@ -140,7 +142,7 @@ class MatchAllianceBuilder
         _dqTeamKeys?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'MatchAlliance', _$failedField, e.toString());
+            r'MatchAlliance', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -149,4 +151,4 @@ class MatchAllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

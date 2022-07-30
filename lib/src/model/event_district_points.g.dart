@@ -8,18 +8,18 @@ part of 'event_district_points.dart';
 
 class _$EventDistrictPoints extends EventDistrictPoints {
   @override
-  final BuiltMap<String, EventDistrictPointsPoints> points;
+  final BuiltMap<String, EventDistrictPointsPointsValue> points;
   @override
-  final BuiltMap<String, EventDistrictPointsTiebreakers>? tiebreakers;
+  final BuiltMap<String, EventDistrictPointsTiebreakersValue>? tiebreakers;
 
   factory _$EventDistrictPoints(
           [void Function(EventDistrictPointsBuilder)? updates]) =>
-      (new EventDistrictPointsBuilder()..update(updates)).build();
+      (new EventDistrictPointsBuilder()..update(updates))._build();
 
   _$EventDistrictPoints._({required this.points, this.tiebreakers})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        points, 'EventDistrictPoints', 'points');
+        points, r'EventDistrictPoints', 'points');
   }
 
   @override
@@ -46,7 +46,7 @@ class _$EventDistrictPoints extends EventDistrictPoints {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('EventDistrictPoints')
+    return (newBuiltValueToStringHelper(r'EventDistrictPoints')
           ..add('points', points)
           ..add('tiebreakers', tiebreakers))
         .toString();
@@ -57,22 +57,24 @@ class EventDistrictPointsBuilder
     implements Builder<EventDistrictPoints, EventDistrictPointsBuilder> {
   _$EventDistrictPoints? _$v;
 
-  MapBuilder<String, EventDistrictPointsPoints>? _points;
-  MapBuilder<String, EventDistrictPointsPoints> get points =>
-      _$this._points ??= new MapBuilder<String, EventDistrictPointsPoints>();
-  set points(MapBuilder<String, EventDistrictPointsPoints>? points) =>
+  MapBuilder<String, EventDistrictPointsPointsValue>? _points;
+  MapBuilder<String, EventDistrictPointsPointsValue> get points =>
+      _$this._points ??=
+          new MapBuilder<String, EventDistrictPointsPointsValue>();
+  set points(MapBuilder<String, EventDistrictPointsPointsValue>? points) =>
       _$this._points = points;
 
-  MapBuilder<String, EventDistrictPointsTiebreakers>? _tiebreakers;
-  MapBuilder<String, EventDistrictPointsTiebreakers> get tiebreakers =>
+  MapBuilder<String, EventDistrictPointsTiebreakersValue>? _tiebreakers;
+  MapBuilder<String, EventDistrictPointsTiebreakersValue> get tiebreakers =>
       _$this._tiebreakers ??=
-          new MapBuilder<String, EventDistrictPointsTiebreakers>();
+          new MapBuilder<String, EventDistrictPointsTiebreakersValue>();
   set tiebreakers(
-          MapBuilder<String, EventDistrictPointsTiebreakers>? tiebreakers) =>
+          MapBuilder<String, EventDistrictPointsTiebreakersValue>?
+              tiebreakers) =>
       _$this._tiebreakers = tiebreakers;
 
   EventDistrictPointsBuilder() {
-    EventDistrictPoints._initializeBuilder(this);
+    EventDistrictPoints._defaults(this);
   }
 
   EventDistrictPointsBuilder get _$this {
@@ -97,7 +99,9 @@ class EventDistrictPointsBuilder
   }
 
   @override
-  _$EventDistrictPoints build() {
+  EventDistrictPoints build() => _build();
+
+  _$EventDistrictPoints _build() {
     _$EventDistrictPoints _$result;
     try {
       _$result = _$v ??
@@ -112,7 +116,7 @@ class EventDistrictPointsBuilder
         _tiebreakers?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'EventDistrictPoints', _$failedField, e.toString());
+            r'EventDistrictPoints', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -121,4 +125,4 @@ class EventDistrictPointsBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

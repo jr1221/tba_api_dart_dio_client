@@ -32,9 +32,10 @@ void main() {
     });
 
     // List of events that contributed to the point total for the team.
-    // BuiltList<DistrictRankingEventPoints> eventPoints
+    // BuiltList<DistrictRankingEventPointsInner> eventPoints
     test('to test the property `eventPoints`', () async {
       // TODO
     });
+
   });
 }

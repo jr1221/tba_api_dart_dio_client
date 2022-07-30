@@ -55,13 +55,13 @@ void main() {
     });
 
     // Event start date in `yyyy-mm-dd` format.
-    // DateTime startDate
+    // Date startDate
     test('to test the property `startDate`', () async {
       // TODO
     });
 
     // Event end date in `yyyy-mm-dd` format.
-    // DateTime endDate
+    // Date endDate
     test('to test the property `endDate`', () async {
       // TODO
     });
@@ -184,5 +184,6 @@ void main() {
     test('to test the property `playoffTypeString`', () async {
       // TODO
     });
+
   });
 }

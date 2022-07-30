@@ -8,21 +8,22 @@ void main() {
 
   group(EventRanking, () {
     // List of rankings at the event.
-    // BuiltList<EventRankingRankings> rankings
+    // BuiltList<EventRankingRankingsInner> rankings
     test('to test the property `rankings`', () async {
       // TODO
     });
 
     // List of special TBA-generated values provided in the `extra_stats` array for each item.
-    // BuiltList<EventRankingExtraStatsInfo> extraStatsInfo
+    // BuiltList<EventRankingExtraStatsInfoInner> extraStatsInfo
     test('to test the property `extraStatsInfo`', () async {
       // TODO
     });
 
     // List of year-specific values provided in the `sort_orders` array for each team.
-    // BuiltList<EventRankingSortOrderInfo> sortOrderInfo
+    // BuiltList<EventRankingSortOrderInfoInner> sortOrderInfo
     test('to test the property `sortOrderInfo`', () async {
       // TODO
     });
+
   });
 }

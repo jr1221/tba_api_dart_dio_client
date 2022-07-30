@@ -10,16 +10,28 @@ import 'package:dio/dio.dart';
 import 'package:tba_api_dart_dio_client/src/model/api_status.dart';
 
 class TBAApi {
+
   final Dio _dio;
 
   final Serializers _serializers;
 
   const TBAApi(this._dio, this._serializers);
 
-  ///
-  ///
+  /// getStatus
   /// Returns API status, and TBA status information.
-  Future<Response<APIStatus>> getStatus({
+  ///
+  /// Parameters:
+  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [APIStatus] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<APIStatus>> getStatus({ 
     String? ifModifiedSince,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -49,12 +61,9 @@ class TBAApi {
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{};
-
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -68,13 +77,14 @@ class TBAApi {
         _response.data!,
         specifiedType: _responseType,
       ) as APIStatus;
-    } catch (error) {
+
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<APIStatus>(
@@ -88,4 +98,5 @@ class TBAApi {
       extra: _response.extra,
     );
   }
+
 }

@@ -118,7 +118,7 @@ class _$TeamEventStatusPlayoffLevelEnumSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       TeamEventStatusPlayoffLevelEnum.valueOf(
-          _fromWire[serialized] ?? serialized as String);
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$TeamEventStatusPlayoffStatusEnumSerializer
@@ -150,7 +150,7 @@ class _$TeamEventStatusPlayoffStatusEnumSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       TeamEventStatusPlayoffStatusEnum.valueOf(
-          _fromWire[serialized] ?? serialized as String);
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$TeamEventStatusPlayoff extends TeamEventStatusPlayoff {
@@ -167,7 +167,7 @@ class _$TeamEventStatusPlayoff extends TeamEventStatusPlayoff {
 
   factory _$TeamEventStatusPlayoff(
           [void Function(TeamEventStatusPlayoffBuilder)? updates]) =>
-      (new TeamEventStatusPlayoffBuilder()..update(updates)).build();
+      (new TeamEventStatusPlayoffBuilder()..update(updates))._build();
 
   _$TeamEventStatusPlayoff._(
       {this.level,
@@ -209,7 +209,7 @@ class _$TeamEventStatusPlayoff extends TeamEventStatusPlayoff {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('TeamEventStatusPlayoff')
+    return (newBuiltValueToStringHelper(r'TeamEventStatusPlayoff')
           ..add('level', level)
           ..add('currentLevelRecord', currentLevelRecord)
           ..add('record', record)
@@ -248,7 +248,7 @@ class TeamEventStatusPlayoffBuilder
       _$this._playoffAverage = playoffAverage;
 
   TeamEventStatusPlayoffBuilder() {
-    TeamEventStatusPlayoff._initializeBuilder(this);
+    TeamEventStatusPlayoff._defaults(this);
   }
 
   TeamEventStatusPlayoffBuilder get _$this {
@@ -276,7 +276,9 @@ class TeamEventStatusPlayoffBuilder
   }
 
   @override
-  _$TeamEventStatusPlayoff build() {
+  TeamEventStatusPlayoff build() => _build();
+
+  _$TeamEventStatusPlayoff _build() {
     _$TeamEventStatusPlayoff _$result;
     try {
       _$result = _$v ??
@@ -295,7 +297,7 @@ class TeamEventStatusPlayoffBuilder
         _record?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'TeamEventStatusPlayoff', _$failedField, e.toString());
+            r'TeamEventStatusPlayoff', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -304,4 +306,4 @@ class TeamEventStatusPlayoffBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
