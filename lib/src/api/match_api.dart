@@ -26,7 +26,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -38,7 +38,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> getEventMatchTimeseries({ 
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -50,7 +50,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -110,7 +110,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -122,7 +122,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<Match>>> getEventMatches({ 
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -134,7 +134,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -194,7 +194,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -206,7 +206,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> getEventMatchesKeys({ 
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -218,7 +218,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -278,7 +278,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -290,7 +290,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<MatchSimple>>> getEventMatchesSimple({ 
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -302,7 +302,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -362,7 +362,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -374,7 +374,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<Match>> getMatch({ 
     required String matchKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -386,7 +386,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -446,7 +446,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -458,7 +458,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<MatchSimple>> getMatchSimple({ 
     required String matchKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -470,7 +470,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -530,7 +530,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -542,7 +542,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<JsonObject>>> getMatchTimeseries({ 
     required String matchKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -554,7 +554,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -614,7 +614,7 @@ class MatchApi {
   ///
   /// Parameters:
   /// * [matchKey] - TBA Match Key, eg `2016nytr_qm1`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -626,7 +626,7 @@ class MatchApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<Zebra>> getMatchZebra({ 
     required String matchKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -638,7 +638,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -699,7 +699,7 @@ class MatchApi {
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -712,7 +712,7 @@ class MatchApi {
   Future<Response<BuiltList<Match>>> getTeamEventMatches({ 
     required String teamKey,
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -724,7 +724,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -785,7 +785,7 @@ class MatchApi {
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -798,7 +798,7 @@ class MatchApi {
   Future<Response<BuiltList<String>>> getTeamEventMatchesKeys({ 
     required String teamKey,
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -810,7 +810,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -871,7 +871,7 @@ class MatchApi {
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -884,7 +884,7 @@ class MatchApi {
   Future<Response<BuiltList<Match>>> getTeamEventMatchesSimple({ 
     required String teamKey,
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -896,7 +896,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -957,7 +957,7 @@ class MatchApi {
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
   /// * [year] - Competition Year (or Season). Must be 4 digits.
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -970,7 +970,7 @@ class MatchApi {
   Future<Response<BuiltList<Match>>> getTeamMatchesByYear({ 
     required String teamKey,
     required int year,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -982,7 +982,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -1043,7 +1043,7 @@ class MatchApi {
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
   /// * [year] - Competition Year (or Season). Must be 4 digits.
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1056,7 +1056,7 @@ class MatchApi {
   Future<Response<BuiltList<String>>> getTeamMatchesByYearKeys({ 
     required String teamKey,
     required int year,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1068,7 +1068,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -1129,7 +1129,7 @@ class MatchApi {
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
   /// * [year] - Competition Year (or Season). Must be 4 digits.
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1142,7 +1142,7 @@ class MatchApi {
   Future<Response<BuiltList<MatchSimple>>> getTeamMatchesByYearSimple({ 
     required String teamKey,
     required int year,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1154,7 +1154,7 @@ class MatchApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{

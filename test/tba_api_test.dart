@@ -9,7 +9,7 @@ void main() {
   group(TBAApi, () {
     // Returns API status, and TBA status information.
     //
-    //Future<APIStatus> getStatus({ String ifModifiedSince }) async
+    //Future<APIStatus> getStatus({ String ifNoneMatch }) async
     test('test getStatus', () async {
       // TODO
     });

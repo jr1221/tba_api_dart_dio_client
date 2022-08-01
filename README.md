@@ -54,10 +54,10 @@ import 'package:tba_api_dart_dio_client/tba_api_dart_dio_client.dart';
 
 final api = TbaApiDartDioClient().getDistrictApi();
 final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = await api.getDistrictEvents(districtKey, ifModifiedSince);
+    final response = await api.getDistrictEvents(districtKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print("Exception when calling DistrictApi->getDistrictEvents: $e\n");

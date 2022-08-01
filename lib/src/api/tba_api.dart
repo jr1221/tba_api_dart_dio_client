@@ -21,7 +21,7 @@ class TBAApi {
   /// Returns API status, and TBA status information.
   ///
   /// Parameters:
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -32,7 +32,7 @@ class TBAApi {
   /// Returns a [Future] containing a [Response] with a [APIStatus] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<APIStatus>> getStatus({ 
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -44,7 +44,7 @@ class TBAApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{

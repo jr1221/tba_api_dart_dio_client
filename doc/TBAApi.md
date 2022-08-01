@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getStatus**
-> APIStatus getStatus(ifModifiedSince)
+> APIStatus getStatus(ifNoneMatch)
 
 
 
@@ -28,10 +28,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('apiKey').apiKeyPrefix = 'Bearer';
 
 final api = TbaApiDartDioClient().getTBAApi();
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getStatus(ifModifiedSince);
+    final response = api.getStatus(ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TBAApi->getStatus: $e\n');
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 

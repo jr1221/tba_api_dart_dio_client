@@ -29,7 +29,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -41,7 +41,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<Event>>> getDistrictEvents({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -53,7 +53,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -113,7 +113,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -125,7 +125,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> getDistrictEventsKeys({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +137,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -197,7 +197,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -209,7 +209,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<EventSimple>>> getDistrictEventsSimple({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -221,7 +221,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -281,7 +281,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -293,7 +293,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<DistrictRanking>>> getDistrictRankings({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -305,7 +305,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -365,7 +365,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -377,7 +377,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<Team>>> getDistrictTeams({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -389,7 +389,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -449,7 +449,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -461,7 +461,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> getDistrictTeamsKeys({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -473,7 +473,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -533,7 +533,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [districtKey] - TBA District Key, eg `2016fim`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -545,7 +545,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<TeamSimple>>> getDistrictTeamsSimple({ 
     required String districtKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -557,7 +557,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -617,7 +617,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [year] - Competition Year (or Season). Must be 4 digits.
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -629,7 +629,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<DistrictList>>> getDistrictsByYear({ 
     required int year,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -641,7 +641,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -701,7 +701,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [eventKey] - TBA Event Key, eg `2016nytr`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -713,7 +713,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<EventDistrictPoints>> getEventDistrictPoints({ 
     required String eventKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -725,7 +725,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -785,7 +785,7 @@ class DistrictApi {
   ///
   /// Parameters:
   /// * [teamKey] - TBA Team Key, eg `frc254`
-  /// * [ifModifiedSince] - Value of the `Last-Modified` header in the most recently cached response by the client.
+  /// * [ifNoneMatch] - Value of the `ETag` header in the most recently cached response by the client.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -797,7 +797,7 @@ class DistrictApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<DistrictList>>> getTeamDistricts({ 
     required String teamKey,
-    String? ifModifiedSince,
+    String? ifNoneMatch,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -809,7 +809,7 @@ class DistrictApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
-        if (ifModifiedSince != null) r'If-Modified-Since': ifModifiedSince,
+        if (ifNoneMatch != null) r'If-None-Match': ifNoneMatch,
         ...?headers,
       },
       extra: <String, dynamic>{

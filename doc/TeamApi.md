@@ -52,7 +52,7 @@ Method | HTTP request | Description
 
 
 # **getDistrictRankings**
-> BuiltList<DistrictRanking> getDistrictRankings(districtKey, ifModifiedSince)
+> BuiltList<DistrictRanking> getDistrictRankings(districtKey, ifNoneMatch)
 
 
 
@@ -68,10 +68,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getDistrictRankings(districtKey, ifModifiedSince);
+    final response = api.getDistrictRankings(districtKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getDistrictRankings: $e\n');
@@ -83,7 +83,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **String**| TBA District Key, eg `2016fim` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictTeams**
-> BuiltList<Team> getDistrictTeams(districtKey, ifModifiedSince)
+> BuiltList<Team> getDistrictTeams(districtKey, ifNoneMatch)
 
 
 
@@ -117,10 +117,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getDistrictTeams(districtKey, ifModifiedSince);
+    final response = api.getDistrictTeams(districtKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getDistrictTeams: $e\n');
@@ -132,7 +132,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **String**| TBA District Key, eg `2016fim` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictTeamsKeys**
-> BuiltList<String> getDistrictTeamsKeys(districtKey, ifModifiedSince)
+> BuiltList<String> getDistrictTeamsKeys(districtKey, ifNoneMatch)
 
 
 
@@ -166,10 +166,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getDistrictTeamsKeys(districtKey, ifModifiedSince);
+    final response = api.getDistrictTeamsKeys(districtKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getDistrictTeamsKeys: $e\n');
@@ -181,7 +181,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **String**| TBA District Key, eg `2016fim` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictTeamsSimple**
-> BuiltList<TeamSimple> getDistrictTeamsSimple(districtKey, ifModifiedSince)
+> BuiltList<TeamSimple> getDistrictTeamsSimple(districtKey, ifNoneMatch)
 
 
 
@@ -215,10 +215,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String districtKey = districtKey_example; // String | TBA District Key, eg `2016fim`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getDistrictTeamsSimple(districtKey, ifModifiedSince);
+    final response = api.getDistrictTeamsSimple(districtKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getDistrictTeamsSimple: $e\n');
@@ -230,7 +230,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **String**| TBA District Key, eg `2016fim` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventTeams**
-> BuiltList<Team> getEventTeams(eventKey, ifModifiedSince)
+> BuiltList<Team> getEventTeams(eventKey, ifNoneMatch)
 
 
 
@@ -264,10 +264,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getEventTeams(eventKey, ifModifiedSince);
+    final response = api.getEventTeams(eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getEventTeams: $e\n');
@@ -279,7 +279,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventTeamsKeys**
-> BuiltList<String> getEventTeamsKeys(eventKey, ifModifiedSince)
+> BuiltList<String> getEventTeamsKeys(eventKey, ifNoneMatch)
 
 
 
@@ -313,10 +313,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getEventTeamsKeys(eventKey, ifModifiedSince);
+    final response = api.getEventTeamsKeys(eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getEventTeamsKeys: $e\n');
@@ -328,7 +328,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventTeamsSimple**
-> BuiltList<TeamSimple> getEventTeamsSimple(eventKey, ifModifiedSince)
+> BuiltList<TeamSimple> getEventTeamsSimple(eventKey, ifNoneMatch)
 
 
 
@@ -362,10 +362,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getEventTeamsSimple(eventKey, ifModifiedSince);
+    final response = api.getEventTeamsSimple(eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getEventTeamsSimple: $e\n');
@@ -377,7 +377,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventTeamsStatuses**
-> BuiltMap<String, TeamEventStatus> getEventTeamsStatuses(eventKey, ifModifiedSince)
+> BuiltMap<String, TeamEventStatus> getEventTeamsStatuses(eventKey, ifNoneMatch)
 
 
 
@@ -411,10 +411,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getEventTeamsStatuses(eventKey, ifModifiedSince);
+    final response = api.getEventTeamsStatuses(eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getEventTeamsStatuses: $e\n');
@@ -426,7 +426,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeam**
-> Team getTeam(teamKey, ifModifiedSince)
+> Team getTeam(teamKey, ifNoneMatch)
 
 
 
@@ -460,10 +460,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeam(teamKey, ifModifiedSince);
+    final response = api.getTeam(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeam: $e\n');
@@ -475,7 +475,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamAwards**
-> BuiltList<Award> getTeamAwards(teamKey, ifModifiedSince)
+> BuiltList<Award> getTeamAwards(teamKey, ifNoneMatch)
 
 
 
@@ -509,10 +509,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamAwards(teamKey, ifModifiedSince);
+    final response = api.getTeamAwards(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamAwards: $e\n');
@@ -524,7 +524,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamAwardsByYear**
-> BuiltList<Award> getTeamAwardsByYear(teamKey, year, ifModifiedSince)
+> BuiltList<Award> getTeamAwardsByYear(teamKey, year, ifNoneMatch)
 
 
 
@@ -559,10 +559,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamAwardsByYear(teamKey, year, ifModifiedSince);
+    final response = api.getTeamAwardsByYear(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamAwardsByYear: $e\n');
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamDistricts**
-> BuiltList<DistrictList> getTeamDistricts(teamKey, ifModifiedSince)
+> BuiltList<DistrictList> getTeamDistricts(teamKey, ifNoneMatch)
 
 
 
@@ -609,10 +609,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamDistricts(teamKey, ifModifiedSince);
+    final response = api.getTeamDistricts(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamDistricts: $e\n');
@@ -624,7 +624,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventAwards**
-> BuiltList<Award> getTeamEventAwards(teamKey, eventKey, ifModifiedSince)
+> BuiltList<Award> getTeamEventAwards(teamKey, eventKey, ifNoneMatch)
 
 
 
@@ -659,10 +659,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventAwards(teamKey, eventKey, ifModifiedSince);
+    final response = api.getTeamEventAwards(teamKey, eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventAwards: $e\n');
@@ -675,7 +675,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -693,7 +693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventMatches**
-> BuiltList<Match> getTeamEventMatches(teamKey, eventKey, ifModifiedSince)
+> BuiltList<Match> getTeamEventMatches(teamKey, eventKey, ifNoneMatch)
 
 
 
@@ -710,10 +710,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
+    final response = api.getTeamEventMatches(teamKey, eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventMatches: $e\n');
@@ -726,7 +726,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -744,7 +744,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventMatchesKeys**
-> BuiltList<String> getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince)
+> BuiltList<String> getTeamEventMatchesKeys(teamKey, eventKey, ifNoneMatch)
 
 
 
@@ -761,10 +761,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
+    final response = api.getTeamEventMatchesKeys(teamKey, eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventMatchesKeys: $e\n');
@@ -777,7 +777,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -795,7 +795,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventMatchesSimple**
-> BuiltList<Match> getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince)
+> BuiltList<Match> getTeamEventMatchesSimple(teamKey, eventKey, ifNoneMatch)
 
 
 
@@ -812,10 +812,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
+    final response = api.getTeamEventMatchesSimple(teamKey, eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventMatchesSimple: $e\n');
@@ -828,7 +828,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -846,7 +846,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventStatus**
-> TeamEventStatus getTeamEventStatus(teamKey, eventKey, ifModifiedSince)
+> TeamEventStatus getTeamEventStatus(teamKey, eventKey, ifNoneMatch)
 
 
 
@@ -863,10 +863,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String eventKey = eventKey_example; // String | TBA Event Key, eg `2016nytr`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventStatus(teamKey, eventKey, ifModifiedSince);
+    final response = api.getTeamEventStatus(teamKey, eventKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventStatus: $e\n');
@@ -879,7 +879,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **eventKey** | **String**| TBA Event Key, eg `2016nytr` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -897,7 +897,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEvents**
-> BuiltList<Event> getTeamEvents(teamKey, ifModifiedSince)
+> BuiltList<Event> getTeamEvents(teamKey, ifNoneMatch)
 
 
 
@@ -913,10 +913,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEvents(teamKey, ifModifiedSince);
+    final response = api.getTeamEvents(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEvents: $e\n');
@@ -928,7 +928,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -946,7 +946,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventsByYear**
-> BuiltList<Event> getTeamEventsByYear(teamKey, year, ifModifiedSince)
+> BuiltList<Event> getTeamEventsByYear(teamKey, year, ifNoneMatch)
 
 
 
@@ -963,10 +963,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventsByYear(teamKey, year, ifModifiedSince);
+    final response = api.getTeamEventsByYear(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventsByYear: $e\n');
@@ -979,7 +979,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -997,7 +997,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventsByYearKeys**
-> BuiltList<String> getTeamEventsByYearKeys(teamKey, year, ifModifiedSince)
+> BuiltList<String> getTeamEventsByYearKeys(teamKey, year, ifNoneMatch)
 
 
 
@@ -1014,10 +1014,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventsByYearKeys(teamKey, year, ifModifiedSince);
+    final response = api.getTeamEventsByYearKeys(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventsByYearKeys: $e\n');
@@ -1030,7 +1030,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1048,7 +1048,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventsByYearSimple**
-> BuiltList<EventSimple> getTeamEventsByYearSimple(teamKey, year, ifModifiedSince)
+> BuiltList<EventSimple> getTeamEventsByYearSimple(teamKey, year, ifNoneMatch)
 
 
 
@@ -1065,10 +1065,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventsByYearSimple(teamKey, year, ifModifiedSince);
+    final response = api.getTeamEventsByYearSimple(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventsByYearSimple: $e\n');
@@ -1081,7 +1081,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1099,7 +1099,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventsKeys**
-> BuiltList<String> getTeamEventsKeys(teamKey, ifModifiedSince)
+> BuiltList<String> getTeamEventsKeys(teamKey, ifNoneMatch)
 
 
 
@@ -1115,10 +1115,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventsKeys(teamKey, ifModifiedSince);
+    final response = api.getTeamEventsKeys(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventsKeys: $e\n');
@@ -1130,7 +1130,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1148,7 +1148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventsSimple**
-> BuiltList<EventSimple> getTeamEventsSimple(teamKey, ifModifiedSince)
+> BuiltList<EventSimple> getTeamEventsSimple(teamKey, ifNoneMatch)
 
 
 
@@ -1164,10 +1164,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventsSimple(teamKey, ifModifiedSince);
+    final response = api.getTeamEventsSimple(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventsSimple: $e\n');
@@ -1179,7 +1179,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1197,7 +1197,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamEventsStatusesByYear**
-> BuiltMap<String, TeamEventStatus> getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+> BuiltMap<String, TeamEventStatus> getTeamEventsStatusesByYear(teamKey, year, ifNoneMatch)
 
 
 
@@ -1214,10 +1214,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince);
+    final response = api.getTeamEventsStatusesByYear(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamEventsStatusesByYear: $e\n');
@@ -1230,7 +1230,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1248,7 +1248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamMatchesByYear**
-> BuiltList<Match> getTeamMatchesByYear(teamKey, year, ifModifiedSince)
+> BuiltList<Match> getTeamMatchesByYear(teamKey, year, ifNoneMatch)
 
 
 
@@ -1265,10 +1265,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamMatchesByYear(teamKey, year, ifModifiedSince);
+    final response = api.getTeamMatchesByYear(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamMatchesByYear: $e\n');
@@ -1281,7 +1281,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1299,7 +1299,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamMatchesByYearKeys**
-> BuiltList<String> getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince)
+> BuiltList<String> getTeamMatchesByYearKeys(teamKey, year, ifNoneMatch)
 
 
 
@@ -1316,10 +1316,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince);
+    final response = api.getTeamMatchesByYearKeys(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamMatchesByYearKeys: $e\n');
@@ -1332,7 +1332,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1350,7 +1350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamMatchesByYearSimple**
-> BuiltList<MatchSimple> getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince)
+> BuiltList<MatchSimple> getTeamMatchesByYearSimple(teamKey, year, ifNoneMatch)
 
 
 
@@ -1367,10 +1367,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince);
+    final response = api.getTeamMatchesByYearSimple(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamMatchesByYearSimple: $e\n');
@@ -1383,7 +1383,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1401,7 +1401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamMediaByTag**
-> BuiltList<Media> getTeamMediaByTag(teamKey, mediaTag, ifModifiedSince)
+> BuiltList<Media> getTeamMediaByTag(teamKey, mediaTag, ifNoneMatch)
 
 
 
@@ -1418,10 +1418,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String mediaTag = mediaTag_example; // String | Media Tag which describes the Media.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamMediaByTag(teamKey, mediaTag, ifModifiedSince);
+    final response = api.getTeamMediaByTag(teamKey, mediaTag, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamMediaByTag: $e\n');
@@ -1434,7 +1434,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **mediaTag** | **String**| Media Tag which describes the Media. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1452,7 +1452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamMediaByTagYear**
-> BuiltList<Media> getTeamMediaByTagYear(teamKey, mediaTag, year, ifModifiedSince)
+> BuiltList<Media> getTeamMediaByTagYear(teamKey, mediaTag, year, ifNoneMatch)
 
 
 
@@ -1470,10 +1470,10 @@ final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final String mediaTag = mediaTag_example; // String | Media Tag which describes the Media.
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamMediaByTagYear(teamKey, mediaTag, year, ifModifiedSince);
+    final response = api.getTeamMediaByTagYear(teamKey, mediaTag, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamMediaByTagYear: $e\n');
@@ -1487,7 +1487,7 @@ Name | Type | Description  | Notes
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **mediaTag** | **String**| Media Tag which describes the Media. | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1505,7 +1505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamMediaByYear**
-> BuiltList<Media> getTeamMediaByYear(teamKey, year, ifModifiedSince)
+> BuiltList<Media> getTeamMediaByYear(teamKey, year, ifNoneMatch)
 
 
 
@@ -1522,10 +1522,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamMediaByYear(teamKey, year, ifModifiedSince);
+    final response = api.getTeamMediaByYear(teamKey, year, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamMediaByYear: $e\n');
@@ -1538,7 +1538,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1556,7 +1556,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamRobots**
-> BuiltList<TeamRobot> getTeamRobots(teamKey, ifModifiedSince)
+> BuiltList<TeamRobot> getTeamRobots(teamKey, ifNoneMatch)
 
 
 
@@ -1572,10 +1572,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamRobots(teamKey, ifModifiedSince);
+    final response = api.getTeamRobots(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamRobots: $e\n');
@@ -1587,7 +1587,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1605,7 +1605,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamSimple**
-> TeamSimple getTeamSimple(teamKey, ifModifiedSince)
+> TeamSimple getTeamSimple(teamKey, ifNoneMatch)
 
 
 
@@ -1621,10 +1621,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamSimple(teamKey, ifModifiedSince);
+    final response = api.getTeamSimple(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamSimple: $e\n');
@@ -1636,7 +1636,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1654,7 +1654,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamSocialMedia**
-> BuiltList<Media> getTeamSocialMedia(teamKey, ifModifiedSince)
+> BuiltList<Media> getTeamSocialMedia(teamKey, ifNoneMatch)
 
 
 
@@ -1670,10 +1670,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamSocialMedia(teamKey, ifModifiedSince);
+    final response = api.getTeamSocialMedia(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamSocialMedia: $e\n');
@@ -1685,7 +1685,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1703,7 +1703,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamYearsParticipated**
-> BuiltList<int> getTeamYearsParticipated(teamKey, ifModifiedSince)
+> BuiltList<int> getTeamYearsParticipated(teamKey, ifNoneMatch)
 
 
 
@@ -1719,10 +1719,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final String teamKey = teamKey_example; // String | TBA Team Key, eg `frc254`
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamYearsParticipated(teamKey, ifModifiedSince);
+    final response = api.getTeamYearsParticipated(teamKey, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamYearsParticipated: $e\n');
@@ -1734,7 +1734,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg `frc254` | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1752,7 +1752,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeams**
-> BuiltList<Team> getTeams(pageNum, ifModifiedSince)
+> BuiltList<Team> getTeams(pageNum, ifNoneMatch)
 
 
 
@@ -1768,10 +1768,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final int pageNum = 56; // int | Page number of results to return, zero-indexed
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeams(pageNum, ifModifiedSince);
+    final response = api.getTeams(pageNum, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeams: $e\n');
@@ -1783,7 +1783,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageNum** | **int**| Page number of results to return, zero-indexed | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1801,7 +1801,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamsByYear**
-> BuiltList<Team> getTeamsByYear(year, pageNum, ifModifiedSince)
+> BuiltList<Team> getTeamsByYear(year, pageNum, ifNoneMatch)
 
 
 
@@ -1818,10 +1818,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
 final int pageNum = 56; // int | Page number of results to return, zero-indexed
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamsByYear(year, pageNum, ifModifiedSince);
+    final response = api.getTeamsByYear(year, pageNum, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamsByYear: $e\n');
@@ -1834,7 +1834,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **pageNum** | **int**| Page number of results to return, zero-indexed | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1852,7 +1852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamsByYearKeys**
-> BuiltList<String> getTeamsByYearKeys(year, pageNum, ifModifiedSince)
+> BuiltList<String> getTeamsByYearKeys(year, pageNum, ifNoneMatch)
 
 
 
@@ -1869,10 +1869,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
 final int pageNum = 56; // int | Page number of results to return, zero-indexed
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamsByYearKeys(year, pageNum, ifModifiedSince);
+    final response = api.getTeamsByYearKeys(year, pageNum, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamsByYearKeys: $e\n');
@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **pageNum** | **int**| Page number of results to return, zero-indexed | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1903,7 +1903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamsByYearSimple**
-> BuiltList<TeamSimple> getTeamsByYearSimple(year, pageNum, ifModifiedSince)
+> BuiltList<TeamSimple> getTeamsByYearSimple(year, pageNum, ifNoneMatch)
 
 
 
@@ -1920,10 +1920,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 final api = TbaApiDartDioClient().getTeamApi();
 final int year = 56; // int | Competition Year (or Season). Must be 4 digits.
 final int pageNum = 56; // int | Page number of results to return, zero-indexed
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamsByYearSimple(year, pageNum, ifModifiedSince);
+    final response = api.getTeamsByYearSimple(year, pageNum, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamsByYearSimple: $e\n');
@@ -1936,7 +1936,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **pageNum** | **int**| Page number of results to return, zero-indexed | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -1954,7 +1954,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamsKeys**
-> BuiltList<String> getTeamsKeys(pageNum, ifModifiedSince)
+> BuiltList<String> getTeamsKeys(pageNum, ifNoneMatch)
 
 
 
@@ -1970,10 +1970,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final int pageNum = 56; // int | Page number of results to return, zero-indexed
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamsKeys(pageNum, ifModifiedSince);
+    final response = api.getTeamsKeys(pageNum, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamsKeys: $e\n');
@@ -1985,7 +1985,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageNum** | **int**| Page number of results to return, zero-indexed | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
@@ -2003,7 +2003,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeamsSimple**
-> BuiltList<TeamSimple> getTeamsSimple(pageNum, ifModifiedSince)
+> BuiltList<TeamSimple> getTeamsSimple(pageNum, ifNoneMatch)
 
 
 
@@ -2019,10 +2019,10 @@ import 'package:tba_api_dart_dio_client/api.dart';
 
 final api = TbaApiDartDioClient().getTeamApi();
 final int pageNum = 56; // int | Page number of results to return, zero-indexed
-final String ifModifiedSince = ifModifiedSince_example; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+final String ifNoneMatch = ifNoneMatch_example; // String | Value of the `ETag` header in the most recently cached response by the client.
 
 try {
-    final response = api.getTeamsSimple(pageNum, ifModifiedSince);
+    final response = api.getTeamsSimple(pageNum, ifNoneMatch);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamApi->getTeamsSimple: $e\n');
@@ -2034,7 +2034,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageNum** | **int**| Page number of results to return, zero-indexed | 
- **ifModifiedSince** | **String**| Value of the `Last-Modified` header in the most recently cached response by the client. | [optional] 
+ **ifNoneMatch** | **String**| Value of the `ETag` header in the most recently cached response by the client. | [optional] 
 
 ### Return type
 
