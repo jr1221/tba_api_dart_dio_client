@@ -129,44 +129,33 @@ class _$MatchScoreBreakdown2015Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, autoPoints.hashCode), teleopPoints.hashCode), containerPoints.hashCode), totePoints.hashCode), litterPoints.hashCode),
-                                                                                foulPoints.hashCode),
-                                                                            adjustPoints.hashCode),
-                                                                        totalPoints.hashCode),
-                                                                    foulCount.hashCode),
-                                                                toteCountFar.hashCode),
-                                                            toteCountNear.hashCode),
-                                                        toteSet.hashCode),
-                                                    toteStack.hashCode),
-                                                containerCountLevel1.hashCode),
-                                            containerCountLevel2.hashCode),
-                                        containerCountLevel3.hashCode),
-                                    containerCountLevel4.hashCode),
-                                containerCountLevel5.hashCode),
-                            containerCountLevel6.hashCode),
-                        containerSet.hashCode),
-                    litterCountContainer.hashCode),
-                litterCountLandfill.hashCode),
-            litterCountUnprocessed.hashCode),
-        robotSet.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, containerPoints.hashCode);
+    _$hash = $jc(_$hash, totePoints.hashCode);
+    _$hash = $jc(_$hash, litterPoints.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, toteCountFar.hashCode);
+    _$hash = $jc(_$hash, toteCountNear.hashCode);
+    _$hash = $jc(_$hash, toteSet.hashCode);
+    _$hash = $jc(_$hash, toteStack.hashCode);
+    _$hash = $jc(_$hash, containerCountLevel1.hashCode);
+    _$hash = $jc(_$hash, containerCountLevel2.hashCode);
+    _$hash = $jc(_$hash, containerCountLevel3.hashCode);
+    _$hash = $jc(_$hash, containerCountLevel4.hashCode);
+    _$hash = $jc(_$hash, containerCountLevel5.hashCode);
+    _$hash = $jc(_$hash, containerCountLevel6.hashCode);
+    _$hash = $jc(_$hash, containerSet.hashCode);
+    _$hash = $jc(_$hash, litterCountContainer.hashCode);
+    _$hash = $jc(_$hash, litterCountLandfill.hashCode);
+    _$hash = $jc(_$hash, litterCountUnprocessed.hashCode);
+    _$hash = $jc(_$hash, robotSet.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -395,4 +384,4 @@ class MatchScoreBreakdown2015AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

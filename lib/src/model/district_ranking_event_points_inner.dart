@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,138 +18,192 @@ part 'district_ranking_event_points_inner.g.dart';
 /// * [awardPoints] - Points awarded for event awards.
 /// * [eventKey] - TBA Event key for this event.
 /// * [qualPoints] - Points awarded for qualification match performance.
+@BuiltValue()
 abstract class DistrictRankingEventPointsInner implements Built<DistrictRankingEventPointsInner, DistrictRankingEventPointsInnerBuilder> {
-    /// `true` if this event is a District Championship event.
-    @BuiltValueField(wireName: r'district_cmp')
-    bool get districtCmp;
+  /// `true` if this event is a District Championship event.
+  @BuiltValueField(wireName: r'district_cmp')
+  bool get districtCmp;
 
-    /// Total points awarded at this event.
-    @BuiltValueField(wireName: r'total')
-    int get total;
+  /// Total points awarded at this event.
+  @BuiltValueField(wireName: r'total')
+  int get total;
 
-    /// Points awarded for alliance selection.
-    @BuiltValueField(wireName: r'alliance_points')
-    int get alliancePoints;
+  /// Points awarded for alliance selection.
+  @BuiltValueField(wireName: r'alliance_points')
+  int get alliancePoints;
 
-    /// Points awarded for elimination match performance.
-    @BuiltValueField(wireName: r'elim_points')
-    int get elimPoints;
+  /// Points awarded for elimination match performance.
+  @BuiltValueField(wireName: r'elim_points')
+  int get elimPoints;
 
-    /// Points awarded for event awards.
-    @BuiltValueField(wireName: r'award_points')
-    int get awardPoints;
+  /// Points awarded for event awards.
+  @BuiltValueField(wireName: r'award_points')
+  int get awardPoints;
 
-    /// TBA Event key for this event.
-    @BuiltValueField(wireName: r'event_key')
-    String get eventKey;
+  /// TBA Event key for this event.
+  @BuiltValueField(wireName: r'event_key')
+  String get eventKey;
 
-    /// Points awarded for qualification match performance.
-    @BuiltValueField(wireName: r'qual_points')
-    int get qualPoints;
+  /// Points awarded for qualification match performance.
+  @BuiltValueField(wireName: r'qual_points')
+  int get qualPoints;
 
-    DistrictRankingEventPointsInner._();
+  DistrictRankingEventPointsInner._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(DistrictRankingEventPointsInnerBuilder b) => b;
+  factory DistrictRankingEventPointsInner([void updates(DistrictRankingEventPointsInnerBuilder b)]) = _$DistrictRankingEventPointsInner;
 
-    factory DistrictRankingEventPointsInner([void updates(DistrictRankingEventPointsInnerBuilder b)]) = _$DistrictRankingEventPointsInner;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(DistrictRankingEventPointsInnerBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<DistrictRankingEventPointsInner> get serializer => _$DistrictRankingEventPointsInnerSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<DistrictRankingEventPointsInner> get serializer => _$DistrictRankingEventPointsInnerSerializer();
 }
 
-class _$DistrictRankingEventPointsInnerSerializer implements StructuredSerializer<DistrictRankingEventPointsInner> {
-    @override
-    final Iterable<Type> types = const [DistrictRankingEventPointsInner, _$DistrictRankingEventPointsInner];
+class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer<DistrictRankingEventPointsInner> {
+  @override
+  final Iterable<Type> types = const [DistrictRankingEventPointsInner, _$DistrictRankingEventPointsInner];
 
-    @override
-    final String wireName = r'DistrictRankingEventPointsInner';
+  @override
+  final String wireName = r'DistrictRankingEventPointsInner';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, DistrictRankingEventPointsInner object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        result
-            ..add(r'district_cmp')
-            ..add(serializers.serialize(object.districtCmp,
-                specifiedType: const FullType(bool)));
-        result
-            ..add(r'total')
-            ..add(serializers.serialize(object.total,
-                specifiedType: const FullType(int)));
-        result
-            ..add(r'alliance_points')
-            ..add(serializers.serialize(object.alliancePoints,
-                specifiedType: const FullType(int)));
-        result
-            ..add(r'elim_points')
-            ..add(serializers.serialize(object.elimPoints,
-                specifiedType: const FullType(int)));
-        result
-            ..add(r'award_points')
-            ..add(serializers.serialize(object.awardPoints,
-                specifiedType: const FullType(int)));
-        result
-            ..add(r'event_key')
-            ..add(serializers.serialize(object.eventKey,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'qual_points')
-            ..add(serializers.serialize(object.qualPoints,
-                specifiedType: const FullType(int)));
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    DistrictRankingEventPointsInner object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    yield r'district_cmp';
+    yield serializers.serialize(
+      object.districtCmp,
+      specifiedType: const FullType(bool),
+    );
+    yield r'total';
+    yield serializers.serialize(
+      object.total,
+      specifiedType: const FullType(int),
+    );
+    yield r'alliance_points';
+    yield serializers.serialize(
+      object.alliancePoints,
+      specifiedType: const FullType(int),
+    );
+    yield r'elim_points';
+    yield serializers.serialize(
+      object.elimPoints,
+      specifiedType: const FullType(int),
+    );
+    yield r'award_points';
+    yield serializers.serialize(
+      object.awardPoints,
+      specifiedType: const FullType(int),
+    );
+    yield r'event_key';
+    yield serializers.serialize(
+      object.eventKey,
+      specifiedType: const FullType(String),
+    );
+    yield r'qual_points';
+    yield serializers.serialize(
+      object.qualPoints,
+      specifiedType: const FullType(int),
+    );
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    DistrictRankingEventPointsInner object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required DistrictRankingEventPointsInnerBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'district_cmp':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.districtCmp = valueDes;
+          break;
+        case r'total':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.total = valueDes;
+          break;
+        case r'alliance_points':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.alliancePoints = valueDes;
+          break;
+        case r'elim_points':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.elimPoints = valueDes;
+          break;
+        case r'award_points':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.awardPoints = valueDes;
+          break;
+        case r'event_key':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.eventKey = valueDes;
+          break;
+        case r'qual_points':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.qualPoints = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
 
-    @override
-    DistrictRankingEventPointsInner deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = DistrictRankingEventPointsInnerBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'district_cmp':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.districtCmp = valueDes;
-                    break;
-                case r'total':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.total = valueDes;
-                    break;
-                case r'alliance_points':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.alliancePoints = valueDes;
-                    break;
-                case r'elim_points':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.elimPoints = valueDes;
-                    break;
-                case r'award_points':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.awardPoints = valueDes;
-                    break;
-                case r'event_key':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    result.eventKey = valueDes;
-                    break;
-                case r'qual_points':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.qualPoints = valueDes;
-                    break;
-            }
-        }
-        return result.build();
-    }
+  @override
+  DistrictRankingEventPointsInner deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = DistrictRankingEventPointsInnerBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

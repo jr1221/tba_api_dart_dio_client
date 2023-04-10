@@ -181,44 +181,46 @@ class _$MatchScoreBreakdown2018Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, adjustPoints.hashCode), autoOwnershipPoints.hashCode), autoPoints.hashCode), autoQuestRankingPoint.hashCode), autoRobot1.hashCode), autoRobot2.hashCode), autoRobot3.hashCode), autoRunPoints.hashCode), autoScaleOwnershipSec.hashCode), autoSwitchAtZero.hashCode), autoSwitchOwnershipSec.hashCode), endgamePoints.hashCode), endgameRobot1.hashCode), endgameRobot2.hashCode), endgameRobot3.hashCode), faceTheBossRankingPoint.hashCode), foulCount.hashCode), foulPoints.hashCode),
-                                                                                rp.hashCode),
-                                                                            techFoulCount.hashCode),
-                                                                        teleopOwnershipPoints.hashCode),
-                                                                    teleopPoints.hashCode),
-                                                                teleopScaleBoostSec.hashCode),
-                                                            teleopScaleForceSec.hashCode),
-                                                        teleopScaleOwnershipSec.hashCode),
-                                                    teleopSwitchBoostSec.hashCode),
-                                                teleopSwitchForceSec.hashCode),
-                                            teleopSwitchOwnershipSec.hashCode),
-                                        totalPoints.hashCode),
-                                    vaultBoostPlayed.hashCode),
-                                vaultBoostTotal.hashCode),
-                            vaultForcePlayed.hashCode),
-                        vaultForceTotal.hashCode),
-                    vaultLevitatePlayed.hashCode),
-                vaultLevitateTotal.hashCode),
-            vaultPoints.hashCode),
-        tbaGameData.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, autoOwnershipPoints.hashCode);
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, autoQuestRankingPoint.hashCode);
+    _$hash = $jc(_$hash, autoRobot1.hashCode);
+    _$hash = $jc(_$hash, autoRobot2.hashCode);
+    _$hash = $jc(_$hash, autoRobot3.hashCode);
+    _$hash = $jc(_$hash, autoRunPoints.hashCode);
+    _$hash = $jc(_$hash, autoScaleOwnershipSec.hashCode);
+    _$hash = $jc(_$hash, autoSwitchAtZero.hashCode);
+    _$hash = $jc(_$hash, autoSwitchOwnershipSec.hashCode);
+    _$hash = $jc(_$hash, endgamePoints.hashCode);
+    _$hash = $jc(_$hash, endgameRobot1.hashCode);
+    _$hash = $jc(_$hash, endgameRobot2.hashCode);
+    _$hash = $jc(_$hash, endgameRobot3.hashCode);
+    _$hash = $jc(_$hash, faceTheBossRankingPoint.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, rp.hashCode);
+    _$hash = $jc(_$hash, techFoulCount.hashCode);
+    _$hash = $jc(_$hash, teleopOwnershipPoints.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, teleopScaleBoostSec.hashCode);
+    _$hash = $jc(_$hash, teleopScaleForceSec.hashCode);
+    _$hash = $jc(_$hash, teleopScaleOwnershipSec.hashCode);
+    _$hash = $jc(_$hash, teleopSwitchBoostSec.hashCode);
+    _$hash = $jc(_$hash, teleopSwitchForceSec.hashCode);
+    _$hash = $jc(_$hash, teleopSwitchOwnershipSec.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jc(_$hash, vaultBoostPlayed.hashCode);
+    _$hash = $jc(_$hash, vaultBoostTotal.hashCode);
+    _$hash = $jc(_$hash, vaultForcePlayed.hashCode);
+    _$hash = $jc(_$hash, vaultForceTotal.hashCode);
+    _$hash = $jc(_$hash, vaultLevitatePlayed.hashCode);
+    _$hash = $jc(_$hash, vaultLevitateTotal.hashCode);
+    _$hash = $jc(_$hash, vaultPoints.hashCode);
+    _$hash = $jc(_$hash, tbaGameData.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -552,4 +554,4 @@ class MatchScoreBreakdown2018AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -26,9 +26,8 @@ MatchScoreBreakdown2022AllianceTaxiRobot1Enum
 }
 
 final BuiltSet<MatchScoreBreakdown2022AllianceTaxiRobot1Enum>
-    _$matchScoreBreakdown2022AllianceTaxiRobot1EnumValues =
-    new BuiltSet<MatchScoreBreakdown2022AllianceTaxiRobot1Enum>(const <
-        MatchScoreBreakdown2022AllianceTaxiRobot1Enum>[
+    _$matchScoreBreakdown2022AllianceTaxiRobot1EnumValues = new BuiltSet<
+        MatchScoreBreakdown2022AllianceTaxiRobot1Enum>(const <MatchScoreBreakdown2022AllianceTaxiRobot1Enum>[
   _$matchScoreBreakdown2022AllianceTaxiRobot1Enum_yes,
   _$matchScoreBreakdown2022AllianceTaxiRobot1Enum_no,
 ]);
@@ -68,9 +67,8 @@ MatchScoreBreakdown2022AllianceEndgameRobot1Enum
 }
 
 final BuiltSet<MatchScoreBreakdown2022AllianceEndgameRobot1Enum>
-    _$matchScoreBreakdown2022AllianceEndgameRobot1EnumValues =
-    new BuiltSet<MatchScoreBreakdown2022AllianceEndgameRobot1Enum>(const <
-        MatchScoreBreakdown2022AllianceEndgameRobot1Enum>[
+    _$matchScoreBreakdown2022AllianceEndgameRobot1EnumValues = new BuiltSet<
+        MatchScoreBreakdown2022AllianceEndgameRobot1Enum>(const <MatchScoreBreakdown2022AllianceEndgameRobot1Enum>[
   _$matchScoreBreakdown2022AllianceEndgameRobot1Enum_traversal,
   _$matchScoreBreakdown2022AllianceEndgameRobot1Enum_high,
   _$matchScoreBreakdown2022AllianceEndgameRobot1Enum_mid,
@@ -98,9 +96,8 @@ MatchScoreBreakdown2022AllianceTaxiRobot2Enum
 }
 
 final BuiltSet<MatchScoreBreakdown2022AllianceTaxiRobot2Enum>
-    _$matchScoreBreakdown2022AllianceTaxiRobot2EnumValues =
-    new BuiltSet<MatchScoreBreakdown2022AllianceTaxiRobot2Enum>(const <
-        MatchScoreBreakdown2022AllianceTaxiRobot2Enum>[
+    _$matchScoreBreakdown2022AllianceTaxiRobot2EnumValues = new BuiltSet<
+        MatchScoreBreakdown2022AllianceTaxiRobot2Enum>(const <MatchScoreBreakdown2022AllianceTaxiRobot2Enum>[
   _$matchScoreBreakdown2022AllianceTaxiRobot2Enum_yes,
   _$matchScoreBreakdown2022AllianceTaxiRobot2Enum_no,
 ]);
@@ -140,9 +137,8 @@ MatchScoreBreakdown2022AllianceEndgameRobot2Enum
 }
 
 final BuiltSet<MatchScoreBreakdown2022AllianceEndgameRobot2Enum>
-    _$matchScoreBreakdown2022AllianceEndgameRobot2EnumValues =
-    new BuiltSet<MatchScoreBreakdown2022AllianceEndgameRobot2Enum>(const <
-        MatchScoreBreakdown2022AllianceEndgameRobot2Enum>[
+    _$matchScoreBreakdown2022AllianceEndgameRobot2EnumValues = new BuiltSet<
+        MatchScoreBreakdown2022AllianceEndgameRobot2Enum>(const <MatchScoreBreakdown2022AllianceEndgameRobot2Enum>[
   _$matchScoreBreakdown2022AllianceEndgameRobot2Enum_traversal,
   _$matchScoreBreakdown2022AllianceEndgameRobot2Enum_high,
   _$matchScoreBreakdown2022AllianceEndgameRobot2Enum_mid,
@@ -170,9 +166,8 @@ MatchScoreBreakdown2022AllianceTaxiRobot3Enum
 }
 
 final BuiltSet<MatchScoreBreakdown2022AllianceTaxiRobot3Enum>
-    _$matchScoreBreakdown2022AllianceTaxiRobot3EnumValues =
-    new BuiltSet<MatchScoreBreakdown2022AllianceTaxiRobot3Enum>(const <
-        MatchScoreBreakdown2022AllianceTaxiRobot3Enum>[
+    _$matchScoreBreakdown2022AllianceTaxiRobot3EnumValues = new BuiltSet<
+        MatchScoreBreakdown2022AllianceTaxiRobot3Enum>(const <MatchScoreBreakdown2022AllianceTaxiRobot3Enum>[
   _$matchScoreBreakdown2022AllianceTaxiRobot3Enum_yes,
   _$matchScoreBreakdown2022AllianceTaxiRobot3Enum_no,
 ]);
@@ -212,9 +207,8 @@ MatchScoreBreakdown2022AllianceEndgameRobot3Enum
 }
 
 final BuiltSet<MatchScoreBreakdown2022AllianceEndgameRobot3Enum>
-    _$matchScoreBreakdown2022AllianceEndgameRobot3EnumValues =
-    new BuiltSet<MatchScoreBreakdown2022AllianceEndgameRobot3Enum>(const <
-        MatchScoreBreakdown2022AllianceEndgameRobot3Enum>[
+    _$matchScoreBreakdown2022AllianceEndgameRobot3EnumValues = new BuiltSet<
+        MatchScoreBreakdown2022AllianceEndgameRobot3Enum>(const <MatchScoreBreakdown2022AllianceEndgameRobot3Enum>[
   _$matchScoreBreakdown2022AllianceEndgameRobot3Enum_traversal,
   _$matchScoreBreakdown2022AllianceEndgameRobot3Enum_high,
   _$matchScoreBreakdown2022AllianceEndgameRobot3Enum_mid,
@@ -644,44 +638,49 @@ class _$MatchScoreBreakdown2022Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, taxiRobot1.hashCode), endgameRobot1.hashCode), taxiRobot2.hashCode), endgameRobot2.hashCode), taxiRobot3.hashCode), endgameRobot3.hashCode), autoCargoLowerNear.hashCode), autoCargoLowerFar.hashCode), autoCargoLowerBlue.hashCode), autoCargoLowerRed.hashCode), autoCargoUpperNear.hashCode), autoCargoUpperFar.hashCode), autoCargoUpperBlue.hashCode), autoCargoUpperRed.hashCode), autoCargoTotal.hashCode), teleopCargoLowerNear.hashCode), teleopCargoLowerFar.hashCode), teleopCargoLowerBlue.hashCode), teleopCargoLowerRed.hashCode), teleopCargoUpperNear.hashCode), teleopCargoUpperFar.hashCode),
-                                                                                teleopCargoUpperBlue.hashCode),
-                                                                            teleopCargoUpperRed.hashCode),
-                                                                        teleopCargoTotal.hashCode),
-                                                                    matchCargoTotal.hashCode),
-                                                                autoTaxiPoints.hashCode),
-                                                            autoCargoPoints.hashCode),
-                                                        autoPoints.hashCode),
-                                                    quintetAchieved.hashCode),
-                                                teleopCargoPoints.hashCode),
-                                            endgamePoints.hashCode),
-                                        teleopPoints.hashCode),
-                                    cargoBonusRankingPoint.hashCode),
-                                hangarBonusRankingPoint.hashCode),
-                            foulCount.hashCode),
-                        techFoulCount.hashCode),
-                    adjustPoints.hashCode),
-                foulPoints.hashCode),
-            rp.hashCode),
-        totalPoints.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, taxiRobot1.hashCode);
+    _$hash = $jc(_$hash, endgameRobot1.hashCode);
+    _$hash = $jc(_$hash, taxiRobot2.hashCode);
+    _$hash = $jc(_$hash, endgameRobot2.hashCode);
+    _$hash = $jc(_$hash, taxiRobot3.hashCode);
+    _$hash = $jc(_$hash, endgameRobot3.hashCode);
+    _$hash = $jc(_$hash, autoCargoLowerNear.hashCode);
+    _$hash = $jc(_$hash, autoCargoLowerFar.hashCode);
+    _$hash = $jc(_$hash, autoCargoLowerBlue.hashCode);
+    _$hash = $jc(_$hash, autoCargoLowerRed.hashCode);
+    _$hash = $jc(_$hash, autoCargoUpperNear.hashCode);
+    _$hash = $jc(_$hash, autoCargoUpperFar.hashCode);
+    _$hash = $jc(_$hash, autoCargoUpperBlue.hashCode);
+    _$hash = $jc(_$hash, autoCargoUpperRed.hashCode);
+    _$hash = $jc(_$hash, autoCargoTotal.hashCode);
+    _$hash = $jc(_$hash, teleopCargoLowerNear.hashCode);
+    _$hash = $jc(_$hash, teleopCargoLowerFar.hashCode);
+    _$hash = $jc(_$hash, teleopCargoLowerBlue.hashCode);
+    _$hash = $jc(_$hash, teleopCargoLowerRed.hashCode);
+    _$hash = $jc(_$hash, teleopCargoUpperNear.hashCode);
+    _$hash = $jc(_$hash, teleopCargoUpperFar.hashCode);
+    _$hash = $jc(_$hash, teleopCargoUpperBlue.hashCode);
+    _$hash = $jc(_$hash, teleopCargoUpperRed.hashCode);
+    _$hash = $jc(_$hash, teleopCargoTotal.hashCode);
+    _$hash = $jc(_$hash, matchCargoTotal.hashCode);
+    _$hash = $jc(_$hash, autoTaxiPoints.hashCode);
+    _$hash = $jc(_$hash, autoCargoPoints.hashCode);
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, quintetAchieved.hashCode);
+    _$hash = $jc(_$hash, teleopCargoPoints.hashCode);
+    _$hash = $jc(_$hash, endgamePoints.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, cargoBonusRankingPoint.hashCode);
+    _$hash = $jc(_$hash, hangarBonusRankingPoint.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, techFoulCount.hashCode);
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, rp.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1053,4 +1052,4 @@ class MatchScoreBreakdown2022AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -170,44 +170,43 @@ class _$MatchScoreBreakdown2020Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, initLineRobot1.hashCode), endgameRobot1.hashCode), initLineRobot2.hashCode), endgameRobot2.hashCode), initLineRobot3.hashCode), endgameRobot3.hashCode), autoCellsBottom.hashCode), autoCellsOuter.hashCode), autoCellsInner.hashCode), teleopCellsBottom.hashCode), teleopCellsOuter.hashCode), teleopCellsInner.hashCode), stage1Activated.hashCode), stage2Activated.hashCode), stage3Activated.hashCode),
-                                                                                stage3TargetColor.hashCode),
-                                                                            endgameRungIsLevel.hashCode),
-                                                                        autoInitLinePoints.hashCode),
-                                                                    autoCellPoints.hashCode),
-                                                                autoPoints.hashCode),
-                                                            teleopCellPoints.hashCode),
-                                                        controlPanelPoints.hashCode),
-                                                    endgamePoints.hashCode),
-                                                teleopPoints.hashCode),
-                                            shieldOperationalRankingPoint.hashCode),
-                                        shieldEnergizedRankingPoint.hashCode),
-                                    tbaShieldEnergizedRankingPointFromFoul.hashCode),
-                                tbaNumRobotsHanging.hashCode),
-                            foulCount.hashCode),
-                        techFoulCount.hashCode),
-                    adjustPoints.hashCode),
-                foulPoints.hashCode),
-            rp.hashCode),
-        totalPoints.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, initLineRobot1.hashCode);
+    _$hash = $jc(_$hash, endgameRobot1.hashCode);
+    _$hash = $jc(_$hash, initLineRobot2.hashCode);
+    _$hash = $jc(_$hash, endgameRobot2.hashCode);
+    _$hash = $jc(_$hash, initLineRobot3.hashCode);
+    _$hash = $jc(_$hash, endgameRobot3.hashCode);
+    _$hash = $jc(_$hash, autoCellsBottom.hashCode);
+    _$hash = $jc(_$hash, autoCellsOuter.hashCode);
+    _$hash = $jc(_$hash, autoCellsInner.hashCode);
+    _$hash = $jc(_$hash, teleopCellsBottom.hashCode);
+    _$hash = $jc(_$hash, teleopCellsOuter.hashCode);
+    _$hash = $jc(_$hash, teleopCellsInner.hashCode);
+    _$hash = $jc(_$hash, stage1Activated.hashCode);
+    _$hash = $jc(_$hash, stage2Activated.hashCode);
+    _$hash = $jc(_$hash, stage3Activated.hashCode);
+    _$hash = $jc(_$hash, stage3TargetColor.hashCode);
+    _$hash = $jc(_$hash, endgameRungIsLevel.hashCode);
+    _$hash = $jc(_$hash, autoInitLinePoints.hashCode);
+    _$hash = $jc(_$hash, autoCellPoints.hashCode);
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, teleopCellPoints.hashCode);
+    _$hash = $jc(_$hash, controlPanelPoints.hashCode);
+    _$hash = $jc(_$hash, endgamePoints.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, shieldOperationalRankingPoint.hashCode);
+    _$hash = $jc(_$hash, shieldEnergizedRankingPoint.hashCode);
+    _$hash = $jc(_$hash, tbaShieldEnergizedRankingPointFromFoul.hashCode);
+    _$hash = $jc(_$hash, tbaNumRobotsHanging.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, techFoulCount.hashCode);
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, rp.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -529,4 +528,4 @@ class MatchScoreBreakdown2020AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

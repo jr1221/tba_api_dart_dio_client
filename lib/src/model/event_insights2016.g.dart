@@ -175,44 +175,33 @@ class _$EventInsights2016 extends EventInsights2016 {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, lowBar.hashCode), aChevalDeFrise.hashCode), aPortcullis.hashCode), bRamparts.hashCode), bMoat.hashCode),
-                                                                                cSallyPort.hashCode),
-                                                                            cDrawbridge.hashCode),
-                                                                        dRoughTerrain.hashCode),
-                                                                    dRockWall.hashCode),
-                                                                averageHighGoals.hashCode),
-                                                            averageLowGoals.hashCode),
-                                                        breaches.hashCode),
-                                                    scales.hashCode),
-                                                challenges.hashCode),
-                                            captures.hashCode),
-                                        averageWinScore.hashCode),
-                                    averageWinMargin.hashCode),
-                                averageScore.hashCode),
-                            averageAutoScore.hashCode),
-                        averageCrossingScore.hashCode),
-                    averageBoulderScore.hashCode),
-                averageTowerScore.hashCode),
-            averageFoulScore.hashCode),
-        highScore.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, lowBar.hashCode);
+    _$hash = $jc(_$hash, aChevalDeFrise.hashCode);
+    _$hash = $jc(_$hash, aPortcullis.hashCode);
+    _$hash = $jc(_$hash, bRamparts.hashCode);
+    _$hash = $jc(_$hash, bMoat.hashCode);
+    _$hash = $jc(_$hash, cSallyPort.hashCode);
+    _$hash = $jc(_$hash, cDrawbridge.hashCode);
+    _$hash = $jc(_$hash, dRoughTerrain.hashCode);
+    _$hash = $jc(_$hash, dRockWall.hashCode);
+    _$hash = $jc(_$hash, averageHighGoals.hashCode);
+    _$hash = $jc(_$hash, averageLowGoals.hashCode);
+    _$hash = $jc(_$hash, breaches.hashCode);
+    _$hash = $jc(_$hash, scales.hashCode);
+    _$hash = $jc(_$hash, challenges.hashCode);
+    _$hash = $jc(_$hash, captures.hashCode);
+    _$hash = $jc(_$hash, averageWinScore.hashCode);
+    _$hash = $jc(_$hash, averageWinMargin.hashCode);
+    _$hash = $jc(_$hash, averageScore.hashCode);
+    _$hash = $jc(_$hash, averageAutoScore.hashCode);
+    _$hash = $jc(_$hash, averageCrossingScore.hashCode);
+    _$hash = $jc(_$hash, averageBoulderScore.hashCode);
+    _$hash = $jc(_$hash, averageTowerScore.hashCode);
+    _$hash = $jc(_$hash, averageFoulScore.hashCode);
+    _$hash = $jc(_$hash, highScore.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -508,4 +497,4 @@ class EventInsights2016Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

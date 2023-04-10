@@ -224,44 +224,41 @@ class _$EventInsights2017 extends EventInsights2017 {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, averageFoulScore.hashCode), averageFuelPoints.hashCode), averageFuelPointsAuto.hashCode), averageFuelPointsTeleop.hashCode), averageHighGoals.hashCode), averageHighGoalsAuto.hashCode), averageHighGoalsTeleop.hashCode), averageLowGoals.hashCode), averageLowGoalsAuto.hashCode), averageLowGoalsTeleop.hashCode), averageMobilityPointsAuto.hashCode), averagePointsAuto.hashCode), averagePointsTeleop.hashCode),
-                                                                                averageRotorPoints.hashCode),
-                                                                            averageRotorPointsAuto.hashCode),
-                                                                        averageRotorPointsTeleop.hashCode),
-                                                                    averageScore.hashCode),
-                                                                averageTakeoffPointsTeleop.hashCode),
-                                                            averageWinMargin.hashCode),
-                                                        averageWinScore.hashCode),
-                                                    highKpa.hashCode),
-                                                highScore.hashCode),
-                                            kpaAchieved.hashCode),
-                                        mobilityCounts.hashCode),
-                                    rotor1Engaged.hashCode),
-                                rotor1EngagedAuto.hashCode),
-                            rotor2Engaged.hashCode),
-                        rotor2EngagedAuto.hashCode),
-                    rotor3Engaged.hashCode),
-                rotor4Engaged.hashCode),
-            takeoffCounts.hashCode),
-        unicornMatches.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, averageFoulScore.hashCode);
+    _$hash = $jc(_$hash, averageFuelPoints.hashCode);
+    _$hash = $jc(_$hash, averageFuelPointsAuto.hashCode);
+    _$hash = $jc(_$hash, averageFuelPointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageHighGoals.hashCode);
+    _$hash = $jc(_$hash, averageHighGoalsAuto.hashCode);
+    _$hash = $jc(_$hash, averageHighGoalsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageLowGoals.hashCode);
+    _$hash = $jc(_$hash, averageLowGoalsAuto.hashCode);
+    _$hash = $jc(_$hash, averageLowGoalsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageMobilityPointsAuto.hashCode);
+    _$hash = $jc(_$hash, averagePointsAuto.hashCode);
+    _$hash = $jc(_$hash, averagePointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageRotorPoints.hashCode);
+    _$hash = $jc(_$hash, averageRotorPointsAuto.hashCode);
+    _$hash = $jc(_$hash, averageRotorPointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageScore.hashCode);
+    _$hash = $jc(_$hash, averageTakeoffPointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageWinMargin.hashCode);
+    _$hash = $jc(_$hash, averageWinScore.hashCode);
+    _$hash = $jc(_$hash, highKpa.hashCode);
+    _$hash = $jc(_$hash, highScore.hashCode);
+    _$hash = $jc(_$hash, kpaAchieved.hashCode);
+    _$hash = $jc(_$hash, mobilityCounts.hashCode);
+    _$hash = $jc(_$hash, rotor1Engaged.hashCode);
+    _$hash = $jc(_$hash, rotor1EngagedAuto.hashCode);
+    _$hash = $jc(_$hash, rotor2Engaged.hashCode);
+    _$hash = $jc(_$hash, rotor2EngagedAuto.hashCode);
+    _$hash = $jc(_$hash, rotor3Engaged.hashCode);
+    _$hash = $jc(_$hash, rotor4Engaged.hashCode);
+    _$hash = $jc(_$hash, takeoffCounts.hashCode);
+    _$hash = $jc(_$hash, unicornMatches.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -617,4 +614,4 @@ class EventInsights2017Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

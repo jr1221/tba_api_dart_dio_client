@@ -271,44 +271,46 @@ class _$EventInsights2018 extends EventInsights2018 {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, autoQuestAchieved.hashCode), averageBoostPlayed.hashCode), averageEndgamePoints.hashCode), averageForcePlayed.hashCode), averageFoulScore.hashCode), averagePointsAuto.hashCode), averagePointsTeleop.hashCode), averageRunPointsAuto.hashCode), averageScaleOwnershipPoints.hashCode), averageScaleOwnershipPointsAuto.hashCode), averageScaleOwnershipPointsTeleop.hashCode), averageScore.hashCode), averageSwitchOwnershipPoints.hashCode), averageSwitchOwnershipPointsAuto.hashCode), averageSwitchOwnershipPointsTeleop.hashCode), averageVaultPoints.hashCode), averageWinMargin.hashCode), averageWinScore.hashCode),
-                                                                                boostPlayedCounts.hashCode),
-                                                                            climbCounts.hashCode),
-                                                                        faceTheBossAchieved.hashCode),
-                                                                    forcePlayedCounts.hashCode),
-                                                                highScore.hashCode),
-                                                            levitatePlayedCounts.hashCode),
-                                                        runCountsAuto.hashCode),
-                                                    scaleNeutralPercentage.hashCode),
-                                                scaleNeutralPercentageAuto.hashCode),
-                                            scaleNeutralPercentageTeleop.hashCode),
-                                        switchOwnedCountsAuto.hashCode),
-                                    unicornMatches.hashCode),
-                                winningOppSwitchDenialPercentageTeleop.hashCode),
-                            winningOwnSwitchOwnershipPercentage.hashCode),
-                        winningOwnSwitchOwnershipPercentageAuto.hashCode),
-                    winningOwnSwitchOwnershipPercentageTeleop.hashCode),
-                winningScaleOwnershipPercentage.hashCode),
-            winningScaleOwnershipPercentageAuto.hashCode),
-        winningScaleOwnershipPercentageTeleop.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, autoQuestAchieved.hashCode);
+    _$hash = $jc(_$hash, averageBoostPlayed.hashCode);
+    _$hash = $jc(_$hash, averageEndgamePoints.hashCode);
+    _$hash = $jc(_$hash, averageForcePlayed.hashCode);
+    _$hash = $jc(_$hash, averageFoulScore.hashCode);
+    _$hash = $jc(_$hash, averagePointsAuto.hashCode);
+    _$hash = $jc(_$hash, averagePointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageRunPointsAuto.hashCode);
+    _$hash = $jc(_$hash, averageScaleOwnershipPoints.hashCode);
+    _$hash = $jc(_$hash, averageScaleOwnershipPointsAuto.hashCode);
+    _$hash = $jc(_$hash, averageScaleOwnershipPointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageScore.hashCode);
+    _$hash = $jc(_$hash, averageSwitchOwnershipPoints.hashCode);
+    _$hash = $jc(_$hash, averageSwitchOwnershipPointsAuto.hashCode);
+    _$hash = $jc(_$hash, averageSwitchOwnershipPointsTeleop.hashCode);
+    _$hash = $jc(_$hash, averageVaultPoints.hashCode);
+    _$hash = $jc(_$hash, averageWinMargin.hashCode);
+    _$hash = $jc(_$hash, averageWinScore.hashCode);
+    _$hash = $jc(_$hash, boostPlayedCounts.hashCode);
+    _$hash = $jc(_$hash, climbCounts.hashCode);
+    _$hash = $jc(_$hash, faceTheBossAchieved.hashCode);
+    _$hash = $jc(_$hash, forcePlayedCounts.hashCode);
+    _$hash = $jc(_$hash, highScore.hashCode);
+    _$hash = $jc(_$hash, levitatePlayedCounts.hashCode);
+    _$hash = $jc(_$hash, runCountsAuto.hashCode);
+    _$hash = $jc(_$hash, scaleNeutralPercentage.hashCode);
+    _$hash = $jc(_$hash, scaleNeutralPercentageAuto.hashCode);
+    _$hash = $jc(_$hash, scaleNeutralPercentageTeleop.hashCode);
+    _$hash = $jc(_$hash, switchOwnedCountsAuto.hashCode);
+    _$hash = $jc(_$hash, unicornMatches.hashCode);
+    _$hash = $jc(_$hash, winningOppSwitchDenialPercentageTeleop.hashCode);
+    _$hash = $jc(_$hash, winningOwnSwitchOwnershipPercentage.hashCode);
+    _$hash = $jc(_$hash, winningOwnSwitchOwnershipPercentageAuto.hashCode);
+    _$hash = $jc(_$hash, winningOwnSwitchOwnershipPercentageTeleop.hashCode);
+    _$hash = $jc(_$hash, winningScaleOwnershipPercentage.hashCode);
+    _$hash = $jc(_$hash, winningScaleOwnershipPercentageAuto.hashCode);
+    _$hash = $jc(_$hash, winningScaleOwnershipPercentageTeleop.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -753,4 +755,4 @@ class EventInsights2018Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

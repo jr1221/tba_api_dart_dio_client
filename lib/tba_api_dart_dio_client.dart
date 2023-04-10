@@ -56,6 +56,10 @@ export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2020.dart
 export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2020_alliance.dart';
 export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2022.dart';
 export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2022_alliance.dart';
+export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023.dart';
+export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023_alliance.dart';
+export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023_alliance_auto_community.dart';
+export 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023_alliance_links_inner.dart';
 export 'package:tba_api_dart_dio_client/src/model/match_simple.dart';
 export 'package:tba_api_dart_dio_client/src/model/match_simple_alliances.dart';
 export 'package:tba_api_dart_dio_client/src/model/match_timeseries2018.dart';

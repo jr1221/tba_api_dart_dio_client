@@ -4,6 +4,8 @@
 
 // ignore_for_file: unused_import
 
+import 'package:one_of_serializer/any_of_serializer.dart';
+import 'package:one_of_serializer/one_of_serializer.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
@@ -52,6 +54,10 @@ import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2020.dart
 import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2020_alliance.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2022.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2022_alliance.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023_alliance.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023_alliance_auto_community.dart';
+import 'package:tba_api_dart_dio_client/src/model/match_score_breakdown2023_alliance_links_inner.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_simple.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_simple_alliances.dart';
 import 'package:tba_api_dart_dio_client/src/model/match_timeseries2018.dart';
@@ -116,6 +122,10 @@ part 'serializers.g.dart';
   MatchScoreBreakdown2020Alliance,
   MatchScoreBreakdown2022,
   MatchScoreBreakdown2022Alliance,
+  MatchScoreBreakdown2023,
+  MatchScoreBreakdown2023Alliance,
+  MatchScoreBreakdown2023AllianceAutoCommunity,
+  MatchScoreBreakdown2023AllianceLinksInner,
   MatchSimple,
   MatchSimpleAlliances,
   MatchTimeseries2018,
@@ -202,6 +212,8 @@ Serializers serializers = (_$serializers.toBuilder()
         const FullType(BuiltList, [FullType(Award)]),
         () => ListBuilder<Award>(),
       )
+      ..add(const OneOfSerializer())
+      ..add(const AnyOfSerializer())
       ..add(const DateSerializer())
       ..add(Iso8601DateTimeSerializer()))
     .build();

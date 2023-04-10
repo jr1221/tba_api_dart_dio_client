@@ -31,9 +31,8 @@ MatchScoreBreakdown2016AllianceRobot1AutoEnum
 }
 
 final BuiltSet<MatchScoreBreakdown2016AllianceRobot1AutoEnum>
-    _$matchScoreBreakdown2016AllianceRobot1AutoEnumValues =
-    new BuiltSet<MatchScoreBreakdown2016AllianceRobot1AutoEnum>(const <
-        MatchScoreBreakdown2016AllianceRobot1AutoEnum>[
+    _$matchScoreBreakdown2016AllianceRobot1AutoEnumValues = new BuiltSet<
+        MatchScoreBreakdown2016AllianceRobot1AutoEnum>(const <MatchScoreBreakdown2016AllianceRobot1AutoEnum>[
   _$matchScoreBreakdown2016AllianceRobot1AutoEnum_crossed,
   _$matchScoreBreakdown2016AllianceRobot1AutoEnum_reached,
   _$matchScoreBreakdown2016AllianceRobot1AutoEnum_none,
@@ -64,9 +63,8 @@ MatchScoreBreakdown2016AllianceRobot2AutoEnum
 }
 
 final BuiltSet<MatchScoreBreakdown2016AllianceRobot2AutoEnum>
-    _$matchScoreBreakdown2016AllianceRobot2AutoEnumValues =
-    new BuiltSet<MatchScoreBreakdown2016AllianceRobot2AutoEnum>(const <
-        MatchScoreBreakdown2016AllianceRobot2AutoEnum>[
+    _$matchScoreBreakdown2016AllianceRobot2AutoEnumValues = new BuiltSet<
+        MatchScoreBreakdown2016AllianceRobot2AutoEnum>(const <MatchScoreBreakdown2016AllianceRobot2AutoEnum>[
   _$matchScoreBreakdown2016AllianceRobot2AutoEnum_crossed,
   _$matchScoreBreakdown2016AllianceRobot2AutoEnum_reached,
   _$matchScoreBreakdown2016AllianceRobot2AutoEnum_none,
@@ -97,9 +95,8 @@ MatchScoreBreakdown2016AllianceRobot3AutoEnum
 }
 
 final BuiltSet<MatchScoreBreakdown2016AllianceRobot3AutoEnum>
-    _$matchScoreBreakdown2016AllianceRobot3AutoEnumValues =
-    new BuiltSet<MatchScoreBreakdown2016AllianceRobot3AutoEnum>(const <
-        MatchScoreBreakdown2016AllianceRobot3AutoEnum>[
+    _$matchScoreBreakdown2016AllianceRobot3AutoEnumValues = new BuiltSet<
+        MatchScoreBreakdown2016AllianceRobot3AutoEnum>(const <MatchScoreBreakdown2016AllianceRobot3AutoEnum>[
   _$matchScoreBreakdown2016AllianceRobot3AutoEnum_crossed,
   _$matchScoreBreakdown2016AllianceRobot3AutoEnum_reached,
   _$matchScoreBreakdown2016AllianceRobot3AutoEnum_none,
@@ -399,44 +396,47 @@ class _$MatchScoreBreakdown2016Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, autoPoints.hashCode), teleopPoints.hashCode), breachPoints.hashCode), foulPoints.hashCode), capturePoints.hashCode), adjustPoints.hashCode), totalPoints.hashCode), robot1Auto.hashCode), robot2Auto.hashCode), robot3Auto.hashCode), autoReachPoints.hashCode), autoCrossingPoints.hashCode), autoBouldersLow.hashCode), autoBouldersHigh.hashCode), autoBoulderPoints.hashCode), teleopCrossingPoints.hashCode), teleopBouldersLow.hashCode), teleopBouldersHigh.hashCode), teleopBoulderPoints.hashCode),
-                                                                                teleopDefensesBreached.hashCode),
-                                                                            teleopChallengePoints.hashCode),
-                                                                        teleopScalePoints.hashCode),
-                                                                    teleopTowerCaptured.hashCode),
-                                                                towerFaceA.hashCode),
-                                                            towerFaceB.hashCode),
-                                                        towerFaceC.hashCode),
-                                                    towerEndStrength.hashCode),
-                                                techFoulCount.hashCode),
-                                            foulCount.hashCode),
-                                        position2.hashCode),
-                                    position3.hashCode),
-                                position4.hashCode),
-                            position5.hashCode),
-                        position1crossings.hashCode),
-                    position2crossings.hashCode),
-                position3crossings.hashCode),
-            position4crossings.hashCode),
-        position5crossings.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, breachPoints.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, capturePoints.hashCode);
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jc(_$hash, robot1Auto.hashCode);
+    _$hash = $jc(_$hash, robot2Auto.hashCode);
+    _$hash = $jc(_$hash, robot3Auto.hashCode);
+    _$hash = $jc(_$hash, autoReachPoints.hashCode);
+    _$hash = $jc(_$hash, autoCrossingPoints.hashCode);
+    _$hash = $jc(_$hash, autoBouldersLow.hashCode);
+    _$hash = $jc(_$hash, autoBouldersHigh.hashCode);
+    _$hash = $jc(_$hash, autoBoulderPoints.hashCode);
+    _$hash = $jc(_$hash, teleopCrossingPoints.hashCode);
+    _$hash = $jc(_$hash, teleopBouldersLow.hashCode);
+    _$hash = $jc(_$hash, teleopBouldersHigh.hashCode);
+    _$hash = $jc(_$hash, teleopBoulderPoints.hashCode);
+    _$hash = $jc(_$hash, teleopDefensesBreached.hashCode);
+    _$hash = $jc(_$hash, teleopChallengePoints.hashCode);
+    _$hash = $jc(_$hash, teleopScalePoints.hashCode);
+    _$hash = $jc(_$hash, teleopTowerCaptured.hashCode);
+    _$hash = $jc(_$hash, towerFaceA.hashCode);
+    _$hash = $jc(_$hash, towerFaceB.hashCode);
+    _$hash = $jc(_$hash, towerFaceC.hashCode);
+    _$hash = $jc(_$hash, towerEndStrength.hashCode);
+    _$hash = $jc(_$hash, techFoulCount.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, position2.hashCode);
+    _$hash = $jc(_$hash, position3.hashCode);
+    _$hash = $jc(_$hash, position4.hashCode);
+    _$hash = $jc(_$hash, position5.hashCode);
+    _$hash = $jc(_$hash, position1crossings.hashCode);
+    _$hash = $jc(_$hash, position2crossings.hashCode);
+    _$hash = $jc(_$hash, position3crossings.hashCode);
+    _$hash = $jc(_$hash, position4crossings.hashCode);
+    _$hash = $jc(_$hash, position5crossings.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -779,4 +779,4 @@ class MatchScoreBreakdown2016AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

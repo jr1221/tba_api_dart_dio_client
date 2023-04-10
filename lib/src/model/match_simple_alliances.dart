@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:tba_api_dart_dio_client/src/model/match_alliance.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -13,75 +14,114 @@ part 'match_simple_alliances.g.dart';
 /// Properties:
 /// * [red] 
 /// * [blue] 
+@BuiltValue()
 abstract class MatchSimpleAlliances implements Built<MatchSimpleAlliances, MatchSimpleAlliancesBuilder> {
-    @BuiltValueField(wireName: r'red')
-    MatchAlliance? get red;
+  @BuiltValueField(wireName: r'red')
+  MatchAlliance? get red;
 
-    @BuiltValueField(wireName: r'blue')
-    MatchAlliance? get blue;
+  @BuiltValueField(wireName: r'blue')
+  MatchAlliance? get blue;
 
-    MatchSimpleAlliances._();
+  MatchSimpleAlliances._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(MatchSimpleAlliancesBuilder b) => b;
+  factory MatchSimpleAlliances([void updates(MatchSimpleAlliancesBuilder b)]) = _$MatchSimpleAlliances;
 
-    factory MatchSimpleAlliances([void updates(MatchSimpleAlliancesBuilder b)]) = _$MatchSimpleAlliances;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(MatchSimpleAlliancesBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<MatchSimpleAlliances> get serializer => _$MatchSimpleAlliancesSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<MatchSimpleAlliances> get serializer => _$MatchSimpleAlliancesSerializer();
 }
 
-class _$MatchSimpleAlliancesSerializer implements StructuredSerializer<MatchSimpleAlliances> {
-    @override
-    final Iterable<Type> types = const [MatchSimpleAlliances, _$MatchSimpleAlliances];
+class _$MatchSimpleAlliancesSerializer implements PrimitiveSerializer<MatchSimpleAlliances> {
+  @override
+  final Iterable<Type> types = const [MatchSimpleAlliances, _$MatchSimpleAlliances];
 
-    @override
-    final String wireName = r'MatchSimpleAlliances';
+  @override
+  final String wireName = r'MatchSimpleAlliances';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, MatchSimpleAlliances object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.red != null) {
-            result
-                ..add(r'red')
-                ..add(serializers.serialize(object.red,
-                    specifiedType: const FullType(MatchAlliance)));
-        }
-        if (object.blue != null) {
-            result
-                ..add(r'blue')
-                ..add(serializers.serialize(object.blue,
-                    specifiedType: const FullType(MatchAlliance)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    MatchSimpleAlliances object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.red != null) {
+      yield r'red';
+      yield serializers.serialize(
+        object.red,
+        specifiedType: const FullType(MatchAlliance),
+      );
     }
-
-    @override
-    MatchSimpleAlliances deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = MatchSimpleAlliancesBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'red':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(MatchAlliance)) as MatchAlliance;
-                    result.red.replace(valueDes);
-                    break;
-                case r'blue':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(MatchAlliance)) as MatchAlliance;
-                    result.blue.replace(valueDes);
-                    break;
-            }
-        }
-        return result.build();
+    if (object.blue != null) {
+      yield r'blue';
+      yield serializers.serialize(
+        object.blue,
+        specifiedType: const FullType(MatchAlliance),
+      );
     }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    MatchSimpleAlliances object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required MatchSimpleAlliancesBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'red':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(MatchAlliance),
+          ) as MatchAlliance;
+          result.red.replace(valueDes);
+          break;
+        case r'blue':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(MatchAlliance),
+          ) as MatchAlliance;
+          result.blue.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  MatchSimpleAlliances deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = MatchSimpleAlliancesBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

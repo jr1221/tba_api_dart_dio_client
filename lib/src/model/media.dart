@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
@@ -18,135 +19,186 @@ part 'media.g.dart';
 /// * [preferred] - True if the media is of high quality.
 /// * [directUrl] - Direct URL to the media.
 /// * [viewUrl] - The URL that leads to the full web page for the media, if one exists.
+@BuiltValue()
 abstract class Media implements Built<Media, MediaBuilder> {
-    /// String type of the media element.
-    @BuiltValueField(wireName: r'type')
-    MediaTypeEnum get type;
-    // enum typeEnum {  youtube,  cdphotothread,  imgur,  facebook-profile,  youtube-channel,  twitter-profile,  github-profile,  instagram-profile,  periscope-profile,  grabcad,  instagram-image,  external-link,  avatar,  };
+  /// String type of the media element.
+  @BuiltValueField(wireName: r'type')
+  MediaTypeEnum get type;
+  // enum typeEnum {  youtube,  cdphotothread,  imgur,  facebook-profile,  youtube-channel,  twitter-profile,  github-profile,  instagram-profile,  periscope-profile,  grabcad,  instagram-image,  external-link,  avatar,  };
 
-    /// The key used to identify this media on the media site.
-    @BuiltValueField(wireName: r'foreign_key')
-    String get foreignKey;
+  /// The key used to identify this media on the media site.
+  @BuiltValueField(wireName: r'foreign_key')
+  String get foreignKey;
 
-    /// If required, a JSON dict of additional media information.
-    @BuiltValueField(wireName: r'details')
-    JsonObject? get details;
+  /// If required, a JSON dict of additional media information.
+  @BuiltValueField(wireName: r'details')
+  JsonObject? get details;
 
-    /// True if the media is of high quality.
-    @BuiltValueField(wireName: r'preferred')
-    bool? get preferred;
+  /// True if the media is of high quality.
+  @BuiltValueField(wireName: r'preferred')
+  bool? get preferred;
 
-    /// Direct URL to the media.
-    @BuiltValueField(wireName: r'direct_url')
-    String? get directUrl;
+  /// Direct URL to the media.
+  @BuiltValueField(wireName: r'direct_url')
+  String? get directUrl;
 
-    /// The URL that leads to the full web page for the media, if one exists.
-    @BuiltValueField(wireName: r'view_url')
-    String? get viewUrl;
+  /// The URL that leads to the full web page for the media, if one exists.
+  @BuiltValueField(wireName: r'view_url')
+  String? get viewUrl;
 
-    Media._();
+  Media._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(MediaBuilder b) => b;
+  factory Media([void updates(MediaBuilder b)]) = _$Media;
 
-    factory Media([void updates(MediaBuilder b)]) = _$Media;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(MediaBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<Media> get serializer => _$MediaSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<Media> get serializer => _$MediaSerializer();
 }
 
-class _$MediaSerializer implements StructuredSerializer<Media> {
-    @override
-    final Iterable<Type> types = const [Media, _$Media];
+class _$MediaSerializer implements PrimitiveSerializer<Media> {
+  @override
+  final Iterable<Type> types = const [Media, _$Media];
 
-    @override
-    final String wireName = r'Media';
+  @override
+  final String wireName = r'Media';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, Media object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        result
-            ..add(r'type')
-            ..add(serializers.serialize(object.type,
-                specifiedType: const FullType(MediaTypeEnum)));
-        result
-            ..add(r'foreign_key')
-            ..add(serializers.serialize(object.foreignKey,
-                specifiedType: const FullType(String)));
-        if (object.details != null) {
-            result
-                ..add(r'details')
-                ..add(serializers.serialize(object.details,
-                    specifiedType: const FullType(JsonObject)));
-        }
-        if (object.preferred != null) {
-            result
-                ..add(r'preferred')
-                ..add(serializers.serialize(object.preferred,
-                    specifiedType: const FullType(bool)));
-        }
-        if (object.directUrl != null) {
-            result
-                ..add(r'direct_url')
-                ..add(serializers.serialize(object.directUrl,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.viewUrl != null) {
-            result
-                ..add(r'view_url')
-                ..add(serializers.serialize(object.viewUrl,
-                    specifiedType: const FullType(String)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    Media object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    yield r'type';
+    yield serializers.serialize(
+      object.type,
+      specifiedType: const FullType(MediaTypeEnum),
+    );
+    yield r'foreign_key';
+    yield serializers.serialize(
+      object.foreignKey,
+      specifiedType: const FullType(String),
+    );
+    if (object.details != null) {
+      yield r'details';
+      yield serializers.serialize(
+        object.details,
+        specifiedType: const FullType(JsonObject),
+      );
     }
-
-    @override
-    Media deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = MediaBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'type':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(MediaTypeEnum)) as MediaTypeEnum;
-                    result.type = valueDes;
-                    break;
-                case r'foreign_key':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    result.foreignKey = valueDes;
-                    break;
-                case r'details':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(JsonObject)) as JsonObject;
-                    result.details = valueDes;
-                    break;
-                case r'preferred':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.preferred = valueDes;
-                    break;
-                case r'direct_url':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    result.directUrl = valueDes;
-                    break;
-                case r'view_url':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    result.viewUrl = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+    if (object.preferred != null) {
+      yield r'preferred';
+      yield serializers.serialize(
+        object.preferred,
+        specifiedType: const FullType(bool),
+      );
     }
+    if (object.directUrl != null) {
+      yield r'direct_url';
+      yield serializers.serialize(
+        object.directUrl,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.viewUrl != null) {
+      yield r'view_url';
+      yield serializers.serialize(
+        object.viewUrl,
+        specifiedType: const FullType(String),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    Media object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required MediaBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'type':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(MediaTypeEnum),
+          ) as MediaTypeEnum;
+          result.type = valueDes;
+          break;
+        case r'foreign_key':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.foreignKey = valueDes;
+          break;
+        case r'details':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(JsonObject),
+          ) as JsonObject;
+          result.details = valueDes;
+          break;
+        case r'preferred':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.preferred = valueDes;
+          break;
+        case r'direct_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.directUrl = valueDes;
+          break;
+        case r'view_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.viewUrl = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  Media deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = MediaBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 
 class MediaTypeEnum extends EnumClass {

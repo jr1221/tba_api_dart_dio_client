@@ -109,50 +109,28 @@ class _$Team extends Team {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc(
-                                                                                0,
-                                                                                key
-                                                                                    .hashCode),
-                                                                            teamNumber
-                                                                                .hashCode),
-                                                                        nickname
-                                                                            .hashCode),
-                                                                    name
-                                                                        .hashCode),
-                                                                schoolName
-                                                                    .hashCode),
-                                                            city.hashCode),
-                                                        stateProv.hashCode),
-                                                    country.hashCode),
-                                                address.hashCode),
-                                            postalCode.hashCode),
-                                        gmapsPlaceId.hashCode),
-                                    gmapsUrl.hashCode),
-                                lat.hashCode),
-                            lng.hashCode),
-                        locationName.hashCode),
-                    website.hashCode),
-                rookieYear.hashCode),
-            motto.hashCode),
-        homeChampionship.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, key.hashCode);
+    _$hash = $jc(_$hash, teamNumber.hashCode);
+    _$hash = $jc(_$hash, nickname.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, schoolName.hashCode);
+    _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, stateProv.hashCode);
+    _$hash = $jc(_$hash, country.hashCode);
+    _$hash = $jc(_$hash, address.hashCode);
+    _$hash = $jc(_$hash, postalCode.hashCode);
+    _$hash = $jc(_$hash, gmapsPlaceId.hashCode);
+    _$hash = $jc(_$hash, gmapsUrl.hashCode);
+    _$hash = $jc(_$hash, lat.hashCode);
+    _$hash = $jc(_$hash, lng.hashCode);
+    _$hash = $jc(_$hash, locationName.hashCode);
+    _$hash = $jc(_$hash, website.hashCode);
+    _$hash = $jc(_$hash, rookieYear.hashCode);
+    _$hash = $jc(_$hash, motto.hashCode);
+    _$hash = $jc(_$hash, homeChampionship.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -334,4 +312,4 @@ class TeamBuilder implements Builder<Team, TeamBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -31,9 +31,8 @@ MatchScoreBreakdown2017AllianceRobot1AutoEnum
 }
 
 final BuiltSet<MatchScoreBreakdown2017AllianceRobot1AutoEnum>
-    _$matchScoreBreakdown2017AllianceRobot1AutoEnumValues =
-    new BuiltSet<MatchScoreBreakdown2017AllianceRobot1AutoEnum>(const <
-        MatchScoreBreakdown2017AllianceRobot1AutoEnum>[
+    _$matchScoreBreakdown2017AllianceRobot1AutoEnumValues = new BuiltSet<
+        MatchScoreBreakdown2017AllianceRobot1AutoEnum>(const <MatchScoreBreakdown2017AllianceRobot1AutoEnum>[
   _$matchScoreBreakdown2017AllianceRobot1AutoEnum_unknown,
   _$matchScoreBreakdown2017AllianceRobot1AutoEnum_mobility,
   _$matchScoreBreakdown2017AllianceRobot1AutoEnum_none,
@@ -64,9 +63,8 @@ MatchScoreBreakdown2017AllianceRobot2AutoEnum
 }
 
 final BuiltSet<MatchScoreBreakdown2017AllianceRobot2AutoEnum>
-    _$matchScoreBreakdown2017AllianceRobot2AutoEnumValues =
-    new BuiltSet<MatchScoreBreakdown2017AllianceRobot2AutoEnum>(const <
-        MatchScoreBreakdown2017AllianceRobot2AutoEnum>[
+    _$matchScoreBreakdown2017AllianceRobot2AutoEnumValues = new BuiltSet<
+        MatchScoreBreakdown2017AllianceRobot2AutoEnum>(const <MatchScoreBreakdown2017AllianceRobot2AutoEnum>[
   _$matchScoreBreakdown2017AllianceRobot2AutoEnum_unknown,
   _$matchScoreBreakdown2017AllianceRobot2AutoEnum_mobility,
   _$matchScoreBreakdown2017AllianceRobot2AutoEnum_none,
@@ -97,9 +95,8 @@ MatchScoreBreakdown2017AllianceRobot3AutoEnum
 }
 
 final BuiltSet<MatchScoreBreakdown2017AllianceRobot3AutoEnum>
-    _$matchScoreBreakdown2017AllianceRobot3AutoEnumValues =
-    new BuiltSet<MatchScoreBreakdown2017AllianceRobot3AutoEnum>(const <
-        MatchScoreBreakdown2017AllianceRobot3AutoEnum>[
+    _$matchScoreBreakdown2017AllianceRobot3AutoEnumValues = new BuiltSet<
+        MatchScoreBreakdown2017AllianceRobot3AutoEnum>(const <MatchScoreBreakdown2017AllianceRobot3AutoEnum>[
   _$matchScoreBreakdown2017AllianceRobot3AutoEnum_unknown,
   _$matchScoreBreakdown2017AllianceRobot3AutoEnum_mobility,
   _$matchScoreBreakdown2017AllianceRobot3AutoEnum_none,
@@ -379,44 +376,42 @@ class _$MatchScoreBreakdown2017Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, autoPoints.hashCode), teleopPoints.hashCode), foulPoints.hashCode), adjustPoints.hashCode), totalPoints.hashCode), robot1Auto.hashCode), robot2Auto.hashCode), robot3Auto.hashCode), rotor1Auto.hashCode), rotor2Auto.hashCode), autoFuelLow.hashCode), autoFuelHigh.hashCode), autoMobilityPoints.hashCode), autoRotorPoints.hashCode),
-                                                                                autoFuelPoints.hashCode),
-                                                                            teleopFuelPoints.hashCode),
-                                                                        teleopFuelLow.hashCode),
-                                                                    teleopFuelHigh.hashCode),
-                                                                teleopRotorPoints.hashCode),
-                                                            kPaRankingPointAchieved.hashCode),
-                                                        teleopTakeoffPoints.hashCode),
-                                                    kPaBonusPoints.hashCode),
-                                                rotorBonusPoints.hashCode),
-                                            rotor1Engaged.hashCode),
-                                        rotor2Engaged.hashCode),
-                                    rotor3Engaged.hashCode),
-                                rotor4Engaged.hashCode),
-                            rotorRankingPointAchieved.hashCode),
-                        techFoulCount.hashCode),
-                    foulCount.hashCode),
-                touchpadNear.hashCode),
-            touchpadMiddle.hashCode),
-        touchpadFar.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jc(_$hash, robot1Auto.hashCode);
+    _$hash = $jc(_$hash, robot2Auto.hashCode);
+    _$hash = $jc(_$hash, robot3Auto.hashCode);
+    _$hash = $jc(_$hash, rotor1Auto.hashCode);
+    _$hash = $jc(_$hash, rotor2Auto.hashCode);
+    _$hash = $jc(_$hash, autoFuelLow.hashCode);
+    _$hash = $jc(_$hash, autoFuelHigh.hashCode);
+    _$hash = $jc(_$hash, autoMobilityPoints.hashCode);
+    _$hash = $jc(_$hash, autoRotorPoints.hashCode);
+    _$hash = $jc(_$hash, autoFuelPoints.hashCode);
+    _$hash = $jc(_$hash, teleopFuelPoints.hashCode);
+    _$hash = $jc(_$hash, teleopFuelLow.hashCode);
+    _$hash = $jc(_$hash, teleopFuelHigh.hashCode);
+    _$hash = $jc(_$hash, teleopRotorPoints.hashCode);
+    _$hash = $jc(_$hash, kPaRankingPointAchieved.hashCode);
+    _$hash = $jc(_$hash, teleopTakeoffPoints.hashCode);
+    _$hash = $jc(_$hash, kPaBonusPoints.hashCode);
+    _$hash = $jc(_$hash, rotorBonusPoints.hashCode);
+    _$hash = $jc(_$hash, rotor1Engaged.hashCode);
+    _$hash = $jc(_$hash, rotor2Engaged.hashCode);
+    _$hash = $jc(_$hash, rotor3Engaged.hashCode);
+    _$hash = $jc(_$hash, rotor4Engaged.hashCode);
+    _$hash = $jc(_$hash, rotorRankingPointAchieved.hashCode);
+    _$hash = $jc(_$hash, techFoulCount.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, touchpadNear.hashCode);
+    _$hash = $jc(_$hash, touchpadMiddle.hashCode);
+    _$hash = $jc(_$hash, touchpadFar.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -721,4 +716,4 @@ class MatchScoreBreakdown2017AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

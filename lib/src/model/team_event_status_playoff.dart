@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:tba_api_dart_dio_client/src/model/wlt_record.dart';
 import 'package:built_value/built_value.dart';
@@ -17,123 +18,171 @@ part 'team_event_status_playoff.g.dart';
 /// * [record] 
 /// * [status] - Current competition status for the playoffs.
 /// * [playoffAverage] - The average match score during playoffs. Year specific. May be null if not relevant for a given year.
+@BuiltValue()
 abstract class TeamEventStatusPlayoff implements Built<TeamEventStatusPlayoff, TeamEventStatusPlayoffBuilder> {
-    /// The highest playoff level the team reached.
-    @BuiltValueField(wireName: r'level')
-    TeamEventStatusPlayoffLevelEnum? get level;
-    // enum levelEnum {  qm,  ef,  qf,  sf,  f,  };
+  /// The highest playoff level the team reached.
+  @BuiltValueField(wireName: r'level')
+  TeamEventStatusPlayoffLevelEnum? get level;
+  // enum levelEnum {  qm,  ef,  qf,  sf,  f,  };
 
-    @BuiltValueField(wireName: r'current_level_record')
-    WLTRecord? get currentLevelRecord;
+  @BuiltValueField(wireName: r'current_level_record')
+  WLTRecord? get currentLevelRecord;
 
-    @BuiltValueField(wireName: r'record')
-    WLTRecord? get record;
+  @BuiltValueField(wireName: r'record')
+  WLTRecord? get record;
 
-    /// Current competition status for the playoffs.
-    @BuiltValueField(wireName: r'status')
-    TeamEventStatusPlayoffStatusEnum? get status;
-    // enum statusEnum {  won,  eliminated,  playing,  };
+  /// Current competition status for the playoffs.
+  @BuiltValueField(wireName: r'status')
+  TeamEventStatusPlayoffStatusEnum? get status;
+  // enum statusEnum {  won,  eliminated,  playing,  };
 
-    /// The average match score during playoffs. Year specific. May be null if not relevant for a given year.
-    @BuiltValueField(wireName: r'playoff_average')
-    int? get playoffAverage;
+  /// The average match score during playoffs. Year specific. May be null if not relevant for a given year.
+  @BuiltValueField(wireName: r'playoff_average')
+  int? get playoffAverage;
 
-    TeamEventStatusPlayoff._();
+  TeamEventStatusPlayoff._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(TeamEventStatusPlayoffBuilder b) => b;
+  factory TeamEventStatusPlayoff([void updates(TeamEventStatusPlayoffBuilder b)]) = _$TeamEventStatusPlayoff;
 
-    factory TeamEventStatusPlayoff([void updates(TeamEventStatusPlayoffBuilder b)]) = _$TeamEventStatusPlayoff;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(TeamEventStatusPlayoffBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<TeamEventStatusPlayoff> get serializer => _$TeamEventStatusPlayoffSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<TeamEventStatusPlayoff> get serializer => _$TeamEventStatusPlayoffSerializer();
 }
 
-class _$TeamEventStatusPlayoffSerializer implements StructuredSerializer<TeamEventStatusPlayoff> {
-    @override
-    final Iterable<Type> types = const [TeamEventStatusPlayoff, _$TeamEventStatusPlayoff];
+class _$TeamEventStatusPlayoffSerializer implements PrimitiveSerializer<TeamEventStatusPlayoff> {
+  @override
+  final Iterable<Type> types = const [TeamEventStatusPlayoff, _$TeamEventStatusPlayoff];
 
-    @override
-    final String wireName = r'TeamEventStatusPlayoff';
+  @override
+  final String wireName = r'TeamEventStatusPlayoff';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, TeamEventStatusPlayoff object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.level != null) {
-            result
-                ..add(r'level')
-                ..add(serializers.serialize(object.level,
-                    specifiedType: const FullType(TeamEventStatusPlayoffLevelEnum)));
-        }
-        if (object.currentLevelRecord != null) {
-            result
-                ..add(r'current_level_record')
-                ..add(serializers.serialize(object.currentLevelRecord,
-                    specifiedType: const FullType(WLTRecord)));
-        }
-        if (object.record != null) {
-            result
-                ..add(r'record')
-                ..add(serializers.serialize(object.record,
-                    specifiedType: const FullType(WLTRecord)));
-        }
-        if (object.status != null) {
-            result
-                ..add(r'status')
-                ..add(serializers.serialize(object.status,
-                    specifiedType: const FullType(TeamEventStatusPlayoffStatusEnum)));
-        }
-        if (object.playoffAverage != null) {
-            result
-                ..add(r'playoff_average')
-                ..add(serializers.serialize(object.playoffAverage,
-                    specifiedType: const FullType(int)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    TeamEventStatusPlayoff object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.level != null) {
+      yield r'level';
+      yield serializers.serialize(
+        object.level,
+        specifiedType: const FullType(TeamEventStatusPlayoffLevelEnum),
+      );
     }
-
-    @override
-    TeamEventStatusPlayoff deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = TeamEventStatusPlayoffBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'level':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TeamEventStatusPlayoffLevelEnum)) as TeamEventStatusPlayoffLevelEnum;
-                    result.level = valueDes;
-                    break;
-                case r'current_level_record':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(WLTRecord)) as WLTRecord;
-                    result.currentLevelRecord.replace(valueDes);
-                    break;
-                case r'record':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(WLTRecord)) as WLTRecord;
-                    result.record.replace(valueDes);
-                    break;
-                case r'status':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(TeamEventStatusPlayoffStatusEnum)) as TeamEventStatusPlayoffStatusEnum;
-                    result.status = valueDes;
-                    break;
-                case r'playoff_average':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.playoffAverage = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+    if (object.currentLevelRecord != null) {
+      yield r'current_level_record';
+      yield serializers.serialize(
+        object.currentLevelRecord,
+        specifiedType: const FullType(WLTRecord),
+      );
     }
+    if (object.record != null) {
+      yield r'record';
+      yield serializers.serialize(
+        object.record,
+        specifiedType: const FullType(WLTRecord),
+      );
+    }
+    if (object.status != null) {
+      yield r'status';
+      yield serializers.serialize(
+        object.status,
+        specifiedType: const FullType(TeamEventStatusPlayoffStatusEnum),
+      );
+    }
+    if (object.playoffAverage != null) {
+      yield r'playoff_average';
+      yield serializers.serialize(
+        object.playoffAverage,
+        specifiedType: const FullType(int),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    TeamEventStatusPlayoff object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required TeamEventStatusPlayoffBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'level':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(TeamEventStatusPlayoffLevelEnum),
+          ) as TeamEventStatusPlayoffLevelEnum;
+          result.level = valueDes;
+          break;
+        case r'current_level_record':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(WLTRecord),
+          ) as WLTRecord;
+          result.currentLevelRecord.replace(valueDes);
+          break;
+        case r'record':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(WLTRecord),
+          ) as WLTRecord;
+          result.record.replace(valueDes);
+          break;
+        case r'status':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(TeamEventStatusPlayoffStatusEnum),
+          ) as TeamEventStatusPlayoffStatusEnum;
+          result.status = valueDes;
+          break;
+        case r'playoff_average':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.playoffAverage = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  TeamEventStatusPlayoff deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = TeamEventStatusPlayoffBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 
 class TeamEventStatusPlayoffLevelEnum extends EnumClass {

@@ -156,44 +156,40 @@ class _$MatchTimeseries2018 extends MatchTimeseries2018 {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, eventKey.hashCode), matchId.hashCode), mode.hashCode), play.hashCode), timeRemaining.hashCode), blueAutoQuest.hashCode), blueBoostCount.hashCode), blueBoostPlayed.hashCode), blueCurrentPowerup.hashCode), blueFaceTheBoss.hashCode), blueForceCount.hashCode), blueForcePlayed.hashCode),
-                                                                                blueLevitateCount.hashCode),
-                                                                            blueLevitatePlayed.hashCode),
-                                                                        bluePowerupTimeRemaining.hashCode),
-                                                                    blueScaleOwned.hashCode),
-                                                                blueScore.hashCode),
-                                                            blueSwitchOwned.hashCode),
-                                                        redAutoQuest.hashCode),
-                                                    redBoostCount.hashCode),
-                                                redBoostPlayed.hashCode),
-                                            redCurrentPowerup.hashCode),
-                                        redFaceTheBoss.hashCode),
-                                    redForceCount.hashCode),
-                                redForcePlayed.hashCode),
-                            redLevitateCount.hashCode),
-                        redLevitatePlayed.hashCode),
-                    redPowerupTimeRemaining.hashCode),
-                redScaleOwned.hashCode),
-            redScore.hashCode),
-        redSwitchOwned.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, eventKey.hashCode);
+    _$hash = $jc(_$hash, matchId.hashCode);
+    _$hash = $jc(_$hash, mode.hashCode);
+    _$hash = $jc(_$hash, play.hashCode);
+    _$hash = $jc(_$hash, timeRemaining.hashCode);
+    _$hash = $jc(_$hash, blueAutoQuest.hashCode);
+    _$hash = $jc(_$hash, blueBoostCount.hashCode);
+    _$hash = $jc(_$hash, blueBoostPlayed.hashCode);
+    _$hash = $jc(_$hash, blueCurrentPowerup.hashCode);
+    _$hash = $jc(_$hash, blueFaceTheBoss.hashCode);
+    _$hash = $jc(_$hash, blueForceCount.hashCode);
+    _$hash = $jc(_$hash, blueForcePlayed.hashCode);
+    _$hash = $jc(_$hash, blueLevitateCount.hashCode);
+    _$hash = $jc(_$hash, blueLevitatePlayed.hashCode);
+    _$hash = $jc(_$hash, bluePowerupTimeRemaining.hashCode);
+    _$hash = $jc(_$hash, blueScaleOwned.hashCode);
+    _$hash = $jc(_$hash, blueScore.hashCode);
+    _$hash = $jc(_$hash, blueSwitchOwned.hashCode);
+    _$hash = $jc(_$hash, redAutoQuest.hashCode);
+    _$hash = $jc(_$hash, redBoostCount.hashCode);
+    _$hash = $jc(_$hash, redBoostPlayed.hashCode);
+    _$hash = $jc(_$hash, redCurrentPowerup.hashCode);
+    _$hash = $jc(_$hash, redFaceTheBoss.hashCode);
+    _$hash = $jc(_$hash, redForceCount.hashCode);
+    _$hash = $jc(_$hash, redForcePlayed.hashCode);
+    _$hash = $jc(_$hash, redLevitateCount.hashCode);
+    _$hash = $jc(_$hash, redLevitatePlayed.hashCode);
+    _$hash = $jc(_$hash, redPowerupTimeRemaining.hashCode);
+    _$hash = $jc(_$hash, redScaleOwned.hashCode);
+    _$hash = $jc(_$hash, redScore.hashCode);
+    _$hash = $jc(_$hash, redSwitchOwned.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -482,4 +478,4 @@ class MatchTimeseries2018Builder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

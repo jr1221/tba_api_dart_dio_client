@@ -62,18 +62,17 @@ class _$TeamEventStatus extends TeamEventStatus {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc($jc($jc(0, qual.hashCode), alliance.hashCode),
-                            playoff.hashCode),
-                        allianceStatusStr.hashCode),
-                    playoffStatusStr.hashCode),
-                overallStatusStr.hashCode),
-            nextMatchKey.hashCode),
-        lastMatchKey.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, qual.hashCode);
+    _$hash = $jc(_$hash, alliance.hashCode);
+    _$hash = $jc(_$hash, playoff.hashCode);
+    _$hash = $jc(_$hash, allianceStatusStr.hashCode);
+    _$hash = $jc(_$hash, playoffStatusStr.hashCode);
+    _$hash = $jc(_$hash, overallStatusStr.hashCode);
+    _$hash = $jc(_$hash, nextMatchKey.hashCode);
+    _$hash = $jc(_$hash, lastMatchKey.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -202,4 +201,4 @@ class TeamEventStatusBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

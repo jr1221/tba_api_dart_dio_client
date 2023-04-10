@@ -237,44 +237,60 @@ class _$MatchScoreBreakdown2019Alliance
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, adjustPoints.hashCode), autoPoints.hashCode), bay1.hashCode), bay2.hashCode), bay3.hashCode), bay4.hashCode), bay5.hashCode), bay6.hashCode), bay7.hashCode), bay8.hashCode), cargoPoints.hashCode), completeRocketRankingPoint.hashCode), completedRocketFar.hashCode), completedRocketNear.hashCode), endgameRobot1.hashCode), endgameRobot2.hashCode), endgameRobot3.hashCode), foulCount.hashCode), foulPoints.hashCode), habClimbPoints.hashCode), habDockingRankingPoint.hashCode), habLineRobot1.hashCode), habLineRobot2.hashCode), habLineRobot3.hashCode), hatchPanelPoints.hashCode), lowLeftRocketFar.hashCode), lowLeftRocketNear.hashCode), lowRightRocketFar.hashCode), lowRightRocketNear.hashCode), midLeftRocketFar.hashCode), midLeftRocketNear.hashCode), midRightRocketFar.hashCode),
-                                                                                midRightRocketNear.hashCode),
-                                                                            preMatchBay1.hashCode),
-                                                                        preMatchBay2.hashCode),
-                                                                    preMatchBay3.hashCode),
-                                                                preMatchBay6.hashCode),
-                                                            preMatchBay7.hashCode),
-                                                        preMatchBay8.hashCode),
-                                                    preMatchLevelRobot1.hashCode),
-                                                preMatchLevelRobot2.hashCode),
-                                            preMatchLevelRobot3.hashCode),
-                                        rp.hashCode),
-                                    sandStormBonusPoints.hashCode),
-                                techFoulCount.hashCode),
-                            teleopPoints.hashCode),
-                        topLeftRocketFar.hashCode),
-                    topLeftRocketNear.hashCode),
-                topRightRocketFar.hashCode),
-            topRightRocketNear.hashCode),
-        totalPoints.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, adjustPoints.hashCode);
+    _$hash = $jc(_$hash, autoPoints.hashCode);
+    _$hash = $jc(_$hash, bay1.hashCode);
+    _$hash = $jc(_$hash, bay2.hashCode);
+    _$hash = $jc(_$hash, bay3.hashCode);
+    _$hash = $jc(_$hash, bay4.hashCode);
+    _$hash = $jc(_$hash, bay5.hashCode);
+    _$hash = $jc(_$hash, bay6.hashCode);
+    _$hash = $jc(_$hash, bay7.hashCode);
+    _$hash = $jc(_$hash, bay8.hashCode);
+    _$hash = $jc(_$hash, cargoPoints.hashCode);
+    _$hash = $jc(_$hash, completeRocketRankingPoint.hashCode);
+    _$hash = $jc(_$hash, completedRocketFar.hashCode);
+    _$hash = $jc(_$hash, completedRocketNear.hashCode);
+    _$hash = $jc(_$hash, endgameRobot1.hashCode);
+    _$hash = $jc(_$hash, endgameRobot2.hashCode);
+    _$hash = $jc(_$hash, endgameRobot3.hashCode);
+    _$hash = $jc(_$hash, foulCount.hashCode);
+    _$hash = $jc(_$hash, foulPoints.hashCode);
+    _$hash = $jc(_$hash, habClimbPoints.hashCode);
+    _$hash = $jc(_$hash, habDockingRankingPoint.hashCode);
+    _$hash = $jc(_$hash, habLineRobot1.hashCode);
+    _$hash = $jc(_$hash, habLineRobot2.hashCode);
+    _$hash = $jc(_$hash, habLineRobot3.hashCode);
+    _$hash = $jc(_$hash, hatchPanelPoints.hashCode);
+    _$hash = $jc(_$hash, lowLeftRocketFar.hashCode);
+    _$hash = $jc(_$hash, lowLeftRocketNear.hashCode);
+    _$hash = $jc(_$hash, lowRightRocketFar.hashCode);
+    _$hash = $jc(_$hash, lowRightRocketNear.hashCode);
+    _$hash = $jc(_$hash, midLeftRocketFar.hashCode);
+    _$hash = $jc(_$hash, midLeftRocketNear.hashCode);
+    _$hash = $jc(_$hash, midRightRocketFar.hashCode);
+    _$hash = $jc(_$hash, midRightRocketNear.hashCode);
+    _$hash = $jc(_$hash, preMatchBay1.hashCode);
+    _$hash = $jc(_$hash, preMatchBay2.hashCode);
+    _$hash = $jc(_$hash, preMatchBay3.hashCode);
+    _$hash = $jc(_$hash, preMatchBay6.hashCode);
+    _$hash = $jc(_$hash, preMatchBay7.hashCode);
+    _$hash = $jc(_$hash, preMatchBay8.hashCode);
+    _$hash = $jc(_$hash, preMatchLevelRobot1.hashCode);
+    _$hash = $jc(_$hash, preMatchLevelRobot2.hashCode);
+    _$hash = $jc(_$hash, preMatchLevelRobot3.hashCode);
+    _$hash = $jc(_$hash, rp.hashCode);
+    _$hash = $jc(_$hash, sandStormBonusPoints.hashCode);
+    _$hash = $jc(_$hash, techFoulCount.hashCode);
+    _$hash = $jc(_$hash, teleopPoints.hashCode);
+    _$hash = $jc(_$hash, topLeftRocketFar.hashCode);
+    _$hash = $jc(_$hash, topLeftRocketNear.hashCode);
+    _$hash = $jc(_$hash, topRightRocketFar.hashCode);
+    _$hash = $jc(_$hash, topRightRocketNear.hashCode);
+    _$hash = $jc(_$hash, totalPoints.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -710,4 +726,4 @@ class MatchScoreBreakdown2019AllianceBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

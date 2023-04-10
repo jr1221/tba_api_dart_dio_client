@@ -61,6 +61,32 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(MatchScoreBreakdown2022AllianceTaxiRobot1Enum.serializer)
       ..add(MatchScoreBreakdown2022AllianceTaxiRobot2Enum.serializer)
       ..add(MatchScoreBreakdown2022AllianceTaxiRobot3Enum.serializer)
+      ..add(MatchScoreBreakdown2023.serializer)
+      ..add(MatchScoreBreakdown2023Alliance.serializer)
+      ..add(MatchScoreBreakdown2023AllianceAutoBridgeStateEnum.serializer)
+      ..add(
+          MatchScoreBreakdown2023AllianceAutoChargeStationRobot1Enum.serializer)
+      ..add(
+          MatchScoreBreakdown2023AllianceAutoChargeStationRobot2Enum.serializer)
+      ..add(
+          MatchScoreBreakdown2023AllianceAutoChargeStationRobot3Enum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceAutoCommunity.serializer)
+      ..add(MatchScoreBreakdown2023AllianceAutoCommunityBEnum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceAutoCommunityMEnum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceAutoCommunityTEnum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceEndGameBridgeStateEnum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceEndGameChargeStationRobot1Enum
+          .serializer)
+      ..add(MatchScoreBreakdown2023AllianceEndGameChargeStationRobot2Enum
+          .serializer)
+      ..add(MatchScoreBreakdown2023AllianceEndGameChargeStationRobot3Enum
+          .serializer)
+      ..add(MatchScoreBreakdown2023AllianceLinksInner.serializer)
+      ..add(MatchScoreBreakdown2023AllianceLinksInnerNodesEnum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceLinksInnerRowEnum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceMobilityRobot1Enum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceMobilityRobot2Enum.serializer)
+      ..add(MatchScoreBreakdown2023AllianceMobilityRobot3Enum.serializer)
       ..add(MatchSimple.serializer)
       ..add(MatchSimpleAlliances.serializer)
       ..add(MatchSimpleCompLevelEnum.serializer)
@@ -107,6 +133,35 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(EventRankingSortOrderInfoInner)]),
           () => new ListBuilder<EventRankingSortOrderInfoInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(MatchScoreBreakdown2023AllianceAutoCommunityBEnum)
+          ]),
+          () => new ListBuilder<
+              MatchScoreBreakdown2023AllianceAutoCommunityBEnum>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(MatchScoreBreakdown2023AllianceAutoCommunityMEnum)
+          ]),
+          () => new ListBuilder<
+              MatchScoreBreakdown2023AllianceAutoCommunityMEnum>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(MatchScoreBreakdown2023AllianceAutoCommunityTEnum)
+          ]),
+          () => new ListBuilder<
+              MatchScoreBreakdown2023AllianceAutoCommunityTEnum>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(MatchScoreBreakdown2023AllianceLinksInner)
+          ]),
+          () => new ListBuilder<MatchScoreBreakdown2023AllianceLinksInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(MatchScoreBreakdown2023AllianceLinksInnerNodesEnum)
+          ]),
+          () => new ListBuilder<
+              MatchScoreBreakdown2023AllianceLinksInnerNodesEnum>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(MatchVideosInner)]),
           () => new ListBuilder<MatchVideosInner>())
@@ -299,4 +354,4 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new MapBuilder<String, double>()))
     .build();
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint
