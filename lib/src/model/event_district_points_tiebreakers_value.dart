@@ -12,10 +12,13 @@ part 'event_district_points_tiebreakers_value.g.dart';
 /// EventDistrictPointsTiebreakersValue
 ///
 /// Properties:
-/// * [highestQualScores] 
-/// * [qualWins] 
+/// * [highestQualScores]
+/// * [qualWins]
 @BuiltValue()
-abstract class EventDistrictPointsTiebreakersValue implements Built<EventDistrictPointsTiebreakersValue, EventDistrictPointsTiebreakersValueBuilder> {
+abstract class EventDistrictPointsTiebreakersValue
+    implements
+        Built<EventDistrictPointsTiebreakersValue,
+            EventDistrictPointsTiebreakersValueBuilder> {
   @BuiltValueField(wireName: r'highest_qual_scores')
   BuiltList<int>? get highestQualScores;
 
@@ -24,18 +27,25 @@ abstract class EventDistrictPointsTiebreakersValue implements Built<EventDistric
 
   EventDistrictPointsTiebreakersValue._();
 
-  factory EventDistrictPointsTiebreakersValue([void updates(EventDistrictPointsTiebreakersValueBuilder b)]) = _$EventDistrictPointsTiebreakersValue;
+  factory EventDistrictPointsTiebreakersValue(
+          [void updates(EventDistrictPointsTiebreakersValueBuilder b)]) =
+      _$EventDistrictPointsTiebreakersValue;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventDistrictPointsTiebreakersValueBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventDistrictPointsTiebreakersValue> get serializer => _$EventDistrictPointsTiebreakersValueSerializer();
+  static Serializer<EventDistrictPointsTiebreakersValue> get serializer =>
+      _$EventDistrictPointsTiebreakersValueSerializer();
 }
 
-class _$EventDistrictPointsTiebreakersValueSerializer implements PrimitiveSerializer<EventDistrictPointsTiebreakersValue> {
+class _$EventDistrictPointsTiebreakersValueSerializer
+    implements PrimitiveSerializer<EventDistrictPointsTiebreakersValue> {
   @override
-  final Iterable<Type> types = const [EventDistrictPointsTiebreakersValue, _$EventDistrictPointsTiebreakersValue];
+  final Iterable<Type> types = const [
+    EventDistrictPointsTiebreakersValue,
+    _$EventDistrictPointsTiebreakersValue
+  ];
 
   @override
   final String wireName = r'EventDistrictPointsTiebreakersValue';
@@ -67,7 +77,9 @@ class _$EventDistrictPointsTiebreakersValueSerializer implements PrimitiveSerial
     EventDistrictPointsTiebreakersValue object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -124,4 +136,3 @@ class _$EventDistrictPointsTiebreakersValueSerializer implements PrimitiveSerial
     return result.build();
   }
 }
-

@@ -19,7 +19,8 @@ part 'district_ranking.g.dart';
 /// * [pointTotal] - Total district points for the team.
 /// * [eventPoints] - List of events that contributed to the point total for the team.
 @BuiltValue()
-abstract class DistrictRanking implements Built<DistrictRanking, DistrictRankingBuilder> {
+abstract class DistrictRanking
+    implements Built<DistrictRanking, DistrictRankingBuilder> {
   /// TBA team key for the team.
   @BuiltValueField(wireName: r'team_key')
   String get teamKey;
@@ -34,7 +35,7 @@ abstract class DistrictRanking implements Built<DistrictRanking, DistrictRanking
 
   /// Total district points for the team.
   @BuiltValueField(wireName: r'point_total')
-  int get pointTotal;
+  num get pointTotal;
 
   /// List of events that contributed to the point total for the team.
   @BuiltValueField(wireName: r'event_points')
@@ -42,16 +43,19 @@ abstract class DistrictRanking implements Built<DistrictRanking, DistrictRanking
 
   DistrictRanking._();
 
-  factory DistrictRanking([void updates(DistrictRankingBuilder b)]) = _$DistrictRanking;
+  factory DistrictRanking([void updates(DistrictRankingBuilder b)]) =
+      _$DistrictRanking;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(DistrictRankingBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<DistrictRanking> get serializer => _$DistrictRankingSerializer();
+  static Serializer<DistrictRanking> get serializer =>
+      _$DistrictRankingSerializer();
 }
 
-class _$DistrictRankingSerializer implements PrimitiveSerializer<DistrictRanking> {
+class _$DistrictRankingSerializer
+    implements PrimitiveSerializer<DistrictRanking> {
   @override
   final Iterable<Type> types = const [DistrictRanking, _$DistrictRanking];
 
@@ -83,13 +87,14 @@ class _$DistrictRankingSerializer implements PrimitiveSerializer<DistrictRanking
     yield r'point_total';
     yield serializers.serialize(
       object.pointTotal,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(num),
     );
     if (object.eventPoints != null) {
       yield r'event_points';
       yield serializers.serialize(
         object.eventPoints,
-        specifiedType: const FullType(BuiltList, [FullType(DistrictRankingEventPointsInner)]),
+        specifiedType: const FullType(
+            BuiltList, [FullType(DistrictRankingEventPointsInner)]),
       );
     }
   }
@@ -100,7 +105,9 @@ class _$DistrictRankingSerializer implements PrimitiveSerializer<DistrictRanking
     DistrictRanking object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -139,14 +146,15 @@ class _$DistrictRankingSerializer implements PrimitiveSerializer<DistrictRanking
         case r'point_total':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(num),
+          ) as num;
           result.pointTotal = valueDes;
           break;
         case r'event_points':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(DistrictRankingEventPointsInner)]),
+            specifiedType: const FullType(
+                BuiltList, [FullType(DistrictRankingEventPointsInner)]),
           ) as BuiltList<DistrictRankingEventPointsInner>;
           result.eventPoints.replace(valueDes);
           break;
@@ -178,4 +186,3 @@ class _$DistrictRankingSerializer implements PrimitiveSerializer<DistrictRanking
     return result.build();
   }
 }
-

@@ -16,7 +16,6 @@ import 'package:tba_api_dart_dio_client/src/model/team_event_status.dart';
 import 'package:tba_api_dart_dio_client/src/model/team_simple.dart';
 
 class ListApi {
-
   final Dio _dio;
 
   final Serializers _serializers;
@@ -38,7 +37,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Event>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Event>>> getDistrictEvents({ 
+  Future<Response<BuiltList<Event>>> getDistrictEvents({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -48,7 +47,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/events'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/events'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -85,7 +85,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Event>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -123,7 +122,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> getDistrictEventsKeys({ 
+  Future<Response<BuiltList<String>>> getDistrictEventsKeys({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -133,7 +132,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/events/keys'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/events/keys'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -170,7 +170,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -208,7 +207,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<EventSimple>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<EventSimple>>> getDistrictEventsSimple({ 
+  Future<Response<BuiltList<EventSimple>>> getDistrictEventsSimple({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -218,7 +217,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/events/simple'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/events/simple'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -255,7 +255,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<EventSimple>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -293,7 +292,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<DistrictRanking>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<DistrictRanking>>> getDistrictRankings({ 
+  Future<Response<BuiltList<DistrictRanking>>> getDistrictRankings({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -303,7 +302,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/rankings'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/rankings'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -340,7 +340,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<DistrictRanking>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -378,7 +377,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Team>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Team>>> getDistrictTeams({ 
+  Future<Response<BuiltList<Team>>> getDistrictTeams({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -388,7 +387,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/teams'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/teams'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -425,7 +425,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Team>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -463,7 +462,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> getDistrictTeamsKeys({ 
+  Future<Response<BuiltList<String>>> getDistrictTeamsKeys({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -473,7 +472,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/teams/keys'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/teams/keys'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -510,7 +510,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -548,7 +547,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TeamSimple>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TeamSimple>>> getDistrictTeamsSimple({ 
+  Future<Response<BuiltList<TeamSimple>>> getDistrictTeamsSimple({
     required String districtKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -558,7 +557,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/district/{district_key}/teams/simple'.replaceAll('{' r'district_key' '}', districtKey.toString());
+    final _path = r'/district/{district_key}/teams/simple'
+        .replaceAll('{' r'district_key' '}', districtKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -595,7 +595,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<TeamSimple>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -633,7 +632,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Team>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Team>>> getEventTeams({ 
+  Future<Response<BuiltList<Team>>> getEventTeams({
     required String eventKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -643,7 +642,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/teams'.replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/teams'
+        .replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -680,7 +680,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Team>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -718,7 +717,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> getEventTeamsKeys({ 
+  Future<Response<BuiltList<String>>> getEventTeamsKeys({
     required String eventKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -728,7 +727,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/teams/keys'.replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/teams/keys'
+        .replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -765,7 +765,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -803,7 +802,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TeamSimple>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TeamSimple>>> getEventTeamsSimple({ 
+  Future<Response<BuiltList<TeamSimple>>> getEventTeamsSimple({
     required String eventKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -813,7 +812,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/teams/simple'.replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/teams/simple'
+        .replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -850,7 +850,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<TeamSimple>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -888,7 +887,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltMap<String, TeamEventStatus>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltMap<String, TeamEventStatus>>> getEventTeamsStatuses({ 
+  Future<Response<BuiltMap<String, TeamEventStatus>>> getEventTeamsStatuses({
     required String eventKey,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -898,7 +897,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/event/{event_key}/teams/statuses'.replaceAll('{' r'event_key' '}', eventKey.toString());
+    final _path = r'/event/{event_key}/teams/statuses'
+        .replaceAll('{' r'event_key' '}', eventKey.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -930,12 +930,12 @@ class ListApi {
     BuiltMap<String, TeamEventStatus> _responseData;
 
     try {
-      const _responseType = FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]);
+      const _responseType =
+          FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltMap<String, TeamEventStatus>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -973,7 +973,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Event>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Event>>> getEventsByYear({ 
+  Future<Response<BuiltList<Event>>> getEventsByYear({
     required int year,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -983,7 +983,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/events/{year}'.replaceAll('{' r'year' '}', year.toString());
+    final _path =
+        r'/events/{year}'.replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1020,7 +1021,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Event>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1058,7 +1058,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> getEventsByYearKeys({ 
+  Future<Response<BuiltList<String>>> getEventsByYearKeys({
     required int year,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -1068,7 +1068,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/events/{year}/keys'.replaceAll('{' r'year' '}', year.toString());
+    final _path =
+        r'/events/{year}/keys'.replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1105,7 +1106,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1143,7 +1143,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<EventSimple>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<EventSimple>>> getEventsByYearSimple({ 
+  Future<Response<BuiltList<EventSimple>>> getEventsByYearSimple({
     required int year,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -1153,7 +1153,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/events/{year}/simple'.replaceAll('{' r'year' '}', year.toString());
+    final _path =
+        r'/events/{year}/simple'.replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1190,7 +1191,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<EventSimple>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1229,7 +1229,8 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltMap<String, TeamEventStatus>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltMap<String, TeamEventStatus>>> getTeamEventsStatusesByYear({ 
+  Future<Response<BuiltMap<String, TeamEventStatus>>>
+      getTeamEventsStatusesByYear({
     required String teamKey,
     required int year,
     String? ifNoneMatch,
@@ -1240,7 +1241,9 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/team/{team_key}/events/{year}/statuses'.replaceAll('{' r'team_key' '}', teamKey.toString()).replaceAll('{' r'year' '}', year.toString());
+    final _path = r'/team/{team_key}/events/{year}/statuses'
+        .replaceAll('{' r'team_key' '}', teamKey.toString())
+        .replaceAll('{' r'year' '}', year.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1272,12 +1275,12 @@ class ListApi {
     BuiltMap<String, TeamEventStatus> _responseData;
 
     try {
-      const _responseType = FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]);
+      const _responseType =
+          FullType(BuiltMap, [FullType(String), FullType(TeamEventStatus)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltMap<String, TeamEventStatus>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1315,7 +1318,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Team>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Team>>> getTeams({ 
+  Future<Response<BuiltList<Team>>> getTeams({
     required int pageNum,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -1325,7 +1328,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/teams/{page_num}'.replaceAll('{' r'page_num' '}', pageNum.toString());
+    final _path = r'/teams/{page_num}'
+        .replaceAll('{' r'page_num' '}', pageNum.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1362,7 +1366,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Team>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1401,7 +1404,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<Team>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<Team>>> getTeamsByYear({ 
+  Future<Response<BuiltList<Team>>> getTeamsByYear({
     required int year,
     required int pageNum,
     String? ifNoneMatch,
@@ -1412,7 +1415,9 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/teams/{year}/{page_num}'.replaceAll('{' r'year' '}', year.toString()).replaceAll('{' r'page_num' '}', pageNum.toString());
+    final _path = r'/teams/{year}/{page_num}'
+        .replaceAll('{' r'year' '}', year.toString())
+        .replaceAll('{' r'page_num' '}', pageNum.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1449,7 +1454,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<Team>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1488,7 +1492,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> getTeamsByYearKeys({ 
+  Future<Response<BuiltList<String>>> getTeamsByYearKeys({
     required int year,
     required int pageNum,
     String? ifNoneMatch,
@@ -1499,7 +1503,9 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/teams/{year}/{page_num}/keys'.replaceAll('{' r'year' '}', year.toString()).replaceAll('{' r'page_num' '}', pageNum.toString());
+    final _path = r'/teams/{year}/{page_num}/keys'
+        .replaceAll('{' r'year' '}', year.toString())
+        .replaceAll('{' r'page_num' '}', pageNum.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1536,7 +1542,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1575,7 +1580,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TeamSimple>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TeamSimple>>> getTeamsByYearSimple({ 
+  Future<Response<BuiltList<TeamSimple>>> getTeamsByYearSimple({
     required int year,
     required int pageNum,
     String? ifNoneMatch,
@@ -1586,7 +1591,9 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/teams/{year}/{page_num}/simple'.replaceAll('{' r'year' '}', year.toString()).replaceAll('{' r'page_num' '}', pageNum.toString());
+    final _path = r'/teams/{year}/{page_num}/simple'
+        .replaceAll('{' r'year' '}', year.toString())
+        .replaceAll('{' r'page_num' '}', pageNum.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1623,7 +1630,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<TeamSimple>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1661,7 +1667,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> getTeamsKeys({ 
+  Future<Response<BuiltList<String>>> getTeamsKeys({
     required int pageNum,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -1671,7 +1677,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/teams/{page_num}/keys'.replaceAll('{' r'page_num' '}', pageNum.toString());
+    final _path = r'/teams/{page_num}/keys'
+        .replaceAll('{' r'page_num' '}', pageNum.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1708,7 +1715,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<String>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1746,7 +1752,7 @@ class ListApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<TeamSimple>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<TeamSimple>>> getTeamsSimple({ 
+  Future<Response<BuiltList<TeamSimple>>> getTeamsSimple({
     required int pageNum,
     String? ifNoneMatch,
     CancelToken? cancelToken,
@@ -1756,7 +1762,8 @@ class ListApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/teams/{page_num}/simple'.replaceAll('{' r'page_num' '}', pageNum.toString());
+    final _path = r'/teams/{page_num}/simple'
+        .replaceAll('{' r'page_num' '}', pageNum.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1793,7 +1800,6 @@ class ListApi {
         _response.data!,
         specifiedType: _responseType,
       ) as BuiltList<TeamSimple>;
-
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -1815,5 +1821,4 @@ class ListApi {
       extra: _response.extra,
     );
   }
-
 }

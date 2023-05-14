@@ -74,7 +74,9 @@ class _$WLTRecordSerializer implements PrimitiveSerializer<WLTRecord> {
     WLTRecord object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -138,4 +140,3 @@ class _$WLTRecordSerializer implements PrimitiveSerializer<WLTRecord> {
     return result.build();
   }
 }
-

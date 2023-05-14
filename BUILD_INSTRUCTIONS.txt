@@ -1,1 +1,4 @@
- openapi-generator generate -i ./api_v3.json -g dart-dio -o ./tba_api_dart_dio_client/ --additional-properties=pubAuthor=Jack1221,pubAuthorEmail=iambent.omnishambles@gmail.com,pubDescription="The Blue Alliance API Dart Dio SDK",pubHomepage=https://github.com/jr1221/tba_api_dart_dio_client,pubLibrary=tba_api_dart_dio_client,pubName=tba_api_dart_dio_client,pubVersion=0.0.2
+fetch api, then change point_total and elim_points and event_points --> total in district ranking to type "number"
+openapi-generator generate -i ./api_v3.json -g dart-dio -o . --additional-properties=pubAuthor=Jack1221,pubAuthorEmail=iambent.omnishambles@gmail.com,pubDescription="The Blue Alliance API Dart Dio SDK",pubHomepage=https://github.com/jr1221/tba_api_dart_dio_client,pubLibrary=tba_api_dart_dio_client,pubName=tba_api_dart_dio_client,pubVersion=0.0.2
+dart run build_runner build
+dart format .

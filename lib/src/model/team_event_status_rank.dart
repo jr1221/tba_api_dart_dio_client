@@ -15,11 +15,12 @@ part 'team_event_status_rank.g.dart';
 ///
 /// Properties:
 /// * [numTeams] - Number of teams ranked.
-/// * [ranking] 
+/// * [ranking]
 /// * [sortOrderInfo] - Ordered list of names corresponding to the elements of the `sort_orders` array.
-/// * [status] 
+/// * [status]
 @BuiltValue()
-abstract class TeamEventStatusRank implements Built<TeamEventStatusRank, TeamEventStatusRankBuilder> {
+abstract class TeamEventStatusRank
+    implements Built<TeamEventStatusRank, TeamEventStatusRankBuilder> {
   /// Number of teams ranked.
   @BuiltValueField(wireName: r'num_teams')
   int? get numTeams;
@@ -36,18 +37,24 @@ abstract class TeamEventStatusRank implements Built<TeamEventStatusRank, TeamEve
 
   TeamEventStatusRank._();
 
-  factory TeamEventStatusRank([void updates(TeamEventStatusRankBuilder b)]) = _$TeamEventStatusRank;
+  factory TeamEventStatusRank([void updates(TeamEventStatusRankBuilder b)]) =
+      _$TeamEventStatusRank;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TeamEventStatusRankBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TeamEventStatusRank> get serializer => _$TeamEventStatusRankSerializer();
+  static Serializer<TeamEventStatusRank> get serializer =>
+      _$TeamEventStatusRankSerializer();
 }
 
-class _$TeamEventStatusRankSerializer implements PrimitiveSerializer<TeamEventStatusRank> {
+class _$TeamEventStatusRankSerializer
+    implements PrimitiveSerializer<TeamEventStatusRank> {
   @override
-  final Iterable<Type> types = const [TeamEventStatusRank, _$TeamEventStatusRank];
+  final Iterable<Type> types = const [
+    TeamEventStatusRank,
+    _$TeamEventStatusRank
+  ];
 
   @override
   final String wireName = r'TeamEventStatusRank';
@@ -75,7 +82,8 @@ class _$TeamEventStatusRankSerializer implements PrimitiveSerializer<TeamEventSt
       yield r'sort_order_info';
       yield serializers.serialize(
         object.sortOrderInfo,
-        specifiedType: const FullType(BuiltList, [FullType(TeamEventStatusRankSortOrderInfoInner)]),
+        specifiedType: const FullType(
+            BuiltList, [FullType(TeamEventStatusRankSortOrderInfoInner)]),
       );
     }
     if (object.status != null) {
@@ -93,7 +101,9 @@ class _$TeamEventStatusRankSerializer implements PrimitiveSerializer<TeamEventSt
     TeamEventStatusRank object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -125,7 +135,8 @@ class _$TeamEventStatusRankSerializer implements PrimitiveSerializer<TeamEventSt
         case r'sort_order_info':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(TeamEventStatusRankSortOrderInfoInner)]),
+            specifiedType: const FullType(
+                BuiltList, [FullType(TeamEventStatusRankSortOrderInfoInner)]),
           ) as BuiltList<TeamEventStatusRankSortOrderInfoInner>;
           result.sortOrderInfo.replace(valueDes);
           break;
@@ -164,4 +175,3 @@ class _$TeamEventStatusRankSerializer implements PrimitiveSerializer<TeamEventSt
     return result.build();
   }
 }
-

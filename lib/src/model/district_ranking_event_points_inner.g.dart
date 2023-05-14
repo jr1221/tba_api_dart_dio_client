@@ -11,11 +11,11 @@ class _$DistrictRankingEventPointsInner
   @override
   final bool districtCmp;
   @override
-  final int total;
+  final num total;
   @override
   final int alliancePoints;
   @override
-  final int elimPoints;
+  final num elimPoints;
   @override
   final int awardPoints;
   @override
@@ -112,18 +112,18 @@ class DistrictRankingEventPointsInnerBuilder
   bool? get districtCmp => _$this._districtCmp;
   set districtCmp(bool? districtCmp) => _$this._districtCmp = districtCmp;
 
-  int? _total;
-  int? get total => _$this._total;
-  set total(int? total) => _$this._total = total;
+  num? _total;
+  num? get total => _$this._total;
+  set total(num? total) => _$this._total = total;
 
   int? _alliancePoints;
   int? get alliancePoints => _$this._alliancePoints;
   set alliancePoints(int? alliancePoints) =>
       _$this._alliancePoints = alliancePoints;
 
-  int? _elimPoints;
-  int? get elimPoints => _$this._elimPoints;
-  set elimPoints(int? elimPoints) => _$this._elimPoints = elimPoints;
+  num? _elimPoints;
+  num? get elimPoints => _$this._elimPoints;
+  set elimPoints(num? elimPoints) => _$this._elimPoints = elimPoints;
 
   int? _awardPoints;
   int? get awardPoints => _$this._awardPoints;

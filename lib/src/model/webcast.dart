@@ -90,7 +90,9 @@ class _$WebcastSerializer implements PrimitiveSerializer<Webcast> {
     Webcast object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -163,49 +165,59 @@ class _$WebcastSerializer implements PrimitiveSerializer<Webcast> {
 }
 
 class WebcastTypeEnum extends EnumClass {
-
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'youtube')
   static const WebcastTypeEnum youtube = _$webcastTypeEnum_youtube;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'twitch')
   static const WebcastTypeEnum twitch = _$webcastTypeEnum_twitch;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'ustream')
   static const WebcastTypeEnum ustream = _$webcastTypeEnum_ustream;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'iframe')
   static const WebcastTypeEnum iframe = _$webcastTypeEnum_iframe;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'html5')
   static const WebcastTypeEnum html5 = _$webcastTypeEnum_html5;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'rtmp')
   static const WebcastTypeEnum rtmp = _$webcastTypeEnum_rtmp;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'livestream')
   static const WebcastTypeEnum livestream = _$webcastTypeEnum_livestream;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'direct_link')
   static const WebcastTypeEnum directLink = _$webcastTypeEnum_directLink;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'mms')
   static const WebcastTypeEnum mms = _$webcastTypeEnum_mms;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'justin')
   static const WebcastTypeEnum justin = _$webcastTypeEnum_justin;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'stemtv')
   static const WebcastTypeEnum stemtv = _$webcastTypeEnum_stemtv;
+
   /// Type of webcast, typically descriptive of the streaming provider.
   @BuiltValueEnumConst(wireName: r'dacast')
   static const WebcastTypeEnum dacast = _$webcastTypeEnum_dacast;
 
-  static Serializer<WebcastTypeEnum> get serializer => _$webcastTypeEnumSerializer;
+  static Serializer<WebcastTypeEnum> get serializer =>
+      _$webcastTypeEnumSerializer;
 
-  const WebcastTypeEnum._(String name): super(name);
+  const WebcastTypeEnum._(String name) : super(name);
 
   static BuiltSet<WebcastTypeEnum> get values => _$webcastTypeEnumValues;
   static WebcastTypeEnum valueOf(String name) => _$webcastTypeEnumValueOf(name);
 }
-

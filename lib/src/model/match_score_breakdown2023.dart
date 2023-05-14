@@ -12,10 +12,11 @@ part 'match_score_breakdown2023.g.dart';
 /// See the 2023 FMS API documentation for a description of each value. https://frc-api-docs.firstinspires.org
 ///
 /// Properties:
-/// * [blue] 
-/// * [red] 
+/// * [blue]
+/// * [red]
 @BuiltValue()
-abstract class MatchScoreBreakdown2023 implements Built<MatchScoreBreakdown2023, MatchScoreBreakdown2023Builder> {
+abstract class MatchScoreBreakdown2023
+    implements Built<MatchScoreBreakdown2023, MatchScoreBreakdown2023Builder> {
   @BuiltValueField(wireName: r'blue')
   MatchScoreBreakdown2023Alliance? get blue;
 
@@ -24,18 +25,25 @@ abstract class MatchScoreBreakdown2023 implements Built<MatchScoreBreakdown2023,
 
   MatchScoreBreakdown2023._();
 
-  factory MatchScoreBreakdown2023([void updates(MatchScoreBreakdown2023Builder b)]) = _$MatchScoreBreakdown2023;
+  factory MatchScoreBreakdown2023(
+          [void updates(MatchScoreBreakdown2023Builder b)]) =
+      _$MatchScoreBreakdown2023;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchScoreBreakdown2023Builder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchScoreBreakdown2023> get serializer => _$MatchScoreBreakdown2023Serializer();
+  static Serializer<MatchScoreBreakdown2023> get serializer =>
+      _$MatchScoreBreakdown2023Serializer();
 }
 
-class _$MatchScoreBreakdown2023Serializer implements PrimitiveSerializer<MatchScoreBreakdown2023> {
+class _$MatchScoreBreakdown2023Serializer
+    implements PrimitiveSerializer<MatchScoreBreakdown2023> {
   @override
-  final Iterable<Type> types = const [MatchScoreBreakdown2023, _$MatchScoreBreakdown2023];
+  final Iterable<Type> types = const [
+    MatchScoreBreakdown2023,
+    _$MatchScoreBreakdown2023
+  ];
 
   @override
   final String wireName = r'MatchScoreBreakdown2023';
@@ -67,7 +75,9 @@ class _$MatchScoreBreakdown2023Serializer implements PrimitiveSerializer<MatchSc
     MatchScoreBreakdown2023 object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -124,4 +134,3 @@ class _$MatchScoreBreakdown2023Serializer implements PrimitiveSerializer<MatchSc
     return result.build();
   }
 }
-

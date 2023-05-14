@@ -14,7 +14,10 @@ part 'team_event_status_rank_sort_order_info_inner.g.dart';
 /// * [precision] - The number of digits of precision used for this value, eg `2` would correspond to a value of `101.11` while `0` would correspond to `101`.
 /// * [name] - The descriptive name of the value used to sort the ranking.
 @BuiltValue()
-abstract class TeamEventStatusRankSortOrderInfoInner implements Built<TeamEventStatusRankSortOrderInfoInner, TeamEventStatusRankSortOrderInfoInnerBuilder> {
+abstract class TeamEventStatusRankSortOrderInfoInner
+    implements
+        Built<TeamEventStatusRankSortOrderInfoInner,
+            TeamEventStatusRankSortOrderInfoInnerBuilder> {
   /// The number of digits of precision used for this value, eg `2` would correspond to a value of `101.11` while `0` would correspond to `101`.
   @BuiltValueField(wireName: r'precision')
   int? get precision;
@@ -25,18 +28,25 @@ abstract class TeamEventStatusRankSortOrderInfoInner implements Built<TeamEventS
 
   TeamEventStatusRankSortOrderInfoInner._();
 
-  factory TeamEventStatusRankSortOrderInfoInner([void updates(TeamEventStatusRankSortOrderInfoInnerBuilder b)]) = _$TeamEventStatusRankSortOrderInfoInner;
+  factory TeamEventStatusRankSortOrderInfoInner(
+          [void updates(TeamEventStatusRankSortOrderInfoInnerBuilder b)]) =
+      _$TeamEventStatusRankSortOrderInfoInner;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TeamEventStatusRankSortOrderInfoInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TeamEventStatusRankSortOrderInfoInner> get serializer => _$TeamEventStatusRankSortOrderInfoInnerSerializer();
+  static Serializer<TeamEventStatusRankSortOrderInfoInner> get serializer =>
+      _$TeamEventStatusRankSortOrderInfoInnerSerializer();
 }
 
-class _$TeamEventStatusRankSortOrderInfoInnerSerializer implements PrimitiveSerializer<TeamEventStatusRankSortOrderInfoInner> {
+class _$TeamEventStatusRankSortOrderInfoInnerSerializer
+    implements PrimitiveSerializer<TeamEventStatusRankSortOrderInfoInner> {
   @override
-  final Iterable<Type> types = const [TeamEventStatusRankSortOrderInfoInner, _$TeamEventStatusRankSortOrderInfoInner];
+  final Iterable<Type> types = const [
+    TeamEventStatusRankSortOrderInfoInner,
+    _$TeamEventStatusRankSortOrderInfoInner
+  ];
 
   @override
   final String wireName = r'TeamEventStatusRankSortOrderInfoInner';
@@ -68,7 +78,9 @@ class _$TeamEventStatusRankSortOrderInfoInnerSerializer implements PrimitiveSeri
     TeamEventStatusRankSortOrderInfoInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -125,4 +137,3 @@ class _$TeamEventStatusRankSortOrderInfoInnerSerializer implements PrimitiveSeri
     return result.build();
   }
 }
-

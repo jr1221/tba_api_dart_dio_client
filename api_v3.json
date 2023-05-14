@@ -7238,7 +7238,7 @@
             "description": "Any points added to a team as a result of the rookie bonus."
           },
           "point_total": {
-            "type": "integer",
+            "type": "number",
             "description": "Total district points for the team."
           },
           "event_points": {
@@ -7261,7 +7261,7 @@
                   "description": "`true` if this event is a District Championship event."
                 },
                 "total": {
-                  "type": "integer",
+                  "type": "number",
                   "description": "Total points awarded at this event."
                 },
                 "alliance_points": {
@@ -7269,7 +7269,7 @@
                   "description": "Points awarded for alliance selection."
                 },
                 "elim_points": {
-                  "type": "integer",
+                  "type": "number",
                   "description": "Points awarded for elimination match performance."
                 },
                 "award_points": {

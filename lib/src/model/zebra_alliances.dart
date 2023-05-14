@@ -16,7 +16,8 @@ part 'zebra_alliances.g.dart';
 /// * [red] - Zebra MotionWorks data for teams on the red alliance
 /// * [blue] - Zebra data for teams on the blue alliance
 @BuiltValue()
-abstract class ZebraAlliances implements Built<ZebraAlliances, ZebraAlliancesBuilder> {
+abstract class ZebraAlliances
+    implements Built<ZebraAlliances, ZebraAlliancesBuilder> {
   /// Zebra MotionWorks data for teams on the red alliance
   @BuiltValueField(wireName: r'red')
   BuiltList<ZebraTeam>? get red;
@@ -27,16 +28,19 @@ abstract class ZebraAlliances implements Built<ZebraAlliances, ZebraAlliancesBui
 
   ZebraAlliances._();
 
-  factory ZebraAlliances([void updates(ZebraAlliancesBuilder b)]) = _$ZebraAlliances;
+  factory ZebraAlliances([void updates(ZebraAlliancesBuilder b)]) =
+      _$ZebraAlliances;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(ZebraAlliancesBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ZebraAlliances> get serializer => _$ZebraAlliancesSerializer();
+  static Serializer<ZebraAlliances> get serializer =>
+      _$ZebraAlliancesSerializer();
 }
 
-class _$ZebraAlliancesSerializer implements PrimitiveSerializer<ZebraAlliances> {
+class _$ZebraAlliancesSerializer
+    implements PrimitiveSerializer<ZebraAlliances> {
   @override
   final Iterable<Type> types = const [ZebraAlliances, _$ZebraAlliances];
 
@@ -70,7 +74,9 @@ class _$ZebraAlliancesSerializer implements PrimitiveSerializer<ZebraAlliances> 
     ZebraAlliances object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -127,4 +133,3 @@ class _$ZebraAlliancesSerializer implements PrimitiveSerializer<ZebraAlliances> 
     return result.build();
   }
 }
-

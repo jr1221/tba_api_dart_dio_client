@@ -17,7 +17,7 @@ part 'event_simple.g.dart';
 /// * [name] - Official name of event on record either provided by FIRST or organizers of offseason event.
 /// * [eventCode] - Event short code, as provided by FIRST.
 /// * [eventType] - Event Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2
-/// * [district] 
+/// * [district]
 /// * [city] - City, town, village, etc. the event is located in.
 /// * [stateProv] - State or Province the event is located in.
 /// * [country] - Country the event is located in.
@@ -163,7 +163,9 @@ class _$EventSimpleSerializer implements PrimitiveSerializer<EventSimple> {
     EventSimple object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -283,4 +285,3 @@ class _$EventSimpleSerializer implements PrimitiveSerializer<EventSimple> {
     return result.build();
   }
 }
-

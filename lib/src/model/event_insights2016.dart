@@ -37,7 +37,8 @@ part 'event_insights2016.g.dart';
 /// * [averageFoulScore] - Average foul score.
 /// * [highScore] - An array with three values, high score, match key from the match with the high score, and the name of the match.
 @BuiltValue()
-abstract class EventInsights2016 implements Built<EventInsights2016, EventInsights2016Builder> {
+abstract class EventInsights2016
+    implements Built<EventInsights2016, EventInsights2016Builder> {
   /// For the Low Bar - An array with three values, number of times damaged, number of opportunities to damage, and percentage.
   @BuiltValueField(wireName: r'LowBar')
   BuiltList<double> get lowBar;
@@ -136,16 +137,19 @@ abstract class EventInsights2016 implements Built<EventInsights2016, EventInsigh
 
   EventInsights2016._();
 
-  factory EventInsights2016([void updates(EventInsights2016Builder b)]) = _$EventInsights2016;
+  factory EventInsights2016([void updates(EventInsights2016Builder b)]) =
+      _$EventInsights2016;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventInsights2016Builder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventInsights2016> get serializer => _$EventInsights2016Serializer();
+  static Serializer<EventInsights2016> get serializer =>
+      _$EventInsights2016Serializer();
 }
 
-class _$EventInsights2016Serializer implements PrimitiveSerializer<EventInsights2016> {
+class _$EventInsights2016Serializer
+    implements PrimitiveSerializer<EventInsights2016> {
   @override
   final Iterable<Type> types = const [EventInsights2016, _$EventInsights2016];
 
@@ -285,7 +289,9 @@ class _$EventInsights2016Serializer implements PrimitiveSerializer<EventInsights
     EventInsights2016 object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -496,4 +502,3 @@ class _$EventInsights2016Serializer implements PrimitiveSerializer<EventInsights
     return result.build();
   }
 }
-

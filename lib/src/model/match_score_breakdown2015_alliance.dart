@@ -11,32 +11,35 @@ part 'match_score_breakdown2015_alliance.g.dart';
 /// MatchScoreBreakdown2015Alliance
 ///
 /// Properties:
-/// * [autoPoints] 
-/// * [teleopPoints] 
-/// * [containerPoints] 
-/// * [totePoints] 
-/// * [litterPoints] 
-/// * [foulPoints] 
-/// * [adjustPoints] 
-/// * [totalPoints] 
-/// * [foulCount] 
-/// * [toteCountFar] 
-/// * [toteCountNear] 
-/// * [toteSet] 
-/// * [toteStack] 
-/// * [containerCountLevel1] 
-/// * [containerCountLevel2] 
-/// * [containerCountLevel3] 
-/// * [containerCountLevel4] 
-/// * [containerCountLevel5] 
-/// * [containerCountLevel6] 
-/// * [containerSet] 
-/// * [litterCountContainer] 
-/// * [litterCountLandfill] 
-/// * [litterCountUnprocessed] 
-/// * [robotSet] 
+/// * [autoPoints]
+/// * [teleopPoints]
+/// * [containerPoints]
+/// * [totePoints]
+/// * [litterPoints]
+/// * [foulPoints]
+/// * [adjustPoints]
+/// * [totalPoints]
+/// * [foulCount]
+/// * [toteCountFar]
+/// * [toteCountNear]
+/// * [toteSet]
+/// * [toteStack]
+/// * [containerCountLevel1]
+/// * [containerCountLevel2]
+/// * [containerCountLevel3]
+/// * [containerCountLevel4]
+/// * [containerCountLevel5]
+/// * [containerCountLevel6]
+/// * [containerSet]
+/// * [litterCountContainer]
+/// * [litterCountLandfill]
+/// * [litterCountUnprocessed]
+/// * [robotSet]
 @BuiltValue()
-abstract class MatchScoreBreakdown2015Alliance implements Built<MatchScoreBreakdown2015Alliance, MatchScoreBreakdown2015AllianceBuilder> {
+abstract class MatchScoreBreakdown2015Alliance
+    implements
+        Built<MatchScoreBreakdown2015Alliance,
+            MatchScoreBreakdown2015AllianceBuilder> {
   @BuiltValueField(wireName: r'auto_points')
   int? get autoPoints;
 
@@ -111,18 +114,25 @@ abstract class MatchScoreBreakdown2015Alliance implements Built<MatchScoreBreakd
 
   MatchScoreBreakdown2015Alliance._();
 
-  factory MatchScoreBreakdown2015Alliance([void updates(MatchScoreBreakdown2015AllianceBuilder b)]) = _$MatchScoreBreakdown2015Alliance;
+  factory MatchScoreBreakdown2015Alliance(
+          [void updates(MatchScoreBreakdown2015AllianceBuilder b)]) =
+      _$MatchScoreBreakdown2015Alliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchScoreBreakdown2015AllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchScoreBreakdown2015Alliance> get serializer => _$MatchScoreBreakdown2015AllianceSerializer();
+  static Serializer<MatchScoreBreakdown2015Alliance> get serializer =>
+      _$MatchScoreBreakdown2015AllianceSerializer();
 }
 
-class _$MatchScoreBreakdown2015AllianceSerializer implements PrimitiveSerializer<MatchScoreBreakdown2015Alliance> {
+class _$MatchScoreBreakdown2015AllianceSerializer
+    implements PrimitiveSerializer<MatchScoreBreakdown2015Alliance> {
   @override
-  final Iterable<Type> types = const [MatchScoreBreakdown2015Alliance, _$MatchScoreBreakdown2015Alliance];
+  final Iterable<Type> types = const [
+    MatchScoreBreakdown2015Alliance,
+    _$MatchScoreBreakdown2015Alliance
+  ];
 
   @override
   final String wireName = r'MatchScoreBreakdown2015Alliance';
@@ -308,7 +318,9 @@ class _$MatchScoreBreakdown2015AllianceSerializer implements PrimitiveSerializer
     MatchScoreBreakdown2015Alliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -519,4 +531,3 @@ class _$MatchScoreBreakdown2015AllianceSerializer implements PrimitiveSerializer
     return result.build();
   }
 }
-

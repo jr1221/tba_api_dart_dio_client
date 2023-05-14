@@ -13,11 +13,12 @@ part 'match_alliance.g.dart';
 ///
 /// Properties:
 /// * [score] - Score for this alliance. Will be null or -1 for an unplayed match.
-/// * [teamKeys] 
+/// * [teamKeys]
 /// * [surrogateTeamKeys] - TBA team keys (eg `frc254`) of any teams playing as a surrogate.
 /// * [dqTeamKeys] - TBA team keys (eg `frc254`) of any disqualified teams.
 @BuiltValue()
-abstract class MatchAlliance implements Built<MatchAlliance, MatchAllianceBuilder> {
+abstract class MatchAlliance
+    implements Built<MatchAlliance, MatchAllianceBuilder> {
   /// Score for this alliance. Will be null or -1 for an unplayed match.
   @BuiltValueField(wireName: r'score')
   int get score;
@@ -35,13 +36,15 @@ abstract class MatchAlliance implements Built<MatchAlliance, MatchAllianceBuilde
 
   MatchAlliance._();
 
-  factory MatchAlliance([void updates(MatchAllianceBuilder b)]) = _$MatchAlliance;
+  factory MatchAlliance([void updates(MatchAllianceBuilder b)]) =
+      _$MatchAlliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchAllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchAlliance> get serializer => _$MatchAllianceSerializer();
+  static Serializer<MatchAlliance> get serializer =>
+      _$MatchAllianceSerializer();
 }
 
 class _$MatchAllianceSerializer implements PrimitiveSerializer<MatchAlliance> {
@@ -88,7 +91,9 @@ class _$MatchAllianceSerializer implements PrimitiveSerializer<MatchAlliance> {
     MatchAlliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -159,4 +164,3 @@ class _$MatchAllianceSerializer implements PrimitiveSerializer<MatchAlliance> {
     return result.build();
   }
 }
-

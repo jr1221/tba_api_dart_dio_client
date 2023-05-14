@@ -19,7 +19,7 @@ part 'event.g.dart';
 /// * [name] - Official name of event on record either provided by FIRST or organizers of offseason event.
 /// * [eventCode] - Event short code, as provided by FIRST.
 /// * [eventType] - Event Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2
-/// * [district] 
+/// * [district]
 /// * [city] - City, town, village, etc. the event is located in.
 /// * [stateProv] - State or Province the event is located in.
 /// * [country] - Country the event is located in.
@@ -40,7 +40,7 @@ part 'event.g.dart';
 /// * [website] - The event's website, if any.
 /// * [firstEventId] - The FIRST internal Event ID, used to link to the event on the FRC webpage.
 /// * [firstEventCode] - Public facing event code used by FIRST (on frc-events.firstinspires.org, for example)
-/// * [webcasts] 
+/// * [webcasts]
 /// * [divisionKeys] - An array of event keys for the divisions at this event.
 /// * [parentEventKey] - The TBA Event key that represents the event's parent. Used to link back to the event from a division event. It is also the inverse relation of `divison_keys`.
 /// * [playoffType] - Playoff Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/playoff_type.py#L4, or null.
@@ -390,7 +390,9 @@ class _$EventSerializer implements PrimitiveSerializer<Event> {
     Event object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -643,4 +645,3 @@ class _$EventSerializer implements PrimitiveSerializer<Event> {
     return result.build();
   }
 }
-

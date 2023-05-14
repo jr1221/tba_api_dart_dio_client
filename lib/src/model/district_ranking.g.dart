@@ -14,7 +14,7 @@ class _$DistrictRanking extends DistrictRanking {
   @override
   final int? rookieBonus;
   @override
-  final int pointTotal;
+  final num pointTotal;
   @override
   final BuiltList<DistrictRankingEventPointsInner>? eventPoints;
 
@@ -94,9 +94,9 @@ class DistrictRankingBuilder
   int? get rookieBonus => _$this._rookieBonus;
   set rookieBonus(int? rookieBonus) => _$this._rookieBonus = rookieBonus;
 
-  int? _pointTotal;
-  int? get pointTotal => _$this._pointTotal;
-  set pointTotal(int? pointTotal) => _$this._pointTotal = pointTotal;
+  num? _pointTotal;
+  num? get pointTotal => _$this._pointTotal;
+  set pointTotal(num? pointTotal) => _$this._pointTotal = pointTotal;
 
   ListBuilder<DistrictRankingEventPointsInner>? _eventPoints;
   ListBuilder<DistrictRankingEventPointsInner> get eventPoints =>

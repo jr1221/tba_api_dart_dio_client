@@ -11,45 +11,48 @@ part 'match_score_breakdown2018_alliance.g.dart';
 /// MatchScoreBreakdown2018Alliance
 ///
 /// Properties:
-/// * [adjustPoints] 
-/// * [autoOwnershipPoints] 
-/// * [autoPoints] 
-/// * [autoQuestRankingPoint] 
-/// * [autoRobot1] 
-/// * [autoRobot2] 
-/// * [autoRobot3] 
-/// * [autoRunPoints] 
-/// * [autoScaleOwnershipSec] 
-/// * [autoSwitchAtZero] 
-/// * [autoSwitchOwnershipSec] 
-/// * [endgamePoints] 
-/// * [endgameRobot1] 
-/// * [endgameRobot2] 
-/// * [endgameRobot3] 
-/// * [faceTheBossRankingPoint] 
-/// * [foulCount] 
-/// * [foulPoints] 
-/// * [rp] 
-/// * [techFoulCount] 
-/// * [teleopOwnershipPoints] 
-/// * [teleopPoints] 
-/// * [teleopScaleBoostSec] 
-/// * [teleopScaleForceSec] 
-/// * [teleopScaleOwnershipSec] 
-/// * [teleopSwitchBoostSec] 
-/// * [teleopSwitchForceSec] 
-/// * [teleopSwitchOwnershipSec] 
-/// * [totalPoints] 
-/// * [vaultBoostPlayed] 
-/// * [vaultBoostTotal] 
-/// * [vaultForcePlayed] 
-/// * [vaultForceTotal] 
-/// * [vaultLevitatePlayed] 
-/// * [vaultLevitateTotal] 
-/// * [vaultPoints] 
+/// * [adjustPoints]
+/// * [autoOwnershipPoints]
+/// * [autoPoints]
+/// * [autoQuestRankingPoint]
+/// * [autoRobot1]
+/// * [autoRobot2]
+/// * [autoRobot3]
+/// * [autoRunPoints]
+/// * [autoScaleOwnershipSec]
+/// * [autoSwitchAtZero]
+/// * [autoSwitchOwnershipSec]
+/// * [endgamePoints]
+/// * [endgameRobot1]
+/// * [endgameRobot2]
+/// * [endgameRobot3]
+/// * [faceTheBossRankingPoint]
+/// * [foulCount]
+/// * [foulPoints]
+/// * [rp]
+/// * [techFoulCount]
+/// * [teleopOwnershipPoints]
+/// * [teleopPoints]
+/// * [teleopScaleBoostSec]
+/// * [teleopScaleForceSec]
+/// * [teleopScaleOwnershipSec]
+/// * [teleopSwitchBoostSec]
+/// * [teleopSwitchForceSec]
+/// * [teleopSwitchOwnershipSec]
+/// * [totalPoints]
+/// * [vaultBoostPlayed]
+/// * [vaultBoostTotal]
+/// * [vaultForcePlayed]
+/// * [vaultForceTotal]
+/// * [vaultLevitatePlayed]
+/// * [vaultLevitateTotal]
+/// * [vaultPoints]
 /// * [tbaGameData] - Unofficial TBA-computed value of the FMS provided GameData given to the alliance teams at the start of the match. 3 Character String containing `L` and `R` only. The first character represents the near switch, the 2nd the scale, and the 3rd the far, opposing, switch from the alliance's perspective. An `L` in a position indicates the platform on the left will be lit for the alliance while an `R` will indicate the right platform will be lit for the alliance. See also [WPI Screen Steps](https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/826278-2018-game-data-details).
 @BuiltValue()
-abstract class MatchScoreBreakdown2018Alliance implements Built<MatchScoreBreakdown2018Alliance, MatchScoreBreakdown2018AllianceBuilder> {
+abstract class MatchScoreBreakdown2018Alliance
+    implements
+        Built<MatchScoreBreakdown2018Alliance,
+            MatchScoreBreakdown2018AllianceBuilder> {
   @BuiltValueField(wireName: r'adjustPoints')
   int? get adjustPoints;
 
@@ -164,18 +167,25 @@ abstract class MatchScoreBreakdown2018Alliance implements Built<MatchScoreBreakd
 
   MatchScoreBreakdown2018Alliance._();
 
-  factory MatchScoreBreakdown2018Alliance([void updates(MatchScoreBreakdown2018AllianceBuilder b)]) = _$MatchScoreBreakdown2018Alliance;
+  factory MatchScoreBreakdown2018Alliance(
+          [void updates(MatchScoreBreakdown2018AllianceBuilder b)]) =
+      _$MatchScoreBreakdown2018Alliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchScoreBreakdown2018AllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchScoreBreakdown2018Alliance> get serializer => _$MatchScoreBreakdown2018AllianceSerializer();
+  static Serializer<MatchScoreBreakdown2018Alliance> get serializer =>
+      _$MatchScoreBreakdown2018AllianceSerializer();
 }
 
-class _$MatchScoreBreakdown2018AllianceSerializer implements PrimitiveSerializer<MatchScoreBreakdown2018Alliance> {
+class _$MatchScoreBreakdown2018AllianceSerializer
+    implements PrimitiveSerializer<MatchScoreBreakdown2018Alliance> {
   @override
-  final Iterable<Type> types = const [MatchScoreBreakdown2018Alliance, _$MatchScoreBreakdown2018Alliance];
+  final Iterable<Type> types = const [
+    MatchScoreBreakdown2018Alliance,
+    _$MatchScoreBreakdown2018Alliance
+  ];
 
   @override
   final String wireName = r'MatchScoreBreakdown2018Alliance';
@@ -452,7 +462,9 @@ class _$MatchScoreBreakdown2018AllianceSerializer implements PrimitiveSerializer
     MatchScoreBreakdown2018Alliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -754,4 +766,3 @@ class _$MatchScoreBreakdown2018AllianceSerializer implements PrimitiveSerializer
     return result.build();
   }
 }
-

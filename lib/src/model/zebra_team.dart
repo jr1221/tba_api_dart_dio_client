@@ -75,7 +75,9 @@ class _$ZebraTeamSerializer implements PrimitiveSerializer<ZebraTeam> {
     ZebraTeam object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -139,4 +141,3 @@ class _$ZebraTeamSerializer implements PrimitiveSerializer<ZebraTeam> {
     return result.build();
   }
 }
-

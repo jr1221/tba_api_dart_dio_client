@@ -14,7 +14,10 @@ part 'event_ranking_extra_stats_info_inner.g.dart';
 /// * [precision] - Integer expressing the number of digits of precision in the number provided in `sort_orders`.
 /// * [name] - Name of the field used in the `extra_stats` array.
 @BuiltValue()
-abstract class EventRankingExtraStatsInfoInner implements Built<EventRankingExtraStatsInfoInner, EventRankingExtraStatsInfoInnerBuilder> {
+abstract class EventRankingExtraStatsInfoInner
+    implements
+        Built<EventRankingExtraStatsInfoInner,
+            EventRankingExtraStatsInfoInnerBuilder> {
   /// Integer expressing the number of digits of precision in the number provided in `sort_orders`.
   @BuiltValueField(wireName: r'precision')
   num get precision;
@@ -25,18 +28,25 @@ abstract class EventRankingExtraStatsInfoInner implements Built<EventRankingExtr
 
   EventRankingExtraStatsInfoInner._();
 
-  factory EventRankingExtraStatsInfoInner([void updates(EventRankingExtraStatsInfoInnerBuilder b)]) = _$EventRankingExtraStatsInfoInner;
+  factory EventRankingExtraStatsInfoInner(
+          [void updates(EventRankingExtraStatsInfoInnerBuilder b)]) =
+      _$EventRankingExtraStatsInfoInner;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventRankingExtraStatsInfoInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventRankingExtraStatsInfoInner> get serializer => _$EventRankingExtraStatsInfoInnerSerializer();
+  static Serializer<EventRankingExtraStatsInfoInner> get serializer =>
+      _$EventRankingExtraStatsInfoInnerSerializer();
 }
 
-class _$EventRankingExtraStatsInfoInnerSerializer implements PrimitiveSerializer<EventRankingExtraStatsInfoInner> {
+class _$EventRankingExtraStatsInfoInnerSerializer
+    implements PrimitiveSerializer<EventRankingExtraStatsInfoInner> {
   @override
-  final Iterable<Type> types = const [EventRankingExtraStatsInfoInner, _$EventRankingExtraStatsInfoInner];
+  final Iterable<Type> types = const [
+    EventRankingExtraStatsInfoInner,
+    _$EventRankingExtraStatsInfoInner
+  ];
 
   @override
   final String wireName = r'EventRankingExtraStatsInfoInner';
@@ -64,7 +74,9 @@ class _$EventRankingExtraStatsInfoInnerSerializer implements PrimitiveSerializer
     EventRankingExtraStatsInfoInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -121,4 +133,3 @@ class _$EventRankingExtraStatsInfoInnerSerializer implements PrimitiveSerializer
     return result.build();
   }
 }
-

@@ -9,9 +9,9 @@ import 'package:tba_api_dart_dio_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **districtCmp** | **bool** | `true` if this event is a District Championship event. | 
-**total** | **int** | Total points awarded at this event. | 
+**total** | **num** | Total points awarded at this event. | 
 **alliancePoints** | **int** | Points awarded for alliance selection. | 
-**elimPoints** | **int** | Points awarded for elimination match performance. | 
+**elimPoints** | **num** | Points awarded for elimination match performance. | 
 **awardPoints** | **int** | Points awarded for event awards. | 
 **eventKey** | **String** | TBA Event key for this event. | 
 **qualPoints** | **int** | Points awarded for qualification match performance. | 

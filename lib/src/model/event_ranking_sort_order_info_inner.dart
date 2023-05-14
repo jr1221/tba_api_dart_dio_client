@@ -14,7 +14,10 @@ part 'event_ranking_sort_order_info_inner.g.dart';
 /// * [precision] - Integer expressing the number of digits of precision in the number provided in `sort_orders`.
 /// * [name] - Name of the field used in the `sort_order` array.
 @BuiltValue()
-abstract class EventRankingSortOrderInfoInner implements Built<EventRankingSortOrderInfoInner, EventRankingSortOrderInfoInnerBuilder> {
+abstract class EventRankingSortOrderInfoInner
+    implements
+        Built<EventRankingSortOrderInfoInner,
+            EventRankingSortOrderInfoInnerBuilder> {
   /// Integer expressing the number of digits of precision in the number provided in `sort_orders`.
   @BuiltValueField(wireName: r'precision')
   int get precision;
@@ -25,18 +28,25 @@ abstract class EventRankingSortOrderInfoInner implements Built<EventRankingSortO
 
   EventRankingSortOrderInfoInner._();
 
-  factory EventRankingSortOrderInfoInner([void updates(EventRankingSortOrderInfoInnerBuilder b)]) = _$EventRankingSortOrderInfoInner;
+  factory EventRankingSortOrderInfoInner(
+          [void updates(EventRankingSortOrderInfoInnerBuilder b)]) =
+      _$EventRankingSortOrderInfoInner;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventRankingSortOrderInfoInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventRankingSortOrderInfoInner> get serializer => _$EventRankingSortOrderInfoInnerSerializer();
+  static Serializer<EventRankingSortOrderInfoInner> get serializer =>
+      _$EventRankingSortOrderInfoInnerSerializer();
 }
 
-class _$EventRankingSortOrderInfoInnerSerializer implements PrimitiveSerializer<EventRankingSortOrderInfoInner> {
+class _$EventRankingSortOrderInfoInnerSerializer
+    implements PrimitiveSerializer<EventRankingSortOrderInfoInner> {
   @override
-  final Iterable<Type> types = const [EventRankingSortOrderInfoInner, _$EventRankingSortOrderInfoInner];
+  final Iterable<Type> types = const [
+    EventRankingSortOrderInfoInner,
+    _$EventRankingSortOrderInfoInner
+  ];
 
   @override
   final String wireName = r'EventRankingSortOrderInfoInner';
@@ -64,7 +74,9 @@ class _$EventRankingSortOrderInfoInnerSerializer implements PrimitiveSerializer<
     EventRankingSortOrderInfoInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -121,4 +133,3 @@ class _$EventRankingSortOrderInfoInnerSerializer implements PrimitiveSerializer<
     return result.build();
   }
 }
-

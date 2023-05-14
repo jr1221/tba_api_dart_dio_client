@@ -14,7 +14,8 @@ part 'api_status_app_version.g.dart';
 /// * [minAppVersion] - Internal use - Minimum application version required to correctly connect and process data.
 /// * [latestAppVersion] - Internal use - Latest application version available.
 @BuiltValue()
-abstract class APIStatusAppVersion implements Built<APIStatusAppVersion, APIStatusAppVersionBuilder> {
+abstract class APIStatusAppVersion
+    implements Built<APIStatusAppVersion, APIStatusAppVersionBuilder> {
   /// Internal use - Minimum application version required to correctly connect and process data.
   @BuiltValueField(wireName: r'min_app_version')
   int get minAppVersion;
@@ -25,18 +26,24 @@ abstract class APIStatusAppVersion implements Built<APIStatusAppVersion, APIStat
 
   APIStatusAppVersion._();
 
-  factory APIStatusAppVersion([void updates(APIStatusAppVersionBuilder b)]) = _$APIStatusAppVersion;
+  factory APIStatusAppVersion([void updates(APIStatusAppVersionBuilder b)]) =
+      _$APIStatusAppVersion;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(APIStatusAppVersionBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<APIStatusAppVersion> get serializer => _$APIStatusAppVersionSerializer();
+  static Serializer<APIStatusAppVersion> get serializer =>
+      _$APIStatusAppVersionSerializer();
 }
 
-class _$APIStatusAppVersionSerializer implements PrimitiveSerializer<APIStatusAppVersion> {
+class _$APIStatusAppVersionSerializer
+    implements PrimitiveSerializer<APIStatusAppVersion> {
   @override
-  final Iterable<Type> types = const [APIStatusAppVersion, _$APIStatusAppVersion];
+  final Iterable<Type> types = const [
+    APIStatusAppVersion,
+    _$APIStatusAppVersion
+  ];
 
   @override
   final String wireName = r'APIStatusAppVersion';
@@ -64,7 +71,9 @@ class _$APIStatusAppVersionSerializer implements PrimitiveSerializer<APIStatusAp
     APIStatusAppVersion object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -121,4 +130,3 @@ class _$APIStatusAppVersionSerializer implements PrimitiveSerializer<APIStatusAp
     return result.build();
   }
 }
-

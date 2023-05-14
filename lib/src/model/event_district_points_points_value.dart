@@ -17,7 +17,10 @@ part 'event_district_points_points_value.g.dart';
 /// * [awardPoints] - Points awarded for event awards.
 /// * [qualPoints] - Points awarded for qualification match performance.
 @BuiltValue()
-abstract class EventDistrictPointsPointsValue implements Built<EventDistrictPointsPointsValue, EventDistrictPointsPointsValueBuilder> {
+abstract class EventDistrictPointsPointsValue
+    implements
+        Built<EventDistrictPointsPointsValue,
+            EventDistrictPointsPointsValueBuilder> {
   /// Total points awarded at this event.
   @BuiltValueField(wireName: r'total')
   int get total;
@@ -40,18 +43,25 @@ abstract class EventDistrictPointsPointsValue implements Built<EventDistrictPoin
 
   EventDistrictPointsPointsValue._();
 
-  factory EventDistrictPointsPointsValue([void updates(EventDistrictPointsPointsValueBuilder b)]) = _$EventDistrictPointsPointsValue;
+  factory EventDistrictPointsPointsValue(
+          [void updates(EventDistrictPointsPointsValueBuilder b)]) =
+      _$EventDistrictPointsPointsValue;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventDistrictPointsPointsValueBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventDistrictPointsPointsValue> get serializer => _$EventDistrictPointsPointsValueSerializer();
+  static Serializer<EventDistrictPointsPointsValue> get serializer =>
+      _$EventDistrictPointsPointsValueSerializer();
 }
 
-class _$EventDistrictPointsPointsValueSerializer implements PrimitiveSerializer<EventDistrictPointsPointsValue> {
+class _$EventDistrictPointsPointsValueSerializer
+    implements PrimitiveSerializer<EventDistrictPointsPointsValue> {
   @override
-  final Iterable<Type> types = const [EventDistrictPointsPointsValue, _$EventDistrictPointsPointsValue];
+  final Iterable<Type> types = const [
+    EventDistrictPointsPointsValue,
+    _$EventDistrictPointsPointsValue
+  ];
 
   @override
   final String wireName = r'EventDistrictPointsPointsValue';
@@ -94,7 +104,9 @@ class _$EventDistrictPointsPointsValueSerializer implements PrimitiveSerializer<
     EventDistrictPointsPointsValue object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -172,4 +184,3 @@ class _$EventDistrictPointsPointsValueSerializer implements PrimitiveSerializer<
     return result.build();
   }
 }
-

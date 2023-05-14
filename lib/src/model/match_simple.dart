@@ -17,7 +17,7 @@ part 'match_simple.g.dart';
 /// * [compLevel] - The competition level the match was played at.
 /// * [setNumber] - The set number in a series of matches where more than one match is required in the match series.
 /// * [matchNumber] - The match number of the match in the competition level.
-/// * [alliances] 
+/// * [alliances]
 /// * [winningAlliance] - The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
 /// * [eventKey] - Event key of the event the match was played at.
 /// * [time] - UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule.
@@ -157,7 +157,9 @@ class _$MatchSimpleSerializer implements PrimitiveSerializer<MatchSimple> {
     MatchSimple object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -272,48 +274,60 @@ class _$MatchSimpleSerializer implements PrimitiveSerializer<MatchSimple> {
 }
 
 class MatchSimpleCompLevelEnum extends EnumClass {
-
   /// The competition level the match was played at.
   @BuiltValueEnumConst(wireName: r'qm')
   static const MatchSimpleCompLevelEnum qm = _$matchSimpleCompLevelEnum_qm;
+
   /// The competition level the match was played at.
   @BuiltValueEnumConst(wireName: r'ef')
   static const MatchSimpleCompLevelEnum ef = _$matchSimpleCompLevelEnum_ef;
+
   /// The competition level the match was played at.
   @BuiltValueEnumConst(wireName: r'qf')
   static const MatchSimpleCompLevelEnum qf = _$matchSimpleCompLevelEnum_qf;
+
   /// The competition level the match was played at.
   @BuiltValueEnumConst(wireName: r'sf')
   static const MatchSimpleCompLevelEnum sf = _$matchSimpleCompLevelEnum_sf;
+
   /// The competition level the match was played at.
   @BuiltValueEnumConst(wireName: r'f')
   static const MatchSimpleCompLevelEnum f = _$matchSimpleCompLevelEnum_f;
 
-  static Serializer<MatchSimpleCompLevelEnum> get serializer => _$matchSimpleCompLevelEnumSerializer;
+  static Serializer<MatchSimpleCompLevelEnum> get serializer =>
+      _$matchSimpleCompLevelEnumSerializer;
 
-  const MatchSimpleCompLevelEnum._(String name): super(name);
+  const MatchSimpleCompLevelEnum._(String name) : super(name);
 
-  static BuiltSet<MatchSimpleCompLevelEnum> get values => _$matchSimpleCompLevelEnumValues;
-  static MatchSimpleCompLevelEnum valueOf(String name) => _$matchSimpleCompLevelEnumValueOf(name);
+  static BuiltSet<MatchSimpleCompLevelEnum> get values =>
+      _$matchSimpleCompLevelEnumValues;
+  static MatchSimpleCompLevelEnum valueOf(String name) =>
+      _$matchSimpleCompLevelEnumValueOf(name);
 }
 
 class MatchSimpleWinningAllianceEnum extends EnumClass {
-
   /// The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
   @BuiltValueEnumConst(wireName: r'red')
-  static const MatchSimpleWinningAllianceEnum red = _$matchSimpleWinningAllianceEnum_red;
+  static const MatchSimpleWinningAllianceEnum red =
+      _$matchSimpleWinningAllianceEnum_red;
+
   /// The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
   @BuiltValueEnumConst(wireName: r'blue')
-  static const MatchSimpleWinningAllianceEnum blue = _$matchSimpleWinningAllianceEnum_blue;
+  static const MatchSimpleWinningAllianceEnum blue =
+      _$matchSimpleWinningAllianceEnum_blue;
+
   /// The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
   @BuiltValueEnumConst(wireName: r'')
-  static const MatchSimpleWinningAllianceEnum empty = _$matchSimpleWinningAllianceEnum_empty;
+  static const MatchSimpleWinningAllianceEnum empty =
+      _$matchSimpleWinningAllianceEnum_empty;
 
-  static Serializer<MatchSimpleWinningAllianceEnum> get serializer => _$matchSimpleWinningAllianceEnumSerializer;
+  static Serializer<MatchSimpleWinningAllianceEnum> get serializer =>
+      _$matchSimpleWinningAllianceEnumSerializer;
 
-  const MatchSimpleWinningAllianceEnum._(String name): super(name);
+  const MatchSimpleWinningAllianceEnum._(String name) : super(name);
 
-  static BuiltSet<MatchSimpleWinningAllianceEnum> get values => _$matchSimpleWinningAllianceEnumValues;
-  static MatchSimpleWinningAllianceEnum valueOf(String name) => _$matchSimpleWinningAllianceEnumValueOf(name);
+  static BuiltSet<MatchSimpleWinningAllianceEnum> get values =>
+      _$matchSimpleWinningAllianceEnumValues;
+  static MatchSimpleWinningAllianceEnum valueOf(String name) =>
+      _$matchSimpleWinningAllianceEnumValueOf(name);
 }
-

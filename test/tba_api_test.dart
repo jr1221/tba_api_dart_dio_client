@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:tba_api_dart_dio_client/tba_api_dart_dio_client.dart';
 
-
 /// tests for TBAApi
 void main() {
   final instance = TbaApiDartDioClient().getTBAApi();
@@ -13,6 +12,5 @@ void main() {
     test('test getStatus', () async {
       // TODO
     });
-
   });
 }

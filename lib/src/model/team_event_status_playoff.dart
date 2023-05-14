@@ -14,12 +14,13 @@ part 'team_event_status_playoff.g.dart';
 ///
 /// Properties:
 /// * [level] - The highest playoff level the team reached.
-/// * [currentLevelRecord] 
-/// * [record] 
+/// * [currentLevelRecord]
+/// * [record]
 /// * [status] - Current competition status for the playoffs.
 /// * [playoffAverage] - The average match score during playoffs. Year specific. May be null if not relevant for a given year.
 @BuiltValue()
-abstract class TeamEventStatusPlayoff implements Built<TeamEventStatusPlayoff, TeamEventStatusPlayoffBuilder> {
+abstract class TeamEventStatusPlayoff
+    implements Built<TeamEventStatusPlayoff, TeamEventStatusPlayoffBuilder> {
   /// The highest playoff level the team reached.
   @BuiltValueField(wireName: r'level')
   TeamEventStatusPlayoffLevelEnum? get level;
@@ -42,18 +43,25 @@ abstract class TeamEventStatusPlayoff implements Built<TeamEventStatusPlayoff, T
 
   TeamEventStatusPlayoff._();
 
-  factory TeamEventStatusPlayoff([void updates(TeamEventStatusPlayoffBuilder b)]) = _$TeamEventStatusPlayoff;
+  factory TeamEventStatusPlayoff(
+          [void updates(TeamEventStatusPlayoffBuilder b)]) =
+      _$TeamEventStatusPlayoff;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TeamEventStatusPlayoffBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TeamEventStatusPlayoff> get serializer => _$TeamEventStatusPlayoffSerializer();
+  static Serializer<TeamEventStatusPlayoff> get serializer =>
+      _$TeamEventStatusPlayoffSerializer();
 }
 
-class _$TeamEventStatusPlayoffSerializer implements PrimitiveSerializer<TeamEventStatusPlayoff> {
+class _$TeamEventStatusPlayoffSerializer
+    implements PrimitiveSerializer<TeamEventStatusPlayoff> {
   @override
-  final Iterable<Type> types = const [TeamEventStatusPlayoff, _$TeamEventStatusPlayoff];
+  final Iterable<Type> types = const [
+    TeamEventStatusPlayoff,
+    _$TeamEventStatusPlayoff
+  ];
 
   @override
   final String wireName = r'TeamEventStatusPlayoff';
@@ -106,7 +114,9 @@ class _$TeamEventStatusPlayoffSerializer implements PrimitiveSerializer<TeamEven
     TeamEventStatusPlayoff object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -186,48 +196,65 @@ class _$TeamEventStatusPlayoffSerializer implements PrimitiveSerializer<TeamEven
 }
 
 class TeamEventStatusPlayoffLevelEnum extends EnumClass {
-
   /// The highest playoff level the team reached.
   @BuiltValueEnumConst(wireName: r'qm')
-  static const TeamEventStatusPlayoffLevelEnum qm = _$teamEventStatusPlayoffLevelEnum_qm;
+  static const TeamEventStatusPlayoffLevelEnum qm =
+      _$teamEventStatusPlayoffLevelEnum_qm;
+
   /// The highest playoff level the team reached.
   @BuiltValueEnumConst(wireName: r'ef')
-  static const TeamEventStatusPlayoffLevelEnum ef = _$teamEventStatusPlayoffLevelEnum_ef;
+  static const TeamEventStatusPlayoffLevelEnum ef =
+      _$teamEventStatusPlayoffLevelEnum_ef;
+
   /// The highest playoff level the team reached.
   @BuiltValueEnumConst(wireName: r'qf')
-  static const TeamEventStatusPlayoffLevelEnum qf = _$teamEventStatusPlayoffLevelEnum_qf;
+  static const TeamEventStatusPlayoffLevelEnum qf =
+      _$teamEventStatusPlayoffLevelEnum_qf;
+
   /// The highest playoff level the team reached.
   @BuiltValueEnumConst(wireName: r'sf')
-  static const TeamEventStatusPlayoffLevelEnum sf = _$teamEventStatusPlayoffLevelEnum_sf;
+  static const TeamEventStatusPlayoffLevelEnum sf =
+      _$teamEventStatusPlayoffLevelEnum_sf;
+
   /// The highest playoff level the team reached.
   @BuiltValueEnumConst(wireName: r'f')
-  static const TeamEventStatusPlayoffLevelEnum f = _$teamEventStatusPlayoffLevelEnum_f;
+  static const TeamEventStatusPlayoffLevelEnum f =
+      _$teamEventStatusPlayoffLevelEnum_f;
 
-  static Serializer<TeamEventStatusPlayoffLevelEnum> get serializer => _$teamEventStatusPlayoffLevelEnumSerializer;
+  static Serializer<TeamEventStatusPlayoffLevelEnum> get serializer =>
+      _$teamEventStatusPlayoffLevelEnumSerializer;
 
-  const TeamEventStatusPlayoffLevelEnum._(String name): super(name);
+  const TeamEventStatusPlayoffLevelEnum._(String name) : super(name);
 
-  static BuiltSet<TeamEventStatusPlayoffLevelEnum> get values => _$teamEventStatusPlayoffLevelEnumValues;
-  static TeamEventStatusPlayoffLevelEnum valueOf(String name) => _$teamEventStatusPlayoffLevelEnumValueOf(name);
+  static BuiltSet<TeamEventStatusPlayoffLevelEnum> get values =>
+      _$teamEventStatusPlayoffLevelEnumValues;
+  static TeamEventStatusPlayoffLevelEnum valueOf(String name) =>
+      _$teamEventStatusPlayoffLevelEnumValueOf(name);
 }
 
 class TeamEventStatusPlayoffStatusEnum extends EnumClass {
-
   /// Current competition status for the playoffs.
   @BuiltValueEnumConst(wireName: r'won')
-  static const TeamEventStatusPlayoffStatusEnum won = _$teamEventStatusPlayoffStatusEnum_won;
+  static const TeamEventStatusPlayoffStatusEnum won =
+      _$teamEventStatusPlayoffStatusEnum_won;
+
   /// Current competition status for the playoffs.
   @BuiltValueEnumConst(wireName: r'eliminated')
-  static const TeamEventStatusPlayoffStatusEnum eliminated = _$teamEventStatusPlayoffStatusEnum_eliminated;
+  static const TeamEventStatusPlayoffStatusEnum eliminated =
+      _$teamEventStatusPlayoffStatusEnum_eliminated;
+
   /// Current competition status for the playoffs.
   @BuiltValueEnumConst(wireName: r'playing')
-  static const TeamEventStatusPlayoffStatusEnum playing = _$teamEventStatusPlayoffStatusEnum_playing;
+  static const TeamEventStatusPlayoffStatusEnum playing =
+      _$teamEventStatusPlayoffStatusEnum_playing;
 
-  static Serializer<TeamEventStatusPlayoffStatusEnum> get serializer => _$teamEventStatusPlayoffStatusEnumSerializer;
+  static Serializer<TeamEventStatusPlayoffStatusEnum> get serializer =>
+      _$teamEventStatusPlayoffStatusEnumSerializer;
 
-  const TeamEventStatusPlayoffStatusEnum._(String name): super(name);
+  const TeamEventStatusPlayoffStatusEnum._(String name) : super(name);
 
-  static BuiltSet<TeamEventStatusPlayoffStatusEnum> get values => _$teamEventStatusPlayoffStatusEnumValues;
-  static TeamEventStatusPlayoffStatusEnum valueOf(String name) => _$teamEventStatusPlayoffStatusEnumValueOf(name);
+  static BuiltSet<TeamEventStatusPlayoffStatusEnum> get values =>
+      _$teamEventStatusPlayoffStatusEnumValues;
+  static TeamEventStatusPlayoffStatusEnum valueOf(String name) =>
+      _$teamEventStatusPlayoffStatusEnumValueOf(name);
 }
-

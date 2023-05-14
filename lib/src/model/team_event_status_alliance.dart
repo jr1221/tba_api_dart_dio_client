@@ -14,10 +14,11 @@ part 'team_event_status_alliance.g.dart';
 /// Properties:
 /// * [name] - Alliance name, may be null.
 /// * [number] - Alliance number.
-/// * [backup] 
+/// * [backup]
 /// * [pick] - Order the team was picked in the alliance from 0-2, with 0 being alliance captain.
 @BuiltValue()
-abstract class TeamEventStatusAlliance implements Built<TeamEventStatusAlliance, TeamEventStatusAllianceBuilder> {
+abstract class TeamEventStatusAlliance
+    implements Built<TeamEventStatusAlliance, TeamEventStatusAllianceBuilder> {
   /// Alliance name, may be null.
   @BuiltValueField(wireName: r'name')
   String? get name;
@@ -35,18 +36,25 @@ abstract class TeamEventStatusAlliance implements Built<TeamEventStatusAlliance,
 
   TeamEventStatusAlliance._();
 
-  factory TeamEventStatusAlliance([void updates(TeamEventStatusAllianceBuilder b)]) = _$TeamEventStatusAlliance;
+  factory TeamEventStatusAlliance(
+          [void updates(TeamEventStatusAllianceBuilder b)]) =
+      _$TeamEventStatusAlliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TeamEventStatusAllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TeamEventStatusAlliance> get serializer => _$TeamEventStatusAllianceSerializer();
+  static Serializer<TeamEventStatusAlliance> get serializer =>
+      _$TeamEventStatusAllianceSerializer();
 }
 
-class _$TeamEventStatusAllianceSerializer implements PrimitiveSerializer<TeamEventStatusAlliance> {
+class _$TeamEventStatusAllianceSerializer
+    implements PrimitiveSerializer<TeamEventStatusAlliance> {
   @override
-  final Iterable<Type> types = const [TeamEventStatusAlliance, _$TeamEventStatusAlliance];
+  final Iterable<Type> types = const [
+    TeamEventStatusAlliance,
+    _$TeamEventStatusAlliance
+  ];
 
   @override
   final String wireName = r'TeamEventStatusAlliance';
@@ -88,7 +96,9 @@ class _$TeamEventStatusAllianceSerializer implements PrimitiveSerializer<TeamEve
     TeamEventStatusAlliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -159,4 +169,3 @@ class _$TeamEventStatusAllianceSerializer implements PrimitiveSerializer<TeamEve
     return result.build();
   }
 }
-

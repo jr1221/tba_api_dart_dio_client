@@ -17,7 +17,8 @@ part 'event_district_points.g.dart';
 /// * [points] - Points gained for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the points as its value.
 /// * [tiebreakers] - Tiebreaker values for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the tiebreaker elements as its value.
 @BuiltValue()
-abstract class EventDistrictPoints implements Built<EventDistrictPoints, EventDistrictPointsBuilder> {
+abstract class EventDistrictPoints
+    implements Built<EventDistrictPoints, EventDistrictPointsBuilder> {
   /// Points gained for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the points as its value.
   @BuiltValueField(wireName: r'points')
   BuiltMap<String, EventDistrictPointsPointsValue> get points;
@@ -28,18 +29,24 @@ abstract class EventDistrictPoints implements Built<EventDistrictPoints, EventDi
 
   EventDistrictPoints._();
 
-  factory EventDistrictPoints([void updates(EventDistrictPointsBuilder b)]) = _$EventDistrictPoints;
+  factory EventDistrictPoints([void updates(EventDistrictPointsBuilder b)]) =
+      _$EventDistrictPoints;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventDistrictPointsBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventDistrictPoints> get serializer => _$EventDistrictPointsSerializer();
+  static Serializer<EventDistrictPoints> get serializer =>
+      _$EventDistrictPointsSerializer();
 }
 
-class _$EventDistrictPointsSerializer implements PrimitiveSerializer<EventDistrictPoints> {
+class _$EventDistrictPointsSerializer
+    implements PrimitiveSerializer<EventDistrictPoints> {
   @override
-  final Iterable<Type> types = const [EventDistrictPoints, _$EventDistrictPoints];
+  final Iterable<Type> types = const [
+    EventDistrictPoints,
+    _$EventDistrictPoints
+  ];
 
   @override
   final String wireName = r'EventDistrictPoints';
@@ -52,13 +59,15 @@ class _$EventDistrictPointsSerializer implements PrimitiveSerializer<EventDistri
     yield r'points';
     yield serializers.serialize(
       object.points,
-      specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EventDistrictPointsPointsValue)]),
+      specifiedType: const FullType(BuiltMap,
+          [FullType(String), FullType(EventDistrictPointsPointsValue)]),
     );
     if (object.tiebreakers != null) {
       yield r'tiebreakers';
       yield serializers.serialize(
         object.tiebreakers,
-        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EventDistrictPointsTiebreakersValue)]),
+        specifiedType: const FullType(BuiltMap,
+            [FullType(String), FullType(EventDistrictPointsTiebreakersValue)]),
       );
     }
   }
@@ -69,7 +78,9 @@ class _$EventDistrictPointsSerializer implements PrimitiveSerializer<EventDistri
     EventDistrictPoints object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -87,14 +98,18 @@ class _$EventDistrictPointsSerializer implements PrimitiveSerializer<EventDistri
         case r'points':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EventDistrictPointsPointsValue)]),
+            specifiedType: const FullType(BuiltMap,
+                [FullType(String), FullType(EventDistrictPointsPointsValue)]),
           ) as BuiltMap<String, EventDistrictPointsPointsValue>;
           result.points.replace(valueDes);
           break;
         case r'tiebreakers':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(EventDistrictPointsTiebreakersValue)]),
+            specifiedType: const FullType(BuiltMap, [
+              FullType(String),
+              FullType(EventDistrictPointsTiebreakersValue)
+            ]),
           ) as BuiltMap<String, EventDistrictPointsTiebreakersValue>;
           result.tiebreakers.replace(valueDes);
           break;
@@ -126,4 +141,3 @@ class _$EventDistrictPointsSerializer implements PrimitiveSerializer<EventDistri
     return result.build();
   }
 }
-

@@ -12,41 +12,44 @@ part 'match_score_breakdown2017_alliance.g.dart';
 /// MatchScoreBreakdown2017Alliance
 ///
 /// Properties:
-/// * [autoPoints] 
-/// * [teleopPoints] 
-/// * [foulPoints] 
-/// * [adjustPoints] 
-/// * [totalPoints] 
-/// * [robot1Auto] 
-/// * [robot2Auto] 
-/// * [robot3Auto] 
-/// * [rotor1Auto] 
-/// * [rotor2Auto] 
-/// * [autoFuelLow] 
-/// * [autoFuelHigh] 
-/// * [autoMobilityPoints] 
-/// * [autoRotorPoints] 
-/// * [autoFuelPoints] 
-/// * [teleopFuelPoints] 
-/// * [teleopFuelLow] 
-/// * [teleopFuelHigh] 
-/// * [teleopRotorPoints] 
-/// * [kPaRankingPointAchieved] 
-/// * [teleopTakeoffPoints] 
-/// * [kPaBonusPoints] 
-/// * [rotorBonusPoints] 
-/// * [rotor1Engaged] 
-/// * [rotor2Engaged] 
-/// * [rotor3Engaged] 
-/// * [rotor4Engaged] 
-/// * [rotorRankingPointAchieved] 
-/// * [techFoulCount] 
-/// * [foulCount] 
-/// * [touchpadNear] 
-/// * [touchpadMiddle] 
-/// * [touchpadFar] 
+/// * [autoPoints]
+/// * [teleopPoints]
+/// * [foulPoints]
+/// * [adjustPoints]
+/// * [totalPoints]
+/// * [robot1Auto]
+/// * [robot2Auto]
+/// * [robot3Auto]
+/// * [rotor1Auto]
+/// * [rotor2Auto]
+/// * [autoFuelLow]
+/// * [autoFuelHigh]
+/// * [autoMobilityPoints]
+/// * [autoRotorPoints]
+/// * [autoFuelPoints]
+/// * [teleopFuelPoints]
+/// * [teleopFuelLow]
+/// * [teleopFuelHigh]
+/// * [teleopRotorPoints]
+/// * [kPaRankingPointAchieved]
+/// * [teleopTakeoffPoints]
+/// * [kPaBonusPoints]
+/// * [rotorBonusPoints]
+/// * [rotor1Engaged]
+/// * [rotor2Engaged]
+/// * [rotor3Engaged]
+/// * [rotor4Engaged]
+/// * [rotorRankingPointAchieved]
+/// * [techFoulCount]
+/// * [foulCount]
+/// * [touchpadNear]
+/// * [touchpadMiddle]
+/// * [touchpadFar]
 @BuiltValue()
-abstract class MatchScoreBreakdown2017Alliance implements Built<MatchScoreBreakdown2017Alliance, MatchScoreBreakdown2017AllianceBuilder> {
+abstract class MatchScoreBreakdown2017Alliance
+    implements
+        Built<MatchScoreBreakdown2017Alliance,
+            MatchScoreBreakdown2017AllianceBuilder> {
   @BuiltValueField(wireName: r'autoPoints')
   int? get autoPoints;
 
@@ -151,18 +154,25 @@ abstract class MatchScoreBreakdown2017Alliance implements Built<MatchScoreBreakd
 
   MatchScoreBreakdown2017Alliance._();
 
-  factory MatchScoreBreakdown2017Alliance([void updates(MatchScoreBreakdown2017AllianceBuilder b)]) = _$MatchScoreBreakdown2017Alliance;
+  factory MatchScoreBreakdown2017Alliance(
+          [void updates(MatchScoreBreakdown2017AllianceBuilder b)]) =
+      _$MatchScoreBreakdown2017Alliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchScoreBreakdown2017AllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchScoreBreakdown2017Alliance> get serializer => _$MatchScoreBreakdown2017AllianceSerializer();
+  static Serializer<MatchScoreBreakdown2017Alliance> get serializer =>
+      _$MatchScoreBreakdown2017AllianceSerializer();
 }
 
-class _$MatchScoreBreakdown2017AllianceSerializer implements PrimitiveSerializer<MatchScoreBreakdown2017Alliance> {
+class _$MatchScoreBreakdown2017AllianceSerializer
+    implements PrimitiveSerializer<MatchScoreBreakdown2017Alliance> {
   @override
-  final Iterable<Type> types = const [MatchScoreBreakdown2017Alliance, _$MatchScoreBreakdown2017Alliance];
+  final Iterable<Type> types = const [
+    MatchScoreBreakdown2017Alliance,
+    _$MatchScoreBreakdown2017Alliance
+  ];
 
   @override
   final String wireName = r'MatchScoreBreakdown2017Alliance';
@@ -211,21 +221,24 @@ class _$MatchScoreBreakdown2017AllianceSerializer implements PrimitiveSerializer
       yield r'robot1Auto';
       yield serializers.serialize(
         object.robot1Auto,
-        specifiedType: const FullType(MatchScoreBreakdown2017AllianceRobot1AutoEnum),
+        specifiedType:
+            const FullType(MatchScoreBreakdown2017AllianceRobot1AutoEnum),
       );
     }
     if (object.robot2Auto != null) {
       yield r'robot2Auto';
       yield serializers.serialize(
         object.robot2Auto,
-        specifiedType: const FullType(MatchScoreBreakdown2017AllianceRobot2AutoEnum),
+        specifiedType:
+            const FullType(MatchScoreBreakdown2017AllianceRobot2AutoEnum),
       );
     }
     if (object.robot3Auto != null) {
       yield r'robot3Auto';
       yield serializers.serialize(
         object.robot3Auto,
-        specifiedType: const FullType(MatchScoreBreakdown2017AllianceRobot3AutoEnum),
+        specifiedType:
+            const FullType(MatchScoreBreakdown2017AllianceRobot3AutoEnum),
       );
     }
     if (object.rotor1Auto != null) {
@@ -411,7 +424,9 @@ class _$MatchScoreBreakdown2017AllianceSerializer implements PrimitiveSerializer
     MatchScoreBreakdown2017Alliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -464,21 +479,24 @@ class _$MatchScoreBreakdown2017AllianceSerializer implements PrimitiveSerializer
         case r'robot1Auto':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MatchScoreBreakdown2017AllianceRobot1AutoEnum),
+            specifiedType:
+                const FullType(MatchScoreBreakdown2017AllianceRobot1AutoEnum),
           ) as MatchScoreBreakdown2017AllianceRobot1AutoEnum;
           result.robot1Auto = valueDes;
           break;
         case r'robot2Auto':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MatchScoreBreakdown2017AllianceRobot2AutoEnum),
+            specifiedType:
+                const FullType(MatchScoreBreakdown2017AllianceRobot2AutoEnum),
           ) as MatchScoreBreakdown2017AllianceRobot2AutoEnum;
           result.robot2Auto = valueDes;
           break;
         case r'robot3Auto':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MatchScoreBreakdown2017AllianceRobot3AutoEnum),
+            specifiedType:
+                const FullType(MatchScoreBreakdown2017AllianceRobot3AutoEnum),
           ) as MatchScoreBreakdown2017AllianceRobot3AutoEnum;
           result.robot3Auto = valueDes;
           break;
@@ -687,53 +705,73 @@ class _$MatchScoreBreakdown2017AllianceSerializer implements PrimitiveSerializer
 }
 
 class MatchScoreBreakdown2017AllianceRobot1AutoEnum extends EnumClass {
-
   @BuiltValueEnumConst(wireName: r'Unknown')
-  static const MatchScoreBreakdown2017AllianceRobot1AutoEnum unknown = _$matchScoreBreakdown2017AllianceRobot1AutoEnum_unknown;
+  static const MatchScoreBreakdown2017AllianceRobot1AutoEnum unknown =
+      _$matchScoreBreakdown2017AllianceRobot1AutoEnum_unknown;
   @BuiltValueEnumConst(wireName: r'Mobility')
-  static const MatchScoreBreakdown2017AllianceRobot1AutoEnum mobility = _$matchScoreBreakdown2017AllianceRobot1AutoEnum_mobility;
+  static const MatchScoreBreakdown2017AllianceRobot1AutoEnum mobility =
+      _$matchScoreBreakdown2017AllianceRobot1AutoEnum_mobility;
   @BuiltValueEnumConst(wireName: r'None')
-  static const MatchScoreBreakdown2017AllianceRobot1AutoEnum none = _$matchScoreBreakdown2017AllianceRobot1AutoEnum_none;
+  static const MatchScoreBreakdown2017AllianceRobot1AutoEnum none =
+      _$matchScoreBreakdown2017AllianceRobot1AutoEnum_none;
 
-  static Serializer<MatchScoreBreakdown2017AllianceRobot1AutoEnum> get serializer => _$matchScoreBreakdown2017AllianceRobot1AutoEnumSerializer;
+  static Serializer<MatchScoreBreakdown2017AllianceRobot1AutoEnum>
+      get serializer =>
+          _$matchScoreBreakdown2017AllianceRobot1AutoEnumSerializer;
 
-  const MatchScoreBreakdown2017AllianceRobot1AutoEnum._(String name): super(name);
+  const MatchScoreBreakdown2017AllianceRobot1AutoEnum._(String name)
+      : super(name);
 
-  static BuiltSet<MatchScoreBreakdown2017AllianceRobot1AutoEnum> get values => _$matchScoreBreakdown2017AllianceRobot1AutoEnumValues;
-  static MatchScoreBreakdown2017AllianceRobot1AutoEnum valueOf(String name) => _$matchScoreBreakdown2017AllianceRobot1AutoEnumValueOf(name);
+  static BuiltSet<MatchScoreBreakdown2017AllianceRobot1AutoEnum> get values =>
+      _$matchScoreBreakdown2017AllianceRobot1AutoEnumValues;
+  static MatchScoreBreakdown2017AllianceRobot1AutoEnum valueOf(String name) =>
+      _$matchScoreBreakdown2017AllianceRobot1AutoEnumValueOf(name);
 }
 
 class MatchScoreBreakdown2017AllianceRobot2AutoEnum extends EnumClass {
-
   @BuiltValueEnumConst(wireName: r'Unknown')
-  static const MatchScoreBreakdown2017AllianceRobot2AutoEnum unknown = _$matchScoreBreakdown2017AllianceRobot2AutoEnum_unknown;
+  static const MatchScoreBreakdown2017AllianceRobot2AutoEnum unknown =
+      _$matchScoreBreakdown2017AllianceRobot2AutoEnum_unknown;
   @BuiltValueEnumConst(wireName: r'Mobility')
-  static const MatchScoreBreakdown2017AllianceRobot2AutoEnum mobility = _$matchScoreBreakdown2017AllianceRobot2AutoEnum_mobility;
+  static const MatchScoreBreakdown2017AllianceRobot2AutoEnum mobility =
+      _$matchScoreBreakdown2017AllianceRobot2AutoEnum_mobility;
   @BuiltValueEnumConst(wireName: r'None')
-  static const MatchScoreBreakdown2017AllianceRobot2AutoEnum none = _$matchScoreBreakdown2017AllianceRobot2AutoEnum_none;
+  static const MatchScoreBreakdown2017AllianceRobot2AutoEnum none =
+      _$matchScoreBreakdown2017AllianceRobot2AutoEnum_none;
 
-  static Serializer<MatchScoreBreakdown2017AllianceRobot2AutoEnum> get serializer => _$matchScoreBreakdown2017AllianceRobot2AutoEnumSerializer;
+  static Serializer<MatchScoreBreakdown2017AllianceRobot2AutoEnum>
+      get serializer =>
+          _$matchScoreBreakdown2017AllianceRobot2AutoEnumSerializer;
 
-  const MatchScoreBreakdown2017AllianceRobot2AutoEnum._(String name): super(name);
+  const MatchScoreBreakdown2017AllianceRobot2AutoEnum._(String name)
+      : super(name);
 
-  static BuiltSet<MatchScoreBreakdown2017AllianceRobot2AutoEnum> get values => _$matchScoreBreakdown2017AllianceRobot2AutoEnumValues;
-  static MatchScoreBreakdown2017AllianceRobot2AutoEnum valueOf(String name) => _$matchScoreBreakdown2017AllianceRobot2AutoEnumValueOf(name);
+  static BuiltSet<MatchScoreBreakdown2017AllianceRobot2AutoEnum> get values =>
+      _$matchScoreBreakdown2017AllianceRobot2AutoEnumValues;
+  static MatchScoreBreakdown2017AllianceRobot2AutoEnum valueOf(String name) =>
+      _$matchScoreBreakdown2017AllianceRobot2AutoEnumValueOf(name);
 }
 
 class MatchScoreBreakdown2017AllianceRobot3AutoEnum extends EnumClass {
-
   @BuiltValueEnumConst(wireName: r'Unknown')
-  static const MatchScoreBreakdown2017AllianceRobot3AutoEnum unknown = _$matchScoreBreakdown2017AllianceRobot3AutoEnum_unknown;
+  static const MatchScoreBreakdown2017AllianceRobot3AutoEnum unknown =
+      _$matchScoreBreakdown2017AllianceRobot3AutoEnum_unknown;
   @BuiltValueEnumConst(wireName: r'Mobility')
-  static const MatchScoreBreakdown2017AllianceRobot3AutoEnum mobility = _$matchScoreBreakdown2017AllianceRobot3AutoEnum_mobility;
+  static const MatchScoreBreakdown2017AllianceRobot3AutoEnum mobility =
+      _$matchScoreBreakdown2017AllianceRobot3AutoEnum_mobility;
   @BuiltValueEnumConst(wireName: r'None')
-  static const MatchScoreBreakdown2017AllianceRobot3AutoEnum none = _$matchScoreBreakdown2017AllianceRobot3AutoEnum_none;
+  static const MatchScoreBreakdown2017AllianceRobot3AutoEnum none =
+      _$matchScoreBreakdown2017AllianceRobot3AutoEnum_none;
 
-  static Serializer<MatchScoreBreakdown2017AllianceRobot3AutoEnum> get serializer => _$matchScoreBreakdown2017AllianceRobot3AutoEnumSerializer;
+  static Serializer<MatchScoreBreakdown2017AllianceRobot3AutoEnum>
+      get serializer =>
+          _$matchScoreBreakdown2017AllianceRobot3AutoEnumSerializer;
 
-  const MatchScoreBreakdown2017AllianceRobot3AutoEnum._(String name): super(name);
+  const MatchScoreBreakdown2017AllianceRobot3AutoEnum._(String name)
+      : super(name);
 
-  static BuiltSet<MatchScoreBreakdown2017AllianceRobot3AutoEnum> get values => _$matchScoreBreakdown2017AllianceRobot3AutoEnumValues;
-  static MatchScoreBreakdown2017AllianceRobot3AutoEnum valueOf(String name) => _$matchScoreBreakdown2017AllianceRobot3AutoEnumValueOf(name);
+  static BuiltSet<MatchScoreBreakdown2017AllianceRobot3AutoEnum> get values =>
+      _$matchScoreBreakdown2017AllianceRobot3AutoEnumValues;
+  static MatchScoreBreakdown2017AllianceRobot3AutoEnum valueOf(String name) =>
+      _$matchScoreBreakdown2017AllianceRobot3AutoEnumValueOf(name);
 }
-

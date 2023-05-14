@@ -14,16 +14,17 @@ part 'team_event_status.g.dart';
 /// TeamEventStatus
 ///
 /// Properties:
-/// * [qual] 
-/// * [alliance] 
-/// * [playoff] 
+/// * [qual]
+/// * [alliance]
+/// * [playoff]
 /// * [allianceStatusStr] - An HTML formatted string suitable for display to the user containing the team's alliance pick status.
 /// * [playoffStatusStr] - An HTML formatter string suitable for display to the user containing the team's playoff status.
 /// * [overallStatusStr] - An HTML formatted string suitable for display to the user containing the team's overall status summary of the event.
 /// * [nextMatchKey] - TBA match key for the next match the team is scheduled to play in at this event, or null.
 /// * [lastMatchKey] - TBA match key for the last match the team played in at this event, or null.
 @BuiltValue()
-abstract class TeamEventStatus implements Built<TeamEventStatus, TeamEventStatusBuilder> {
+abstract class TeamEventStatus
+    implements Built<TeamEventStatus, TeamEventStatusBuilder> {
   @BuiltValueField(wireName: r'qual')
   TeamEventStatusRank? get qual;
 
@@ -55,16 +56,19 @@ abstract class TeamEventStatus implements Built<TeamEventStatus, TeamEventStatus
 
   TeamEventStatus._();
 
-  factory TeamEventStatus([void updates(TeamEventStatusBuilder b)]) = _$TeamEventStatus;
+  factory TeamEventStatus([void updates(TeamEventStatusBuilder b)]) =
+      _$TeamEventStatus;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TeamEventStatusBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TeamEventStatus> get serializer => _$TeamEventStatusSerializer();
+  static Serializer<TeamEventStatus> get serializer =>
+      _$TeamEventStatusSerializer();
 }
 
-class _$TeamEventStatusSerializer implements PrimitiveSerializer<TeamEventStatus> {
+class _$TeamEventStatusSerializer
+    implements PrimitiveSerializer<TeamEventStatus> {
   @override
   final Iterable<Type> types = const [TeamEventStatus, _$TeamEventStatus];
 
@@ -140,7 +144,9 @@ class _$TeamEventStatusSerializer implements PrimitiveSerializer<TeamEventStatus
     TeamEventStatus object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -239,4 +245,3 @@ class _$TeamEventStatusSerializer implements PrimitiveSerializer<TeamEventStatus
     return result.build();
   }
 }
-

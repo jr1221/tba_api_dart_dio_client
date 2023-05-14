@@ -19,7 +19,8 @@ part 'event_ranking.g.dart';
 /// * [extraStatsInfo] - List of special TBA-generated values provided in the `extra_stats` array for each item.
 /// * [sortOrderInfo] - List of year-specific values provided in the `sort_orders` array for each team.
 @BuiltValue()
-abstract class EventRanking implements Built<EventRanking, EventRankingBuilder> {
+abstract class EventRanking
+    implements Built<EventRanking, EventRankingBuilder> {
   /// List of rankings at the event.
   @BuiltValueField(wireName: r'rankings')
   BuiltList<EventRankingRankingsInner> get rankings;
@@ -58,19 +59,22 @@ class _$EventRankingSerializer implements PrimitiveSerializer<EventRanking> {
     yield r'rankings';
     yield serializers.serialize(
       object.rankings,
-      specifiedType: const FullType(BuiltList, [FullType(EventRankingRankingsInner)]),
+      specifiedType:
+          const FullType(BuiltList, [FullType(EventRankingRankingsInner)]),
     );
     if (object.extraStatsInfo != null) {
       yield r'extra_stats_info';
       yield serializers.serialize(
         object.extraStatsInfo,
-        specifiedType: const FullType(BuiltList, [FullType(EventRankingExtraStatsInfoInner)]),
+        specifiedType: const FullType(
+            BuiltList, [FullType(EventRankingExtraStatsInfoInner)]),
       );
     }
     yield r'sort_order_info';
     yield serializers.serialize(
       object.sortOrderInfo,
-      specifiedType: const FullType(BuiltList, [FullType(EventRankingSortOrderInfoInner)]),
+      specifiedType:
+          const FullType(BuiltList, [FullType(EventRankingSortOrderInfoInner)]),
     );
   }
 
@@ -80,7 +84,9 @@ class _$EventRankingSerializer implements PrimitiveSerializer<EventRanking> {
     EventRanking object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -98,21 +104,24 @@ class _$EventRankingSerializer implements PrimitiveSerializer<EventRanking> {
         case r'rankings':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(EventRankingRankingsInner)]),
+            specifiedType: const FullType(
+                BuiltList, [FullType(EventRankingRankingsInner)]),
           ) as BuiltList<EventRankingRankingsInner>;
           result.rankings.replace(valueDes);
           break;
         case r'extra_stats_info':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(EventRankingExtraStatsInfoInner)]),
+            specifiedType: const FullType(
+                BuiltList, [FullType(EventRankingExtraStatsInfoInner)]),
           ) as BuiltList<EventRankingExtraStatsInfoInner>;
           result.extraStatsInfo.replace(valueDes);
           break;
         case r'sort_order_info':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(EventRankingSortOrderInfoInner)]),
+            specifiedType: const FullType(
+                BuiltList, [FullType(EventRankingSortOrderInfoInner)]),
           ) as BuiltList<EventRankingSortOrderInfoInner>;
           result.sortOrderInfo.replace(valueDes);
           break;
@@ -144,4 +153,3 @@ class _$EventRankingSerializer implements PrimitiveSerializer<EventRanking> {
     return result.build();
   }
 }
-

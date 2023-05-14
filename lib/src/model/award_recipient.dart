@@ -14,7 +14,8 @@ part 'award_recipient.g.dart';
 /// * [teamKey] - The TBA team key for the team that was given the award. May be null.
 /// * [awardee] - The name of the individual given the award. May be null.
 @BuiltValue()
-abstract class AwardRecipient implements Built<AwardRecipient, AwardRecipientBuilder> {
+abstract class AwardRecipient
+    implements Built<AwardRecipient, AwardRecipientBuilder> {
   /// The TBA team key for the team that was given the award. May be null.
   @BuiltValueField(wireName: r'team_key')
   String? get teamKey;
@@ -25,16 +26,19 @@ abstract class AwardRecipient implements Built<AwardRecipient, AwardRecipientBui
 
   AwardRecipient._();
 
-  factory AwardRecipient([void updates(AwardRecipientBuilder b)]) = _$AwardRecipient;
+  factory AwardRecipient([void updates(AwardRecipientBuilder b)]) =
+      _$AwardRecipient;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(AwardRecipientBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<AwardRecipient> get serializer => _$AwardRecipientSerializer();
+  static Serializer<AwardRecipient> get serializer =>
+      _$AwardRecipientSerializer();
 }
 
-class _$AwardRecipientSerializer implements PrimitiveSerializer<AwardRecipient> {
+class _$AwardRecipientSerializer
+    implements PrimitiveSerializer<AwardRecipient> {
   @override
   final Iterable<Type> types = const [AwardRecipient, _$AwardRecipient];
 
@@ -68,7 +72,9 @@ class _$AwardRecipientSerializer implements PrimitiveSerializer<AwardRecipient> 
     AwardRecipient object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -125,4 +131,3 @@ class _$AwardRecipientSerializer implements PrimitiveSerializer<AwardRecipient> 
     return result.build();
   }
 }
-

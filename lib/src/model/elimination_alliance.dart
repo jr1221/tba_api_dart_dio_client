@@ -15,12 +15,13 @@ part 'elimination_alliance.g.dart';
 ///
 /// Properties:
 /// * [name] - Alliance name, may be null.
-/// * [backup] 
+/// * [backup]
 /// * [declines] - List of teams that declined the alliance.
 /// * [picks] - List of team keys picked for the alliance. First pick is captain.
-/// * [status] 
+/// * [status]
 @BuiltValue()
-abstract class EliminationAlliance implements Built<EliminationAlliance, EliminationAllianceBuilder> {
+abstract class EliminationAlliance
+    implements Built<EliminationAlliance, EliminationAllianceBuilder> {
   /// Alliance name, may be null.
   @BuiltValueField(wireName: r'name')
   String? get name;
@@ -41,18 +42,24 @@ abstract class EliminationAlliance implements Built<EliminationAlliance, Elimina
 
   EliminationAlliance._();
 
-  factory EliminationAlliance([void updates(EliminationAllianceBuilder b)]) = _$EliminationAlliance;
+  factory EliminationAlliance([void updates(EliminationAllianceBuilder b)]) =
+      _$EliminationAlliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EliminationAllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EliminationAlliance> get serializer => _$EliminationAllianceSerializer();
+  static Serializer<EliminationAlliance> get serializer =>
+      _$EliminationAllianceSerializer();
 }
 
-class _$EliminationAllianceSerializer implements PrimitiveSerializer<EliminationAlliance> {
+class _$EliminationAllianceSerializer
+    implements PrimitiveSerializer<EliminationAlliance> {
   @override
-  final Iterable<Type> types = const [EliminationAlliance, _$EliminationAlliance];
+  final Iterable<Type> types = const [
+    EliminationAlliance,
+    _$EliminationAlliance
+  ];
 
   @override
   final String wireName = r'EliminationAlliance';
@@ -103,7 +110,9 @@ class _$EliminationAllianceSerializer implements PrimitiveSerializer<Elimination
     EliminationAlliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -181,4 +190,3 @@ class _$EliminationAllianceSerializer implements PrimitiveSerializer<Elimination
     return result.build();
   }
 }
-

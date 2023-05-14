@@ -12,13 +12,15 @@ part 'elimination_alliance_status.g.dart';
 /// EliminationAllianceStatus
 ///
 /// Properties:
-/// * [playoffAverage] 
-/// * [level] 
-/// * [record] 
-/// * [currentLevelRecord] 
-/// * [status] 
+/// * [playoffAverage]
+/// * [level]
+/// * [record]
+/// * [currentLevelRecord]
+/// * [status]
 @BuiltValue()
-abstract class EliminationAllianceStatus implements Built<EliminationAllianceStatus, EliminationAllianceStatusBuilder> {
+abstract class EliminationAllianceStatus
+    implements
+        Built<EliminationAllianceStatus, EliminationAllianceStatusBuilder> {
   @BuiltValueField(wireName: r'playoff_average')
   double? get playoffAverage;
 
@@ -36,18 +38,25 @@ abstract class EliminationAllianceStatus implements Built<EliminationAllianceSta
 
   EliminationAllianceStatus._();
 
-  factory EliminationAllianceStatus([void updates(EliminationAllianceStatusBuilder b)]) = _$EliminationAllianceStatus;
+  factory EliminationAllianceStatus(
+          [void updates(EliminationAllianceStatusBuilder b)]) =
+      _$EliminationAllianceStatus;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EliminationAllianceStatusBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EliminationAllianceStatus> get serializer => _$EliminationAllianceStatusSerializer();
+  static Serializer<EliminationAllianceStatus> get serializer =>
+      _$EliminationAllianceStatusSerializer();
 }
 
-class _$EliminationAllianceStatusSerializer implements PrimitiveSerializer<EliminationAllianceStatus> {
+class _$EliminationAllianceStatusSerializer
+    implements PrimitiveSerializer<EliminationAllianceStatus> {
   @override
-  final Iterable<Type> types = const [EliminationAllianceStatus, _$EliminationAllianceStatus];
+  final Iterable<Type> types = const [
+    EliminationAllianceStatus,
+    _$EliminationAllianceStatus
+  ];
 
   @override
   final String wireName = r'EliminationAllianceStatus';
@@ -100,7 +109,9 @@ class _$EliminationAllianceStatusSerializer implements PrimitiveSerializer<Elimi
     EliminationAllianceStatus object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -178,4 +189,3 @@ class _$EliminationAllianceStatusSerializer implements PrimitiveSerializer<Elimi
     return result.build();
   }
 }
-

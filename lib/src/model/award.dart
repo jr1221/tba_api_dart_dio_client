@@ -96,7 +96,9 @@ class _$AwardSerializer implements PrimitiveSerializer<Award> {
     Award object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -135,7 +137,8 @@ class _$AwardSerializer implements PrimitiveSerializer<Award> {
         case r'recipient_list':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(AwardRecipient)]),
+            specifiedType:
+                const FullType(BuiltList, [FullType(AwardRecipient)]),
           ) as BuiltList<AwardRecipient>;
           result.recipientList.replace(valueDes);
           break;
@@ -174,4 +177,3 @@ class _$AwardSerializer implements PrimitiveSerializer<Award> {
     return result.build();
   }
 }
-

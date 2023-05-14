@@ -12,10 +12,11 @@ part 'match_simple_alliances.g.dart';
 /// A list of alliances, the teams on the alliances, and their score.
 ///
 /// Properties:
-/// * [red] 
-/// * [blue] 
+/// * [red]
+/// * [blue]
 @BuiltValue()
-abstract class MatchSimpleAlliances implements Built<MatchSimpleAlliances, MatchSimpleAlliancesBuilder> {
+abstract class MatchSimpleAlliances
+    implements Built<MatchSimpleAlliances, MatchSimpleAlliancesBuilder> {
   @BuiltValueField(wireName: r'red')
   MatchAlliance? get red;
 
@@ -24,18 +25,24 @@ abstract class MatchSimpleAlliances implements Built<MatchSimpleAlliances, Match
 
   MatchSimpleAlliances._();
 
-  factory MatchSimpleAlliances([void updates(MatchSimpleAlliancesBuilder b)]) = _$MatchSimpleAlliances;
+  factory MatchSimpleAlliances([void updates(MatchSimpleAlliancesBuilder b)]) =
+      _$MatchSimpleAlliances;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchSimpleAlliancesBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchSimpleAlliances> get serializer => _$MatchSimpleAlliancesSerializer();
+  static Serializer<MatchSimpleAlliances> get serializer =>
+      _$MatchSimpleAlliancesSerializer();
 }
 
-class _$MatchSimpleAlliancesSerializer implements PrimitiveSerializer<MatchSimpleAlliances> {
+class _$MatchSimpleAlliancesSerializer
+    implements PrimitiveSerializer<MatchSimpleAlliances> {
   @override
-  final Iterable<Type> types = const [MatchSimpleAlliances, _$MatchSimpleAlliances];
+  final Iterable<Type> types = const [
+    MatchSimpleAlliances,
+    _$MatchSimpleAlliances
+  ];
 
   @override
   final String wireName = r'MatchSimpleAlliances';
@@ -67,7 +74,9 @@ class _$MatchSimpleAlliancesSerializer implements PrimitiveSerializer<MatchSimpl
     MatchSimpleAlliances object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -124,4 +133,3 @@ class _$MatchSimpleAlliancesSerializer implements PrimitiveSerializer<MatchSimpl
     return result.build();
   }
 }
-

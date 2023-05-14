@@ -11,42 +11,45 @@ part 'match_score_breakdown2020_alliance.g.dart';
 /// MatchScoreBreakdown2020Alliance
 ///
 /// Properties:
-/// * [initLineRobot1] 
-/// * [endgameRobot1] 
-/// * [initLineRobot2] 
-/// * [endgameRobot2] 
-/// * [initLineRobot3] 
-/// * [endgameRobot3] 
-/// * [autoCellsBottom] 
-/// * [autoCellsOuter] 
-/// * [autoCellsInner] 
-/// * [teleopCellsBottom] 
-/// * [teleopCellsOuter] 
-/// * [teleopCellsInner] 
-/// * [stage1Activated] 
-/// * [stage2Activated] 
-/// * [stage3Activated] 
-/// * [stage3TargetColor] 
-/// * [endgameRungIsLevel] 
-/// * [autoInitLinePoints] 
-/// * [autoCellPoints] 
-/// * [autoPoints] 
-/// * [teleopCellPoints] 
-/// * [controlPanelPoints] 
-/// * [endgamePoints] 
-/// * [teleopPoints] 
-/// * [shieldOperationalRankingPoint] 
-/// * [shieldEnergizedRankingPoint] 
+/// * [initLineRobot1]
+/// * [endgameRobot1]
+/// * [initLineRobot2]
+/// * [endgameRobot2]
+/// * [initLineRobot3]
+/// * [endgameRobot3]
+/// * [autoCellsBottom]
+/// * [autoCellsOuter]
+/// * [autoCellsInner]
+/// * [teleopCellsBottom]
+/// * [teleopCellsOuter]
+/// * [teleopCellsInner]
+/// * [stage1Activated]
+/// * [stage2Activated]
+/// * [stage3Activated]
+/// * [stage3TargetColor]
+/// * [endgameRungIsLevel]
+/// * [autoInitLinePoints]
+/// * [autoCellPoints]
+/// * [autoPoints]
+/// * [teleopCellPoints]
+/// * [controlPanelPoints]
+/// * [endgamePoints]
+/// * [teleopPoints]
+/// * [shieldOperationalRankingPoint]
+/// * [shieldEnergizedRankingPoint]
 /// * [tbaShieldEnergizedRankingPointFromFoul] - Unofficial TBA-computed value that indicates whether the shieldEnergizedRankingPoint was earned normally or awarded due to a foul.
 /// * [tbaNumRobotsHanging] - Unofficial TBA-computed value that counts the number of robots who were hanging at the end of the match.
-/// * [foulCount] 
-/// * [techFoulCount] 
-/// * [adjustPoints] 
-/// * [foulPoints] 
-/// * [rp] 
-/// * [totalPoints] 
+/// * [foulCount]
+/// * [techFoulCount]
+/// * [adjustPoints]
+/// * [foulPoints]
+/// * [rp]
+/// * [totalPoints]
 @BuiltValue()
-abstract class MatchScoreBreakdown2020Alliance implements Built<MatchScoreBreakdown2020Alliance, MatchScoreBreakdown2020AllianceBuilder> {
+abstract class MatchScoreBreakdown2020Alliance
+    implements
+        Built<MatchScoreBreakdown2020Alliance,
+            MatchScoreBreakdown2020AllianceBuilder> {
   @BuiltValueField(wireName: r'initLineRobot1')
   String? get initLineRobot1;
 
@@ -153,18 +156,25 @@ abstract class MatchScoreBreakdown2020Alliance implements Built<MatchScoreBreakd
 
   MatchScoreBreakdown2020Alliance._();
 
-  factory MatchScoreBreakdown2020Alliance([void updates(MatchScoreBreakdown2020AllianceBuilder b)]) = _$MatchScoreBreakdown2020Alliance;
+  factory MatchScoreBreakdown2020Alliance(
+          [void updates(MatchScoreBreakdown2020AllianceBuilder b)]) =
+      _$MatchScoreBreakdown2020Alliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchScoreBreakdown2020AllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchScoreBreakdown2020Alliance> get serializer => _$MatchScoreBreakdown2020AllianceSerializer();
+  static Serializer<MatchScoreBreakdown2020Alliance> get serializer =>
+      _$MatchScoreBreakdown2020AllianceSerializer();
 }
 
-class _$MatchScoreBreakdown2020AllianceSerializer implements PrimitiveSerializer<MatchScoreBreakdown2020Alliance> {
+class _$MatchScoreBreakdown2020AllianceSerializer
+    implements PrimitiveSerializer<MatchScoreBreakdown2020Alliance> {
   @override
-  final Iterable<Type> types = const [MatchScoreBreakdown2020Alliance, _$MatchScoreBreakdown2020Alliance];
+  final Iterable<Type> types = const [
+    MatchScoreBreakdown2020Alliance,
+    _$MatchScoreBreakdown2020Alliance
+  ];
 
   @override
   final String wireName = r'MatchScoreBreakdown2020Alliance';
@@ -420,7 +430,9 @@ class _$MatchScoreBreakdown2020AllianceSerializer implements PrimitiveSerializer
     MatchScoreBreakdown2020Alliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -701,4 +713,3 @@ class _$MatchScoreBreakdown2020AllianceSerializer implements PrimitiveSerializer
     return result.build();
   }
 }
-

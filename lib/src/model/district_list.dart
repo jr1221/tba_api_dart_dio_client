@@ -16,7 +16,8 @@ part 'district_list.g.dart';
 /// * [key] - Key for this district, e.g. `2016ne`.
 /// * [year] - Year this district participated.
 @BuiltValue()
-abstract class DistrictList implements Built<DistrictList, DistrictListBuilder> {
+abstract class DistrictList
+    implements Built<DistrictList, DistrictListBuilder> {
   /// The short identifier for the district.
   @BuiltValueField(wireName: r'abbreviation')
   String get abbreviation;
@@ -84,7 +85,9 @@ class _$DistrictListSerializer implements PrimitiveSerializer<DistrictList> {
     DistrictList object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -155,4 +158,3 @@ class _$DistrictListSerializer implements PrimitiveSerializer<DistrictList> {
     return result.build();
   }
 }
-

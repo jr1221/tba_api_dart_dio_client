@@ -14,7 +14,7 @@ part 'match_timeseries2018.g.dart';
 /// * [eventKey] - TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.
 /// * [matchId] - Match ID consisting of the level, match number, and set number, eg `qm45` or `f1m1`.
 /// * [mode] - Current mode of play, can be `pre_match`, `auto`, `telop`, or `post_match`.
-/// * [play] 
+/// * [play]
 /// * [timeRemaining] - Amount of time remaining in the match, only valid during `auto` and `teleop` modes.
 /// * [blueAutoQuest] - 1 if the blue alliance is credited with the AUTO QUEST, 0 if not.
 /// * [blueBoostCount] - Number of POWER CUBES in the BOOST section of the blue alliance VAULT.
@@ -43,7 +43,8 @@ part 'match_timeseries2018.g.dart';
 /// * [redScore] - Current score for the red alliance.
 /// * [redSwitchOwned] - 1 if the red alliance owns their SWITCH, 0 if not.
 @BuiltValue()
-abstract class MatchTimeseries2018 implements Built<MatchTimeseries2018, MatchTimeseries2018Builder> {
+abstract class MatchTimeseries2018
+    implements Built<MatchTimeseries2018, MatchTimeseries2018Builder> {
   /// TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.
   @BuiltValueField(wireName: r'event_key')
   String? get eventKey;
@@ -169,18 +170,24 @@ abstract class MatchTimeseries2018 implements Built<MatchTimeseries2018, MatchTi
 
   MatchTimeseries2018._();
 
-  factory MatchTimeseries2018([void updates(MatchTimeseries2018Builder b)]) = _$MatchTimeseries2018;
+  factory MatchTimeseries2018([void updates(MatchTimeseries2018Builder b)]) =
+      _$MatchTimeseries2018;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchTimeseries2018Builder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchTimeseries2018> get serializer => _$MatchTimeseries2018Serializer();
+  static Serializer<MatchTimeseries2018> get serializer =>
+      _$MatchTimeseries2018Serializer();
 }
 
-class _$MatchTimeseries2018Serializer implements PrimitiveSerializer<MatchTimeseries2018> {
+class _$MatchTimeseries2018Serializer
+    implements PrimitiveSerializer<MatchTimeseries2018> {
   @override
-  final Iterable<Type> types = const [MatchTimeseries2018, _$MatchTimeseries2018];
+  final Iterable<Type> types = const [
+    MatchTimeseries2018,
+    _$MatchTimeseries2018
+  ];
 
   @override
   final String wireName = r'MatchTimeseries2018';
@@ -415,7 +422,9 @@ class _$MatchTimeseries2018Serializer implements PrimitiveSerializer<MatchTimese
     MatchTimeseries2018 object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -675,4 +684,3 @@ class _$MatchTimeseries2018Serializer implements PrimitiveSerializer<MatchTimese
     return result.build();
   }
 }
-

@@ -16,12 +16,14 @@ part 'team_event_status_rank_ranking.g.dart';
 /// * [matchesPlayed] - Number of matches played.
 /// * [qualAverage] - For some years, average qualification score. Can be null.
 /// * [sortOrders] - Ordered list of values used to determine the rank. See the `sort_order_info` property for the name of each value.
-/// * [record] 
+/// * [record]
 /// * [rank] - Relative rank of this team.
 /// * [dq] - Number of matches the team was disqualified for.
 /// * [teamKey] - TBA team key for this rank.
 @BuiltValue()
-abstract class TeamEventStatusRankRanking implements Built<TeamEventStatusRankRanking, TeamEventStatusRankRankingBuilder> {
+abstract class TeamEventStatusRankRanking
+    implements
+        Built<TeamEventStatusRankRanking, TeamEventStatusRankRankingBuilder> {
   /// Number of matches played.
   @BuiltValueField(wireName: r'matches_played')
   int? get matchesPlayed;
@@ -51,18 +53,25 @@ abstract class TeamEventStatusRankRanking implements Built<TeamEventStatusRankRa
 
   TeamEventStatusRankRanking._();
 
-  factory TeamEventStatusRankRanking([void updates(TeamEventStatusRankRankingBuilder b)]) = _$TeamEventStatusRankRanking;
+  factory TeamEventStatusRankRanking(
+          [void updates(TeamEventStatusRankRankingBuilder b)]) =
+      _$TeamEventStatusRankRanking;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TeamEventStatusRankRankingBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TeamEventStatusRankRanking> get serializer => _$TeamEventStatusRankRankingSerializer();
+  static Serializer<TeamEventStatusRankRanking> get serializer =>
+      _$TeamEventStatusRankRankingSerializer();
 }
 
-class _$TeamEventStatusRankRankingSerializer implements PrimitiveSerializer<TeamEventStatusRankRanking> {
+class _$TeamEventStatusRankRankingSerializer
+    implements PrimitiveSerializer<TeamEventStatusRankRanking> {
   @override
-  final Iterable<Type> types = const [TeamEventStatusRankRanking, _$TeamEventStatusRankRanking];
+  final Iterable<Type> types = const [
+    TeamEventStatusRankRanking,
+    _$TeamEventStatusRankRanking
+  ];
 
   @override
   final String wireName = r'TeamEventStatusRankRanking';
@@ -129,7 +138,9 @@ class _$TeamEventStatusRankRankingSerializer implements PrimitiveSerializer<Team
     TeamEventStatusRankRanking object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -221,4 +232,3 @@ class _$TeamEventStatusRankRankingSerializer implements PrimitiveSerializer<Team
     return result.build();
   }
 }
-

@@ -19,14 +19,17 @@ part 'district_ranking_event_points_inner.g.dart';
 /// * [eventKey] - TBA Event key for this event.
 /// * [qualPoints] - Points awarded for qualification match performance.
 @BuiltValue()
-abstract class DistrictRankingEventPointsInner implements Built<DistrictRankingEventPointsInner, DistrictRankingEventPointsInnerBuilder> {
+abstract class DistrictRankingEventPointsInner
+    implements
+        Built<DistrictRankingEventPointsInner,
+            DistrictRankingEventPointsInnerBuilder> {
   /// `true` if this event is a District Championship event.
   @BuiltValueField(wireName: r'district_cmp')
   bool get districtCmp;
 
   /// Total points awarded at this event.
   @BuiltValueField(wireName: r'total')
-  int get total;
+  num get total;
 
   /// Points awarded for alliance selection.
   @BuiltValueField(wireName: r'alliance_points')
@@ -34,7 +37,7 @@ abstract class DistrictRankingEventPointsInner implements Built<DistrictRankingE
 
   /// Points awarded for elimination match performance.
   @BuiltValueField(wireName: r'elim_points')
-  int get elimPoints;
+  num get elimPoints;
 
   /// Points awarded for event awards.
   @BuiltValueField(wireName: r'award_points')
@@ -50,18 +53,25 @@ abstract class DistrictRankingEventPointsInner implements Built<DistrictRankingE
 
   DistrictRankingEventPointsInner._();
 
-  factory DistrictRankingEventPointsInner([void updates(DistrictRankingEventPointsInnerBuilder b)]) = _$DistrictRankingEventPointsInner;
+  factory DistrictRankingEventPointsInner(
+          [void updates(DistrictRankingEventPointsInnerBuilder b)]) =
+      _$DistrictRankingEventPointsInner;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(DistrictRankingEventPointsInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<DistrictRankingEventPointsInner> get serializer => _$DistrictRankingEventPointsInnerSerializer();
+  static Serializer<DistrictRankingEventPointsInner> get serializer =>
+      _$DistrictRankingEventPointsInnerSerializer();
 }
 
-class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer<DistrictRankingEventPointsInner> {
+class _$DistrictRankingEventPointsInnerSerializer
+    implements PrimitiveSerializer<DistrictRankingEventPointsInner> {
   @override
-  final Iterable<Type> types = const [DistrictRankingEventPointsInner, _$DistrictRankingEventPointsInner];
+  final Iterable<Type> types = const [
+    DistrictRankingEventPointsInner,
+    _$DistrictRankingEventPointsInner
+  ];
 
   @override
   final String wireName = r'DistrictRankingEventPointsInner';
@@ -79,7 +89,7 @@ class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer
     yield r'total';
     yield serializers.serialize(
       object.total,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(num),
     );
     yield r'alliance_points';
     yield serializers.serialize(
@@ -89,7 +99,7 @@ class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer
     yield r'elim_points';
     yield serializers.serialize(
       object.elimPoints,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(num),
     );
     yield r'award_points';
     yield serializers.serialize(
@@ -114,7 +124,9 @@ class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer
     DistrictRankingEventPointsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -139,8 +151,8 @@ class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer
         case r'total':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(num),
+          ) as num;
           result.total = valueDes;
           break;
         case r'alliance_points':
@@ -153,8 +165,8 @@ class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer
         case r'elim_points':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(num),
+          ) as num;
           result.elimPoints = valueDes;
           break;
         case r'award_points':
@@ -206,4 +218,3 @@ class _$DistrictRankingEventPointsInnerSerializer implements PrimitiveSerializer
     return result.build();
   }
 }
-

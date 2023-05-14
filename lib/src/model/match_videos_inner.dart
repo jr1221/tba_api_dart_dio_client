@@ -14,7 +14,8 @@ part 'match_videos_inner.g.dart';
 /// * [type] - Can be one of 'youtube' or 'tba'
 /// * [key] - Unique key representing this video
 @BuiltValue()
-abstract class MatchVideosInner implements Built<MatchVideosInner, MatchVideosInnerBuilder> {
+abstract class MatchVideosInner
+    implements Built<MatchVideosInner, MatchVideosInnerBuilder> {
   /// Can be one of 'youtube' or 'tba'
   @BuiltValueField(wireName: r'type')
   String? get type;
@@ -25,16 +26,19 @@ abstract class MatchVideosInner implements Built<MatchVideosInner, MatchVideosIn
 
   MatchVideosInner._();
 
-  factory MatchVideosInner([void updates(MatchVideosInnerBuilder b)]) = _$MatchVideosInner;
+  factory MatchVideosInner([void updates(MatchVideosInnerBuilder b)]) =
+      _$MatchVideosInner;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchVideosInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchVideosInner> get serializer => _$MatchVideosInnerSerializer();
+  static Serializer<MatchVideosInner> get serializer =>
+      _$MatchVideosInnerSerializer();
 }
 
-class _$MatchVideosInnerSerializer implements PrimitiveSerializer<MatchVideosInner> {
+class _$MatchVideosInnerSerializer
+    implements PrimitiveSerializer<MatchVideosInner> {
   @override
   final Iterable<Type> types = const [MatchVideosInner, _$MatchVideosInner];
 
@@ -68,7 +72,9 @@ class _$MatchVideosInnerSerializer implements PrimitiveSerializer<MatchVideosInn
     MatchVideosInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -125,4 +131,3 @@ class _$MatchVideosInnerSerializer implements PrimitiveSerializer<MatchVideosInn
     return result.build();
   }
 }
-

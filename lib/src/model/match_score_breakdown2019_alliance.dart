@@ -11,59 +11,62 @@ part 'match_score_breakdown2019_alliance.g.dart';
 /// MatchScoreBreakdown2019Alliance
 ///
 /// Properties:
-/// * [adjustPoints] 
-/// * [autoPoints] 
-/// * [bay1] 
-/// * [bay2] 
-/// * [bay3] 
-/// * [bay4] 
-/// * [bay5] 
-/// * [bay6] 
-/// * [bay7] 
-/// * [bay8] 
-/// * [cargoPoints] 
-/// * [completeRocketRankingPoint] 
-/// * [completedRocketFar] 
-/// * [completedRocketNear] 
-/// * [endgameRobot1] 
-/// * [endgameRobot2] 
-/// * [endgameRobot3] 
-/// * [foulCount] 
-/// * [foulPoints] 
-/// * [habClimbPoints] 
-/// * [habDockingRankingPoint] 
-/// * [habLineRobot1] 
-/// * [habLineRobot2] 
-/// * [habLineRobot3] 
-/// * [hatchPanelPoints] 
-/// * [lowLeftRocketFar] 
-/// * [lowLeftRocketNear] 
-/// * [lowRightRocketFar] 
-/// * [lowRightRocketNear] 
-/// * [midLeftRocketFar] 
-/// * [midLeftRocketNear] 
-/// * [midRightRocketFar] 
-/// * [midRightRocketNear] 
-/// * [preMatchBay1] 
-/// * [preMatchBay2] 
-/// * [preMatchBay3] 
-/// * [preMatchBay6] 
-/// * [preMatchBay7] 
-/// * [preMatchBay8] 
-/// * [preMatchLevelRobot1] 
-/// * [preMatchLevelRobot2] 
-/// * [preMatchLevelRobot3] 
-/// * [rp] 
-/// * [sandStormBonusPoints] 
-/// * [techFoulCount] 
-/// * [teleopPoints] 
-/// * [topLeftRocketFar] 
-/// * [topLeftRocketNear] 
-/// * [topRightRocketFar] 
-/// * [topRightRocketNear] 
-/// * [totalPoints] 
+/// * [adjustPoints]
+/// * [autoPoints]
+/// * [bay1]
+/// * [bay2]
+/// * [bay3]
+/// * [bay4]
+/// * [bay5]
+/// * [bay6]
+/// * [bay7]
+/// * [bay8]
+/// * [cargoPoints]
+/// * [completeRocketRankingPoint]
+/// * [completedRocketFar]
+/// * [completedRocketNear]
+/// * [endgameRobot1]
+/// * [endgameRobot2]
+/// * [endgameRobot3]
+/// * [foulCount]
+/// * [foulPoints]
+/// * [habClimbPoints]
+/// * [habDockingRankingPoint]
+/// * [habLineRobot1]
+/// * [habLineRobot2]
+/// * [habLineRobot3]
+/// * [hatchPanelPoints]
+/// * [lowLeftRocketFar]
+/// * [lowLeftRocketNear]
+/// * [lowRightRocketFar]
+/// * [lowRightRocketNear]
+/// * [midLeftRocketFar]
+/// * [midLeftRocketNear]
+/// * [midRightRocketFar]
+/// * [midRightRocketNear]
+/// * [preMatchBay1]
+/// * [preMatchBay2]
+/// * [preMatchBay3]
+/// * [preMatchBay6]
+/// * [preMatchBay7]
+/// * [preMatchBay8]
+/// * [preMatchLevelRobot1]
+/// * [preMatchLevelRobot2]
+/// * [preMatchLevelRobot3]
+/// * [rp]
+/// * [sandStormBonusPoints]
+/// * [techFoulCount]
+/// * [teleopPoints]
+/// * [topLeftRocketFar]
+/// * [topLeftRocketNear]
+/// * [topRightRocketFar]
+/// * [topRightRocketNear]
+/// * [totalPoints]
 @BuiltValue()
-abstract class MatchScoreBreakdown2019Alliance implements Built<MatchScoreBreakdown2019Alliance, MatchScoreBreakdown2019AllianceBuilder> {
+abstract class MatchScoreBreakdown2019Alliance
+    implements
+        Built<MatchScoreBreakdown2019Alliance,
+            MatchScoreBreakdown2019AllianceBuilder> {
   @BuiltValueField(wireName: r'adjustPoints')
   int? get adjustPoints;
 
@@ -219,18 +222,25 @@ abstract class MatchScoreBreakdown2019Alliance implements Built<MatchScoreBreakd
 
   MatchScoreBreakdown2019Alliance._();
 
-  factory MatchScoreBreakdown2019Alliance([void updates(MatchScoreBreakdown2019AllianceBuilder b)]) = _$MatchScoreBreakdown2019Alliance;
+  factory MatchScoreBreakdown2019Alliance(
+          [void updates(MatchScoreBreakdown2019AllianceBuilder b)]) =
+      _$MatchScoreBreakdown2019Alliance;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MatchScoreBreakdown2019AllianceBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<MatchScoreBreakdown2019Alliance> get serializer => _$MatchScoreBreakdown2019AllianceSerializer();
+  static Serializer<MatchScoreBreakdown2019Alliance> get serializer =>
+      _$MatchScoreBreakdown2019AllianceSerializer();
 }
 
-class _$MatchScoreBreakdown2019AllianceSerializer implements PrimitiveSerializer<MatchScoreBreakdown2019Alliance> {
+class _$MatchScoreBreakdown2019AllianceSerializer
+    implements PrimitiveSerializer<MatchScoreBreakdown2019Alliance> {
   @override
-  final Iterable<Type> types = const [MatchScoreBreakdown2019Alliance, _$MatchScoreBreakdown2019Alliance];
+  final Iterable<Type> types = const [
+    MatchScoreBreakdown2019Alliance,
+    _$MatchScoreBreakdown2019Alliance
+  ];
 
   @override
   final String wireName = r'MatchScoreBreakdown2019Alliance';
@@ -605,7 +615,9 @@ class _$MatchScoreBreakdown2019AllianceSerializer implements PrimitiveSerializer
     MatchScoreBreakdown2019Alliance object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -1005,4 +1017,3 @@ class _$MatchScoreBreakdown2019AllianceSerializer implements PrimitiveSerializer
     return result.build();
   }
 }
-

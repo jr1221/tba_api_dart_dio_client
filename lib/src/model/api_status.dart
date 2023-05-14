@@ -17,8 +17,8 @@ part 'api_status.g.dart';
 /// * [maxSeason] - Maximum FRC season year for valid queries.
 /// * [isDatafeedDown] - True if the entire FMS API provided by FIRST is down.
 /// * [downEvents] - An array of strings containing event keys of any active events that are no longer updating.
-/// * [ios] 
-/// * [android] 
+/// * [ios]
+/// * [android]
 @BuiltValue()
 abstract class APIStatus implements Built<APIStatus, APIStatusBuilder> {
   /// Year of the current FRC season.
@@ -104,7 +104,9 @@ class _$APIStatusSerializer implements PrimitiveSerializer<APIStatus> {
     APIStatus object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -189,4 +191,3 @@ class _$APIStatusSerializer implements PrimitiveSerializer<APIStatus> {
     return result.build();
   }
 }
-

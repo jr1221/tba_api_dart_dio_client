@@ -115,7 +115,9 @@ class _$MediaSerializer implements PrimitiveSerializer<Media> {
     Media object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -202,52 +204,64 @@ class _$MediaSerializer implements PrimitiveSerializer<Media> {
 }
 
 class MediaTypeEnum extends EnumClass {
-
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'youtube')
   static const MediaTypeEnum youtube = _$mediaTypeEnum_youtube;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'cdphotothread')
   static const MediaTypeEnum cdphotothread = _$mediaTypeEnum_cdphotothread;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'imgur')
   static const MediaTypeEnum imgur = _$mediaTypeEnum_imgur;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'facebook-profile')
   static const MediaTypeEnum facebookProfile = _$mediaTypeEnum_facebookProfile;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'youtube-channel')
   static const MediaTypeEnum youtubeChannel = _$mediaTypeEnum_youtubeChannel;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'twitter-profile')
   static const MediaTypeEnum twitterProfile = _$mediaTypeEnum_twitterProfile;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'github-profile')
   static const MediaTypeEnum githubProfile = _$mediaTypeEnum_githubProfile;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'instagram-profile')
-  static const MediaTypeEnum instagramProfile = _$mediaTypeEnum_instagramProfile;
+  static const MediaTypeEnum instagramProfile =
+      _$mediaTypeEnum_instagramProfile;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'periscope-profile')
-  static const MediaTypeEnum periscopeProfile = _$mediaTypeEnum_periscopeProfile;
+  static const MediaTypeEnum periscopeProfile =
+      _$mediaTypeEnum_periscopeProfile;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'grabcad')
   static const MediaTypeEnum grabcad = _$mediaTypeEnum_grabcad;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'instagram-image')
   static const MediaTypeEnum instagramImage = _$mediaTypeEnum_instagramImage;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'external-link')
   static const MediaTypeEnum externalLink = _$mediaTypeEnum_externalLink;
+
   /// String type of the media element.
   @BuiltValueEnumConst(wireName: r'avatar')
   static const MediaTypeEnum avatar = _$mediaTypeEnum_avatar;
 
   static Serializer<MediaTypeEnum> get serializer => _$mediaTypeEnumSerializer;
 
-  const MediaTypeEnum._(String name): super(name);
+  const MediaTypeEnum._(String name) : super(name);
 
   static BuiltSet<MediaTypeEnum> get values => _$mediaTypeEnumValues;
   static MediaTypeEnum valueOf(String name) => _$mediaTypeEnumValueOf(name);
 }
-

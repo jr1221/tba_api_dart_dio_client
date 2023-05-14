@@ -50,7 +50,8 @@ part 'event_insights2018.g.dart';
 /// * [winningScaleOwnershipPercentageAuto] - Average scale ownership percentage for the winning alliance during auto.
 /// * [winningScaleOwnershipPercentageTeleop] - Average scale ownership percentage for the winning alliance during teleop.
 @BuiltValue()
-abstract class EventInsights2018 implements Built<EventInsights2018, EventInsights2018Builder> {
+abstract class EventInsights2018
+    implements Built<EventInsights2018, EventInsights2018Builder> {
   /// An array with three values, number of times auto quest was completed, number of opportunities to complete the auto quest, and percentage.
   @BuiltValueField(wireName: r'auto_quest_achieved')
   BuiltList<double> get autoQuestAchieved;
@@ -201,16 +202,19 @@ abstract class EventInsights2018 implements Built<EventInsights2018, EventInsigh
 
   EventInsights2018._();
 
-  factory EventInsights2018([void updates(EventInsights2018Builder b)]) = _$EventInsights2018;
+  factory EventInsights2018([void updates(EventInsights2018Builder b)]) =
+      _$EventInsights2018;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventInsights2018Builder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventInsights2018> get serializer => _$EventInsights2018Serializer();
+  static Serializer<EventInsights2018> get serializer =>
+      _$EventInsights2018Serializer();
 }
 
-class _$EventInsights2018Serializer implements PrimitiveSerializer<EventInsights2018> {
+class _$EventInsights2018Serializer
+    implements PrimitiveSerializer<EventInsights2018> {
   @override
   final Iterable<Type> types = const [EventInsights2018, _$EventInsights2018];
 
@@ -415,7 +419,9 @@ class _$EventInsights2018Serializer implements PrimitiveSerializer<EventInsights
     EventInsights2018 object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -717,4 +723,3 @@ class _$EventInsights2018Serializer implements PrimitiveSerializer<EventInsights
     return result.build();
   }
 }
-

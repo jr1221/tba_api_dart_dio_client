@@ -15,7 +15,8 @@ part 'event_insights.g.dart';
 /// * [qual] - Inights for the qualification round of an event
 /// * [playoff] - Insights for the playoff round of an event
 @BuiltValue()
-abstract class EventInsights implements Built<EventInsights, EventInsightsBuilder> {
+abstract class EventInsights
+    implements Built<EventInsights, EventInsightsBuilder> {
   /// Inights for the qualification round of an event
   @BuiltValueField(wireName: r'qual')
   JsonObject? get qual;
@@ -26,13 +27,15 @@ abstract class EventInsights implements Built<EventInsights, EventInsightsBuilde
 
   EventInsights._();
 
-  factory EventInsights([void updates(EventInsightsBuilder b)]) = _$EventInsights;
+  factory EventInsights([void updates(EventInsightsBuilder b)]) =
+      _$EventInsights;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventInsightsBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventInsights> get serializer => _$EventInsightsSerializer();
+  static Serializer<EventInsights> get serializer =>
+      _$EventInsightsSerializer();
 }
 
 class _$EventInsightsSerializer implements PrimitiveSerializer<EventInsights> {
@@ -69,7 +72,9 @@ class _$EventInsightsSerializer implements PrimitiveSerializer<EventInsights> {
     EventInsights object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -126,4 +131,3 @@ class _$EventInsightsSerializer implements PrimitiveSerializer<EventInsights> {
     return result.build();
   }
 }
-

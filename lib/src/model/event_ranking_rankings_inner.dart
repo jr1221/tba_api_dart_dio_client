@@ -17,12 +17,14 @@ part 'event_ranking_rankings_inner.g.dart';
 /// * [qualAverage] - The average match score during qualifications. Year specific. May be null if not relevant for a given year.
 /// * [extraStats] - Additional special data on the team's performance calculated by TBA.
 /// * [sortOrders] - Additional year-specific information, may be null. See parent `sort_order_info` for details.
-/// * [record] 
+/// * [record]
 /// * [rank] - The team's rank at the event as provided by FIRST.
 /// * [dq] - Number of times disqualified.
 /// * [teamKey] - The team with this rank.
 @BuiltValue()
-abstract class EventRankingRankingsInner implements Built<EventRankingRankingsInner, EventRankingRankingsInnerBuilder> {
+abstract class EventRankingRankingsInner
+    implements
+        Built<EventRankingRankingsInner, EventRankingRankingsInnerBuilder> {
   /// Number of matches played by this team.
   @BuiltValueField(wireName: r'matches_played')
   int get matchesPlayed;
@@ -56,18 +58,25 @@ abstract class EventRankingRankingsInner implements Built<EventRankingRankingsIn
 
   EventRankingRankingsInner._();
 
-  factory EventRankingRankingsInner([void updates(EventRankingRankingsInnerBuilder b)]) = _$EventRankingRankingsInner;
+  factory EventRankingRankingsInner(
+          [void updates(EventRankingRankingsInnerBuilder b)]) =
+      _$EventRankingRankingsInner;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(EventRankingRankingsInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<EventRankingRankingsInner> get serializer => _$EventRankingRankingsInnerSerializer();
+  static Serializer<EventRankingRankingsInner> get serializer =>
+      _$EventRankingRankingsInnerSerializer();
 }
 
-class _$EventRankingRankingsInnerSerializer implements PrimitiveSerializer<EventRankingRankingsInner> {
+class _$EventRankingRankingsInnerSerializer
+    implements PrimitiveSerializer<EventRankingRankingsInner> {
   @override
-  final Iterable<Type> types = const [EventRankingRankingsInner, _$EventRankingRankingsInner];
+  final Iterable<Type> types = const [
+    EventRankingRankingsInner,
+    _$EventRankingRankingsInner
+  ];
 
   @override
   final String wireName = r'EventRankingRankingsInner';
@@ -131,7 +140,9 @@ class _$EventRankingRankingsInnerSerializer implements PrimitiveSerializer<Event
     EventRankingRankingsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -230,4 +241,3 @@ class _$EventRankingRankingsInnerSerializer implements PrimitiveSerializer<Event
     return result.build();
   }
 }
-

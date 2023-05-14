@@ -56,21 +56,24 @@ class _$EventOPRsSerializer implements PrimitiveSerializer<EventOPRs> {
       yield r'oprs';
       yield serializers.serialize(
         object.oprs,
-        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(double)]),
+        specifiedType:
+            const FullType(BuiltMap, [FullType(String), FullType(double)]),
       );
     }
     if (object.dprs != null) {
       yield r'dprs';
       yield serializers.serialize(
         object.dprs,
-        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(double)]),
+        specifiedType:
+            const FullType(BuiltMap, [FullType(String), FullType(double)]),
       );
     }
     if (object.ccwms != null) {
       yield r'ccwms';
       yield serializers.serialize(
         object.ccwms,
-        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(double)]),
+        specifiedType:
+            const FullType(BuiltMap, [FullType(String), FullType(double)]),
       );
     }
   }
@@ -81,7 +84,9 @@ class _$EventOPRsSerializer implements PrimitiveSerializer<EventOPRs> {
     EventOPRs object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -99,21 +104,24 @@ class _$EventOPRsSerializer implements PrimitiveSerializer<EventOPRs> {
         case r'oprs':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(double)]),
+            specifiedType:
+                const FullType(BuiltMap, [FullType(String), FullType(double)]),
           ) as BuiltMap<String, double>;
           result.oprs.replace(valueDes);
           break;
         case r'dprs':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(double)]),
+            specifiedType:
+                const FullType(BuiltMap, [FullType(String), FullType(double)]),
           ) as BuiltMap<String, double>;
           result.dprs.replace(valueDes);
           break;
         case r'ccwms':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(double)]),
+            specifiedType:
+                const FullType(BuiltMap, [FullType(String), FullType(double)]),
           ) as BuiltMap<String, double>;
           result.ccwms.replace(valueDes);
           break;
@@ -145,4 +153,3 @@ class _$EventOPRsSerializer implements PrimitiveSerializer<EventOPRs> {
     return result.build();
   }
 }
-

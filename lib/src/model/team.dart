@@ -267,7 +267,9 @@ class _$TeamSerializer implements PrimitiveSerializer<Team> {
     Team object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -443,4 +445,3 @@ class _$TeamSerializer implements PrimitiveSerializer<Team> {
     return result.build();
   }
 }
-
